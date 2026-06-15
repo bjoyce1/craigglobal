@@ -124,7 +124,12 @@ export function Nav() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-3" aria-label="CGE home">
             <Crest size={28} />
-            <span className="font-serif text-lg font-semibold tracking-wide text-bone">
+            <span
+              className={cn(
+                "font-serif text-lg font-semibold tracking-wide transition-colors",
+                onDark ? "text-bone" : "text-ink",
+              )}
+            >
               CGE
             </span>
           </Link>
@@ -134,7 +139,12 @@ export function Nav() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group relative font-sans text-sm font-medium text-bone/80 transition-colors hover:text-bone data-[status=active]:text-bone"
+                className={cn(
+                  "group relative font-sans text-sm font-medium transition-colors",
+                  onDark
+                    ? "text-bone/80 hover:text-bone data-[status=active]:text-bone"
+                    : "text-ink/70 hover:text-ink data-[status=active]:text-ink",
+                )}
               >
                 {l.label}
                 <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100 group-data-[status=active]:scale-x-100" />
