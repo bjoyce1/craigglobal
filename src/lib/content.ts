@@ -3,6 +3,17 @@
  * Items tagged [PLACEHOLDER] are stand-ins — replace with the real brief.
  */
 
+export type Stat = { value: string; label: string };
+export type Chapter = {
+  title: string;
+  note: string;
+  heading: string;
+  body: string;
+  tags?: string[];
+};
+export type FilmCredit = { title: string; note: string };
+export type PlaybookEntry = { number: string; title: string; body: string };
+
 export type Person = {
   name: string;
   role: string;
@@ -11,9 +22,15 @@ export type Person = {
   placeholderBio?: boolean;
   slug?: string;
   // Extended profile fields — surfaced on the individual profile page.
+  subtitle?: string;
   fullBio?: string[];
   focus?: string[];
   quote?: string;
+  quoteAttribution?: string;
+  stats?: Stat[];
+  chapters?: Chapter[];
+  films?: FilmCredit[];
+  playbook?: PlaybookEntry[];
 };
 
 // Executive Leadership — names/roles real; surnames/bios [PLACEHOLDER] where noted.
