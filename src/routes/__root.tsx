@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "An assets holding company that owns and stewards a portfolio of operating businesses for the long term.",
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CGE Corporate — Assets Holding Company" },
+      { name: "description", content: "CGE Corporate builds and stewards a portfolio of operating businesses with a focus on long-term value." },
+      { property: "og:description", content: "CGE Corporate builds and stewards a portfolio of operating businesses with a focus on long-term value." },
+      { name: "twitter:description", content: "CGE Corporate builds and stewards a portfolio of operating businesses with a focus on long-term value." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5bec8f80-6430-4ecb-b394-514fb04d3262/id-preview-8d505bae--117cec8e-fba8-454c-b91c-51125e823647.lovable.app-1781551451748.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5bec8f80-6430-4ecb-b394-514fb04d3262/id-preview-8d505bae--117cec8e-fba8-454c-b91c-51125e823647.lovable.app-1781551451748.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
