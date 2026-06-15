@@ -77,7 +77,7 @@ function Leadership() {
 
       {/* Corporate structure */}
       <section className="surface-light">
-        <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
+        <SectionReveal className="section-pad px-6">
           <Eyebrow>Corporate Structure</Eyebrow>
           <h2 className="display-h2 mt-6 max-w-xl">How CGE is organized.</h2>
           <div className="mt-16">

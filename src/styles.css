@@ -487,8 +487,6 @@
   margin: 0 auto;
 }
 .cge-org .leadership {
-  margin: 0 auto;
-  max-width: 1000px;
   padding: 20px 24px 22px;
   border: 1px solid var(--org-line-soft);
   border-radius: 18px;
@@ -549,8 +547,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  max-width: 1000px;
-  margin: 36px auto 0;
+  margin-top: 36px;
   color: var(--bone-dim);
 }
 .cge-org .divider::before,
@@ -569,8 +566,7 @@
 }
 
 .cge-org .org-notes {
-  max-width: 900px;
-  margin: 56px auto 0;
+  margin-top: 56px;
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
