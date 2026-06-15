@@ -145,6 +145,3 @@ function Profile() {
     </main>
   );
 }
-
-// Keep the slug list referenced so unused imports stay meaningful.
-void (executives satisfies Person[]);
