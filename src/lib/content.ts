@@ -9,6 +9,11 @@ export type Person = {
   initials: string;
   bio: string;
   placeholderBio?: boolean;
+  slug?: string;
+  // Extended profile fields — surfaced on the individual profile page.
+  fullBio?: string[];
+  focus?: string[];
+  quote?: string;
 };
 
 // Executive Leadership — names/roles real; surnames/bios [PLACEHOLDER] where noted.
@@ -17,39 +22,75 @@ export const executives: Person[] = [
     name: "Sergeant Major Keith L. Craig",
     role: "Chief Executive Officer",
     initials: "KC",
+    slug: "keith-l-craig",
     // [PLACEHOLDER] bio — founder/CEO; rank retained with name.
     bio: "Founder and Chief Executive Officer. A Sergeant Major whose ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds. [PLACEHOLDER bio]",
     placeholderBio: true,
+    fullBio: [
+      "Founder and Chief Executive Officer of CGE Corporate. A Sergeant Major whose ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds. [PLACEHOLDER bio]",
+      "Under his leadership, CGE measures in decades rather than quarters — committing capital and counsel to businesses worth building for the long term. [PLACEHOLDER bio]",
+    ],
+    focus: ["Capital stewardship", "Long-view strategy", "Operating discipline"],
+    quote:
+      "Ownership is a responsibility before it is an asset. [PLACEHOLDER quote]",
   },
   {
     name: "Taalib", // [surname PLACEHOLDER]
     role: "Chief Operating Officer",
     initials: "T",
+    slug: "taalib",
     bio: "Chief Operating Officer, accountable for operating discipline across the portfolio. [PLACEHOLDER bio]",
     placeholderBio: true,
+    fullBio: [
+      "Chief Operating Officer, accountable for operating discipline across the portfolio. [PLACEHOLDER bio]",
+      "He aligns cadence, standards, and execution so that every business CGE holds operates to the standard. [PLACEHOLDER bio]",
+    ],
+    focus: ["Operations", "Portfolio oversight", "Execution"],
   },
   {
     name: "Lynn", // [surname PLACEHOLDER]
     role: "Chief Strategy Officer / Chief Legal Officer",
     initials: "L",
+    slug: "lynn",
     bio: "Chief Strategy Officer and Chief Legal Officer, steering long-view strategy and governance. [PLACEHOLDER bio]",
     placeholderBio: true,
+    fullBio: [
+      "Chief Strategy Officer and Chief Legal Officer, steering long-view strategy and governance. [PLACEHOLDER bio]",
+      "She safeguards the structures and standards that let CGE commit with conviction and care. [PLACEHOLDER bio]",
+    ],
+    focus: ["Strategy", "Governance", "Legal"],
   },
   {
     name: "Ken Merritt",
     role: "Chief Financial Officer",
     initials: "KM",
+    slug: "ken-merritt",
     bio: "Chief Financial Officer, responsible for capital allocation and financial stewardship. [PLACEHOLDER bio]",
     placeholderBio: true,
+    fullBio: [
+      "Chief Financial Officer, responsible for capital allocation and financial stewardship. [PLACEHOLDER bio]",
+      "He brings the financial discipline that keeps every position governed by process and accountability. [PLACEHOLDER bio]",
+    ],
+    focus: ["Capital allocation", "Financial stewardship", "Risk"],
   },
   {
     name: "David Ash",
     role: "Chief of Staff",
     initials: "DA",
+    slug: "david-ash",
     bio: "Chief of Staff, aligning leadership, cadence, and execution across CGE. [PLACEHOLDER bio]",
     placeholderBio: true,
+    fullBio: [
+      "Chief of Staff, aligning leadership, cadence, and execution across CGE. [PLACEHOLDER bio]",
+      "He connects the leadership team to the work, ensuring intent translates into outcomes. [PLACEHOLDER bio]",
+    ],
+    focus: ["Leadership cadence", "Alignment", "Execution"],
   },
 ];
+
+export function executiveBySlug(slug: string): Person | undefined {
+  return executives.find((p) => p.slug === slug);
+}
 
 // Board of Directors — [ENTIRE BOARD IS PLACEHOLDER]
 export const board: Person[] = [

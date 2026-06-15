@@ -16,6 +16,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LeadershipIndexRouteImport } from './routes/leadership.index'
+import { Route as LeadershipSlugRouteImport } from './routes/leadership.$slug'
 
 const NewsroomRoute = NewsroomRouteImport.update({
   id: '/newsroom',
@@ -52,6 +54,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LeadershipIndexRoute = LeadershipIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LeadershipRoute,
+} as any)
+const LeadershipSlugRoute = LeadershipSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => LeadershipRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,8 +71,10 @@ export interface FileRoutesByFullPath {
   '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
-  '/leadership': typeof LeadershipRoute
+  '/leadership': typeof LeadershipRouteWithChildren
   '/newsroom': typeof NewsroomRoute
+  '/leadership/$slug': typeof LeadershipSlugRoute
+  '/leadership/': typeof LeadershipIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +82,9 @@ export interface FileRoutesByTo {
   '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
-  '/leadership': typeof LeadershipRoute
   '/newsroom': typeof NewsroomRoute
+  '/leadership/$slug': typeof LeadershipSlugRoute
+  '/leadership': typeof LeadershipIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,8 +93,10 @@ export interface FileRoutesById {
   '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
-  '/leadership': typeof LeadershipRoute
+  '/leadership': typeof LeadershipRouteWithChildren
   '/newsroom': typeof NewsroomRoute
+  '/leadership/$slug': typeof LeadershipSlugRoute
+  '/leadership/': typeof LeadershipIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +108,8 @@ export interface FileRouteTypes {
     | '/holdings'
     | '/leadership'
     | '/newsroom'
+    | '/leadership/$slug'
+    | '/leadership/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -98,8 +117,9 @@ export interface FileRouteTypes {
     | '/approach'
     | '/contact'
     | '/holdings'
-    | '/leadership'
     | '/newsroom'
+    | '/leadership/$slug'
+    | '/leadership'
   id:
     | '__root__'
     | '/'
@@ -109,6 +129,8 @@ export interface FileRouteTypes {
     | '/holdings'
     | '/leadership'
     | '/newsroom'
+    | '/leadership/$slug'
+    | '/leadership/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -117,7 +139,7 @@ export interface RootRouteChildren {
   ApproachRoute: typeof ApproachRoute
   ContactRoute: typeof ContactRoute
   HoldingsRoute: typeof HoldingsRoute
-  LeadershipRoute: typeof LeadershipRoute
+  LeadershipRoute: typeof LeadershipRouteWithChildren
   NewsroomRoute: typeof NewsroomRoute
 }
 
@@ -172,8 +194,36 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/leadership/': {
+      id: '/leadership/'
+      path: '/'
+      fullPath: '/leadership/'
+      preLoaderRoute: typeof LeadershipIndexRouteImport
+      parentRoute: typeof LeadershipRoute
+    }
+    '/leadership/$slug': {
+      id: '/leadership/$slug'
+      path: '/$slug'
+      fullPath: '/leadership/$slug'
+      preLoaderRoute: typeof LeadershipSlugRouteImport
+      parentRoute: typeof LeadershipRoute
+    }
   }
 }
+
+interface LeadershipRouteChildren {
+  LeadershipSlugRoute: typeof LeadershipSlugRoute
+  LeadershipIndexRoute: typeof LeadershipIndexRoute
+}
+
+const LeadershipRouteChildren: LeadershipRouteChildren = {
+  LeadershipSlugRoute: LeadershipSlugRoute,
+  LeadershipIndexRoute: LeadershipIndexRoute,
+}
+
+const LeadershipRouteWithChildren = LeadershipRoute._addFileChildren(
+  LeadershipRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -181,7 +231,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApproachRoute: ApproachRoute,
   ContactRoute: ContactRoute,
   HoldingsRoute: HoldingsRoute,
-  LeadershipRoute: LeadershipRoute,
+  LeadershipRoute: LeadershipRouteWithChildren,
   NewsroomRoute: NewsroomRoute,
 }
 export const routeTree = rootRouteImport
