@@ -3,7 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
 import { CTABand } from "@/components/CTABand";
-import { executiveBySlug, executives, type Person } from "@/lib/content";
+import { executiveBySlug } from "@/lib/content";
 
 export const Route = createFileRoute("/leadership/$slug")({
   loader: ({ params }) => {
