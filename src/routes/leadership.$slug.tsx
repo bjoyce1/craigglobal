@@ -123,7 +123,7 @@ function Profile() {
             <aside className="md:pt-1">
               <Eyebrow>Areas of focus</Eyebrow>
               <ul className="mt-8 divide-y divide-[var(--line-light)] border-y border-[var(--line-light)]">
-                {person.focus.map((f) => (
+                {person.focus.map((f: string) => (
                   <li
                     key={f}
                     className="flex items-center gap-3 py-4 font-serif text-lg"
