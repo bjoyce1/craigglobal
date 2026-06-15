@@ -12,13 +12,14 @@ export function PersonCard({
   person,
   primary = false,
   showBio = true,
-  to,
+  profileSlug,
 }: {
   person: Person;
   primary?: boolean;
   showBio?: boolean;
-  to?: string;
+  profileSlug?: string;
 }) {
+  const to = profileSlug;
   const inner = (
     <>
       {/* [PLACEHOLDER portrait] — initials in gold Playfair on navy */}
