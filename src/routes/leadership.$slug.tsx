@@ -256,8 +256,8 @@ function ChaptersSection({ person }: { person: Person }) {
         <Eyebrow>Interactive Bio</Eyebrow>
         <h2 className="display-h2 mt-6 max-w-xl">Choose a chapter.</h2>
         <p className="text-dim body-measure mt-6">
-          Each chapter reframes the story for a different intent: service,
-          cinema, entrepreneurship, leadership, and the field.
+          Each chapter reframes the story for a different intent — the arenas
+          where the work has left its mark.
         </p>
 
         <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-[300px_1fr]">
