@@ -87,8 +87,8 @@ export const executives: Person[] = [
         title: "Author & Speaker",
         note: "Books, stages, practical wisdom",
         heading: "Lessons made usable.",
-        body: "His books Serving To Lead and Checkpoint Decoder distill decades of leadership under pressure into practical systems. On stage, he helps leaders and storytellers turn preparation into impact.",
-        tags: ["Serving To Lead", "Checkpoint Decoder", "Keynotes"],
+        body: "His books Serving To Lead and Checkpoint Decoder — including an International Best Seller — distill decades of leadership under pressure into practical systems. On stage, he helps leaders and storytellers turn preparation into impact.",
+        tags: ["Serving To Lead", "Checkpoint Decoder", "Keynotes", "International Best Seller"],
       },
       {
         title: "Athlete",
