@@ -1,96 +1,192 @@
-import { holdings } from "@/lib/content";
-
 /**
- * OrgChart — architectural CSS org diagram (not an image).
- * Top: CGE Corporate (holding company). Governance tier: Board (oversight,
- * dashed) and Executive Leadership (operating). Below: holding nodes.
- * Collapses to a vertical stack on mobile.
+ * OrgChart — Craig Global Enterprises corporate structure.
+ * Parent holding company → board & executive leadership → subsidiaries,
+ * divisions, and operating entities. Ported from the approved org-chart tree,
+ * styled with CGE brand tokens (see .cge-org in styles.css).
+ * Collapses to a vertical, indented stack on mobile.
  */
-function Node({
-  label,
-  sub,
-  primary = false,
-}: {
-  label: string;
-  sub?: string;
-  primary?: boolean;
-}) {
-  return (
-    <div
-      className={
-        primary
-          ? "surface-dark border border-gold px-7 py-5 text-center"
-          : "border border-[var(--line-light)] bg-paper-2 px-5 py-4 text-center"
-      }
-    >
-      <p
-        className={
-          primary
-            ? "font-serif text-lg font-semibold text-bone"
-            : "font-serif text-base font-semibold text-ink"
-        }
-      >
-        {label}
-      </p>
-      {sub && (
-        <p
-          className={
-            primary
-              ? "eyebrow mt-1 justify-center text-center"
-              : "mt-1 font-sans text-[0.68rem] uppercase tracking-[0.2em] text-[var(--ink-dim)]"
-          }
-        >
-          {sub}
-        </p>
-      )}
-    </div>
-  );
-}
-
 export function OrgChart() {
   return (
-    <div className="surface-light">
-      {/* top node */}
-      <div className="flex flex-col items-center">
-        <div className="w-full max-w-md">
-          <Node label="CGE Corporate" sub="Assets Holding Company" primary />
-        </div>
-
-        {/* governance tier */}
-        <div className="h-10 w-px bg-gold" aria-hidden="true" />
-        <div className="grid w-full max-w-2xl grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="flex flex-col items-center">
-            {/* dashed = oversight */}
-            <div
-              className="mb-4 h-6 w-px border-l border-dashed border-gold md:hidden"
-              aria-hidden="true"
-            />
-            <Node label="Board of Directors" sub="Oversight" />
-          </div>
-          <div className="flex flex-col items-center">
-            <div
-              className="mb-4 h-6 w-px bg-gold md:hidden"
-              aria-hidden="true"
-            />
-            <Node label="Executive Leadership" sub="Operating" />
-          </div>
-        </div>
-
-        {/* connector to holdings */}
-        <div className="h-10 w-px bg-gold" aria-hidden="true" />
-        <div className="hidden h-px w-3/4 bg-gold md:block" aria-hidden="true" />
-
-        {/* holdings row */}
-        <div className="grid w-full grid-cols-1 gap-6 pt-0 md:grid-cols-4 md:pt-10">
-          {holdings.map((h) => (
-            <div key={h.name} className="flex flex-col items-center">
-              <div className="mb-4 h-6 w-px bg-gold md:-mt-10" aria-hidden="true" />
-              {/* [PLACEHOLDER holding] */}
-              <Node label={h.name} sub={h.sector} />
+    <div className="cge-org">
+      <div className="tree" role="tree" aria-label="CGE corporate structure">
+        <ul>
+          <li>
+            <div className="node parent" role="treeitem">
+              <div className="tag">Parent · Assets Holding Company</div>
+              <div className="brand">CGE</div>
+              <div className="full">Craig Global Enterprises</div>
             </div>
-          ))}
-        </div>
+
+            <div className="stem" />
+
+            {/* Board & Executive Leadership */}
+            <div className="leadership">
+              <div className="lead-label">Board &amp; Executive Leadership</div>
+              <div className="lead-row">
+                <div className="exec ceo">
+                  <div className="role">CEO</div>
+                  <div className="who">Sergeant Major</div>
+                </div>
+                <div className="exec">
+                  <div className="role">COO</div>
+                  <div className="who">Taalib</div>
+                </div>
+                <div className="exec">
+                  <div className="role">CSO / CLO</div>
+                  <div className="who">Lynn</div>
+                </div>
+                <div className="exec">
+                  <div className="role">CFO</div>
+                  <div className="who">Ken Merritt</div>
+                </div>
+                <div className="exec">
+                  <div className="role">COS</div>
+                  <div className="who">Dave</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="divider">
+              <span>Subsidiaries &amp; Divisions</span>
+            </div>
+
+            {/* Subsidiaries & divisions */}
+            <ul>
+              <li>
+                <div className="node division">
+                  <div className="tag">Division</div>
+                  <div className="name">Nonprofit</div>
+                </div>
+                <ul>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">Academies &amp; Schools</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <div className="node subsidiary">
+                  <div className="name">CGE Management, LLC</div>
+                </div>
+                <div className="badge">Subsidiary</div>
+              </li>
+
+              <li>
+                <div className="feeder">
+                  <span className="arr">↳</span> Intake: <b>Got Bag, North America</b>
+                </div>
+                <div className="node subsidiary">
+                  <div className="name">Craig Investments, LLC</div>
+                </div>
+                <div className="badge">Subsidiary</div>
+                <ul>
+                  <li>
+                    <div className="node">
+                      <div className="name">Got Bag Initiative</div>
+                      <div className="roster">
+                        <span>
+                          <b>Ike</b> · Int'l CEO
+                        </span>
+                        <span>
+                          <b>Joel</b> · Advisor
+                        </span>
+                        <span>
+                          <b>Patricia</b> · Operations
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <div className="node subsidiary">
+                  <div className="name">CGE Entertainment, LLC</div>
+                  <div className="sub">Contracts will be signed by</div>
+                </div>
+                <div className="badge">Subsidiary</div>
+                <ul>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">Advent</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">Paralight.AI</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">BBPI</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="node leaf highlight">
+                      <div className="name">Sgt. Major Records</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">Odflix (Canada)</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="node leaf">
+                      <div className="name">Porter Craig</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <div className="node subsidiary pending">
+                  <div className="tag">CGI</div>
+                  <div className="name">Craig Global International</div>
+                </div>
+                <div className="badge confirm">Relationship to confirm</div>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
+
+      <section className="org-notes">
+        <h3>Abbreviation Key</h3>
+        <div className="grid">
+          <p>
+            <b>CEO</b> Chief Executive Officer
+          </p>
+          <p>
+            <b>COO</b> Chief Operating Officer
+          </p>
+          <p>
+            <b>CSO / CLO</b> Chief Strategy or Security Officer / Chief Legal Officer
+          </p>
+          <p>
+            <b>CFO</b> Chief Financial Officer
+          </p>
+          <p>
+            <b>COS</b> Chief of Staff
+          </p>
+        </div>
+        <h3 style={{ marginTop: 28 }}>Items to Confirm</h3>
+        <div className="grid">
+          <p>
+            <span className="flag">CSO meaning:</span> Strategy, Security, or another title.
+          </p>
+          <p>
+            <span className="flag">CGI placement:</span> shown as a subsidiary for now. Confirm
+            whether Craig Global International is a subsidiary, affiliate, or international parent.
+          </p>
+          <p>
+            <span className="flag">Full names:</span> only Ken Merritt is confirmed. Remaining
+            executives are shown by first name or title.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

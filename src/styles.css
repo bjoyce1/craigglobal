@@ -248,3 +248,402 @@
     animation: none;
   }
 }
+
+/* ---- Corporate structure org chart (ported tree) ---- */
+.cge-org {
+  --org-line: rgba(197, 162, 83, 0.45);
+  --org-line-soft: rgba(197, 162, 83, 0.22);
+  --org-crimson: #d6584e;
+  --org-crimson-soft: rgba(214, 88, 78, 0.5);
+  --org-blue: #7da6cf;
+  --org-blue-soft: rgba(125, 166, 207, 0.4);
+  background:
+    radial-gradient(1200px 700px at 50% -10%, rgba(203, 162, 79, 0.1), transparent 60%),
+    radial-gradient(900px 600px at 85% 110%, rgba(203, 162, 79, 0.06), transparent 55%),
+    var(--midnight);
+  color: var(--bone);
+  border: 1px solid var(--line-dark);
+  border-radius: 18px;
+  padding: 48px 24px 56px;
+  overflow-x: auto;
+}
+
+.cge-org .tree {
+  display: flex;
+  justify-content: center;
+  min-width: min-content;
+  padding: 0 12px;
+}
+.cge-org .tree ul {
+  display: flex;
+  padding-top: 34px;
+  position: relative;
+  list-style: none;
+  margin: 0;
+}
+.cge-org .tree > ul {
+  padding-top: 0;
+}
+.cge-org .tree li {
+  list-style: none;
+  position: relative;
+  padding: 34px 12px 0;
+  text-align: center;
+}
+.cge-org .tree li::before,
+.cge-org .tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1.5px solid var(--org-line-soft);
+  width: 50%;
+  height: 34px;
+}
+.cge-org .tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1.5px solid var(--org-line-soft);
+}
+.cge-org .tree li:only-child::before,
+.cge-org .tree li:only-child::after {
+  display: none;
+}
+.cge-org .tree li:first-child::before,
+.cge-org .tree li:last-child::after {
+  border: 0;
+}
+.cge-org .tree li:last-child::before {
+  border-right: 1.5px solid var(--org-line-soft);
+  border-radius: 0 6px 0 0;
+}
+.cge-org .tree li:first-child::after {
+  border-radius: 6px 0 0 0;
+}
+.cge-org .tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1.5px solid var(--org-line-soft);
+  width: 0;
+  height: 34px;
+}
+
+.cge-org .node {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 3px;
+  min-width: 148px;
+  max-width: 240px;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, var(--navy-2), var(--navy));
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -28px rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.cge-org .node:hover {
+  transform: translateY(-4px);
+  border-color: var(--org-line);
+}
+.cge-org .node .name {
+  font-weight: 600;
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+.cge-org .node .tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.cge-org .node .sub {
+  font-size: 0.72rem;
+  color: var(--bone-dim);
+  line-height: 1.45;
+  margin-top: 5px;
+}
+
+.cge-org .node.parent {
+  min-width: 360px;
+  max-width: 560px;
+  padding: 24px 40px;
+  background: linear-gradient(180deg, #20242e, #13161d);
+  border: 1px solid var(--org-line);
+  box-shadow: 0 0 0 1px rgba(203, 162, 79, 0.15), 0 30px 70px -30px rgba(0, 0, 0, 1),
+    0 0 60px -20px rgba(203, 162, 79, 0.25);
+}
+.cge-org .node.parent .brand {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--gold-hi);
+  line-height: 1;
+}
+.cge-org .node.parent .full {
+  font-size: 0.78rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-top: 8px;
+}
+
+.cge-org .node.subsidiary {
+  border-color: rgba(203, 162, 79, 0.28);
+}
+.cge-org .node.subsidiary .name {
+  font-size: 1.02rem;
+}
+.cge-org .node.division .tag {
+  color: var(--gold-hi);
+}
+.cge-org .node.highlight {
+  border-color: var(--org-crimson-soft);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 18px 40px -28px rgba(0, 0, 0, 0.9),
+    0 0 26px -12px rgba(214, 88, 78, 0.55);
+}
+.cge-org .node.highlight .name {
+  color: var(--org-crimson);
+}
+.cge-org .node.highlight:hover {
+  border-color: var(--org-crimson);
+}
+.cge-org .node.leaf {
+  min-width: 124px;
+  padding: 13px 16px;
+}
+.cge-org .node.leaf .name {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+.cge-org .node.pending {
+  border-style: dashed;
+  border-color: var(--org-blue-soft);
+}
+.cge-org .node.pending .tag {
+  color: var(--org-blue);
+}
+
+.cge-org .badge {
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-top: 10px;
+  font-weight: 600;
+}
+.cge-org .badge.confirm {
+  color: var(--org-blue);
+}
+
+.cge-org .feeder {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 7px 13px;
+  border: 1px dashed var(--org-line-soft);
+  border-radius: 999px;
+  background: rgba(203, 162, 79, 0.05);
+  font-size: 0.7rem;
+  color: var(--bone-dim);
+}
+.cge-org .feeder b {
+  color: var(--gold);
+  font-weight: 600;
+}
+.cge-org .feeder .arr {
+  color: var(--gold);
+}
+
+.cge-org .roster {
+  margin-top: 7px;
+  display: grid;
+  gap: 2px;
+}
+.cge-org .roster span {
+  font-size: 0.68rem;
+  color: var(--bone-dim);
+}
+.cge-org .roster span b {
+  color: var(--bone);
+  font-weight: 600;
+}
+
+.cge-org .stem {
+  width: 1.5px;
+  height: 30px;
+  background: var(--org-line-soft);
+  margin: 0 auto;
+}
+.cge-org .leadership {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px 24px 22px;
+  border: 1px solid var(--org-line-soft);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(13, 39, 71, 0.7), rgba(10, 29, 56, 0.7));
+}
+.cge-org .lead-label {
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.cge-org .lead-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.cge-org .exec {
+  flex: 1 1 150px;
+  max-width: 190px;
+  min-width: 140px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--navy-2), var(--navy));
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.cge-org .exec:hover {
+  transform: translateY(-3px);
+  border-color: var(--org-line);
+}
+.cge-org .exec .role {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.cge-org .exec .who {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-top: 6px;
+  font-family: var(--font-serif);
+}
+.cge-org .exec.ceo {
+  border-color: var(--org-line);
+  box-shadow: 0 0 26px -16px rgba(203, 162, 79, 0.7);
+}
+.cge-org .exec.ceo .role {
+  color: var(--gold-hi);
+}
+
+.cge-org .divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  max-width: 1000px;
+  margin: 36px auto 0;
+  color: var(--bone-dim);
+}
+.cge-org .divider::before,
+.cge-org .divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.cge-org .divider span {
+  font-size: 0.66rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.cge-org .org-notes {
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+.cge-org .org-notes h3 {
+  font-size: 0.7rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-family: var(--font-sans);
+}
+.cge-org .org-notes .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px 28px;
+}
+.cge-org .org-notes p {
+  font-size: 0.82rem;
+  color: var(--bone-dim);
+  line-height: 1.5;
+}
+.cge-org .org-notes p b {
+  color: var(--bone);
+  font-weight: 600;
+}
+.cge-org .org-notes .flag {
+  color: var(--org-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 880px) {
+  .cge-org .tree,
+  .cge-org .tree ul {
+    display: block;
+    min-width: 0;
+  }
+  .cge-org .tree ul {
+    padding-top: 0;
+  }
+  .cge-org .tree li {
+    padding: 0;
+    text-align: left;
+  }
+  .cge-org .tree li::before,
+  .cge-org .tree li::after,
+  .cge-org .tree ul ul::before {
+    display: none;
+  }
+  .cge-org .node {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    align-items: flex-start;
+    text-align: left;
+    margin: 8px 0;
+  }
+  .cge-org .node.parent {
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .cge-org .tree ul ul {
+    margin-left: 20px;
+    padding-left: 18px;
+    border-left: 1.5px solid var(--org-line-soft);
+  }
+  .cge-org .badge,
+  .cge-org .feeder {
+    margin: 6px 0;
+  }
+  .cge-org .exec {
+    flex: 1 1 100%;
+    text-align: left;
+  }
+}
