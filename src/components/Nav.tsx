@@ -17,19 +17,65 @@ const links = [
  */
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [behindDark, setBehindDark] = useState(true);
   const [open, setOpen] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const overlayRef = useRef<HTMLDivElement>(null);
 
+  // Sample the background color directly behind the bar to decide text color.
+  const detectBehind = () => {
+    if (typeof window === "undefined") return;
+    const header = document.querySelector("header");
+    const headerH = header?.getBoundingClientRect().height ?? 72;
+    const x = window.innerWidth / 2;
+    const y = headerH + 8;
+
+    // Temporarily disable pointer events on the fixed header so we hit the
+    // element underneath it.
+    const prevPe = header ? (header as HTMLElement).style.pointerEvents : "";
+    if (header) (header as HTMLElement).style.pointerEvents = "none";
+    let el = document.elementFromPoint(x, y) as HTMLElement | null;
+    if (header) (header as HTMLElement).style.pointerEvents = prevPe;
+
+    let rgb: [number, number, number] = [5, 8, 15]; // default midnight
+    while (el) {
+      const c = getComputedStyle(el).backgroundColor;
+      const m = c.match(/rgba?\(([^)]+)\)/);
+      if (m) {
+        const parts = m[1].split(",").map((s) => parseFloat(s));
+        const a = parts[3] === undefined ? 1 : parts[3];
+        if (a > 0.1) {
+          rgb = [parts[0], parts[1], parts[2]];
+          break;
+        }
+      }
+      el = el.parentElement;
+    }
+    const [r, g, b] = rgb;
+    const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    setBehindDark(lum < 0.55);
+  };
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+      detectBehind();
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", detectBehind);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", detectBehind);
+    };
   }, []);
 
-  // close menu on route change
-  useEffect(() => setOpen(false), [pathname]);
+  // re-detect after route change (next frame so the new DOM has painted)
+  useEffect(() => {
+    setOpen(false);
+    const id = requestAnimationFrame(() => detectBehind());
+    return () => cancelAnimationFrame(id);
+  }, [pathname]);
 
   // lock scroll + focus trap while overlay open
   useEffect(() => {
@@ -61,7 +107,9 @@ export function Nav() {
     };
   }, [open]);
 
-  const onDark = scrolled; // solid navy bar once scrolled
+  // Dark text-on-light when the bar is transparent over a light surface.
+  // Scrolled bar is navy, and the open overlay is navy → light text.
+  const onDark = scrolled || open || behindDark;
 
   return (
     <>
@@ -76,7 +124,12 @@ export function Nav() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-3" aria-label="CGE home">
             <Crest size={28} />
-            <span className="font-serif text-lg font-semibold tracking-wide text-bone">
+            <span
+              className={cn(
+                "font-serif text-lg font-semibold tracking-wide transition-colors",
+                onDark ? "text-bone" : "text-ink",
+              )}
+            >
               CGE
             </span>
           </Link>
@@ -86,7 +139,12 @@ export function Nav() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="group relative font-sans text-sm font-medium text-bone/80 transition-colors hover:text-bone data-[status=active]:text-bone"
+                className={cn(
+                  "group relative font-sans text-sm font-medium transition-colors",
+                  onDark
+                    ? "text-bone/80 hover:text-bone data-[status=active]:text-bone"
+                    : "text-ink/70 hover:text-ink data-[status=active]:text-ink",
+                )}
               >
                 {l.label}
                 <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100 group-data-[status=active]:scale-x-100" />
