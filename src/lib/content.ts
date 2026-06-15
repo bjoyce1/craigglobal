@@ -194,7 +194,7 @@ export const executives: Person[] = [
     initials: "LR",
     slug: "lynn",
     placeholderBio: false,
-    image: "/__l5e/assets-v1/77fc1ae2-2ee9-408a-8b81-f0ba252fe748/lynn-roberts.jpg",
+    image: "/__l5e/assets-v1/c08e96d0-d73c-4efa-9ef2-2d66fe650bbc/lynn-roberts.png",
     subtitle:
       "Award-winning intellectual property attorney, governance strategist, and economic empowerment advocate. Founder & Principal Attorney of Roberts Legal Group, advising small businesses, creatives, and emerging enterprises on trademark protection, brand strategy, and sustainable development across the Mid-Atlantic and Tri-State regions.",
     bio: "Chief Strategy Officer and Chief Legal Officer, steering long-view strategy and governance. An award-winning IP attorney and governance strategist who safeguards the structures and standards that let CGE commit with conviction and care.",
