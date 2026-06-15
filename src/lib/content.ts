@@ -42,7 +42,7 @@ export const executives: Person[] = [
     slug: "keith-l-craig",
     placeholderBio: false,
     subtitle:
-      "Retired U.S. Army Sergeant Major, film distribution executive, author, speaker, and builder of pathways for creators ready to move with discipline and scale with purpose.",
+      "Retired U.S. Army Sergeant Major, film distribution executive, award-winning International Best Selling Author, 2018 HAPA Trailblazer Award recipient, speaker, and builder of pathways for creators ready to move with discipline and scale with purpose.",
     bio: "Founder and Chief Executive Officer. A Sergeant Major whose ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds.",
     fullBio: [
       "Keith L. Craig brings battlefield-tested logistics, studio-level distribution strategy, and a servant-leader mindset into one rare profile. As Founder and Chief Executive Officer of CGE Corporate, his ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds.",
