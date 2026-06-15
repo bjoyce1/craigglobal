@@ -159,7 +159,7 @@ function Profile() {
               Proof points, not a résumé avalanche.
             </h2>
             <div className="mt-14 grid grid-cols-1 border-l border-t border-[var(--line-dark)] sm:grid-cols-2 lg:grid-cols-4">
-              {person.stats.map((s) => (
+              {person.stats.map((s: Stat) => (
                 <div
                   key={s.label}
                   className="border-b border-r border-[var(--line-dark)] p-8"
@@ -193,7 +193,7 @@ function Profile() {
               and film-media work.
             </p>
             <div className="mt-14 grid grid-cols-1 border-l border-t border-[var(--line-dark)] sm:grid-cols-2 lg:grid-cols-3">
-              {person.films.map((f) => (
+              {person.films.map((f: FilmCredit) => (
                 <div
                   key={f.title}
                   className="border-b border-r border-[var(--line-dark)] p-8"
@@ -218,7 +218,7 @@ function Profile() {
               Short enough to remember.
             </h2>
             <div className="mt-14 grid grid-cols-1 border-l border-t border-[var(--line-light)] md:grid-cols-2 lg:grid-cols-3">
-              {person.playbook.map((p) => (
+              {person.playbook.map((p: PlaybookEntry) => (
                 <div
                   key={p.number}
                   className="border-b border-r border-[var(--line-light)] p-8 md:p-10"
