@@ -86,15 +86,10 @@ export function Nav() {
               <Link
                 key={l.to}
                 to={l.to}
-                className="relative font-sans text-sm font-medium text-bone/80 transition-colors hover:text-bone"
-                activeProps={{
-                  className: "text-bone after:scale-x-100",
-                }}
+                className="group relative font-sans text-sm font-medium text-bone/80 transition-colors hover:text-bone data-[status=active]:text-bone"
               >
-                <span className="relative">
-                  {l.label}
-                  <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 data-[active]:scale-x-100" />
-                </span>
+                {l.label}
+                <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-gold transition-transform duration-300 group-hover:scale-x-100 group-data-[status=active]:scale-x-100" />
               </Link>
             ))}
             <Link
