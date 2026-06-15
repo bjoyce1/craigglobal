@@ -41,7 +41,7 @@ export const executives: Person[] = [
     role: "Chief Executive Officer",
     initials: "KC",
     slug: "keith-l-craig",
-    image: "/__l5e/assets-v1/7cff45fc-cbb1-41bf-889b-8f965539eb82/keith-l-craig.jpg",
+    image: "/__l5e/assets-v1/b7b03f08-63dd-467e-b907-829479eaa896/keith-l-craig.png",
     placeholderBio: false,
     subtitle:
       "Retired U.S. Army Sergeant Major, film distribution executive, award-winning International Best Selling Author, 2018 HAPA Trailblazer Award recipient, speaker, and builder of pathways for creators ready to move with discipline and scale with purpose.",
