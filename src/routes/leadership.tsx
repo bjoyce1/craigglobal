@@ -45,10 +45,10 @@ function Leadership() {
         >
           {/* CEO carries the Sergeant Major rank + visual primacy */}
           <div className="md:col-span-2 lg:col-span-1 lg:row-span-1">
-            <PersonCard person={ceo} primary />
+            <PersonCard person={ceo} primary profileSlug={ceo.slug} />
           </div>
           {rest.map((p) => (
-            <PersonCard key={p.name} person={p} />
+            <PersonCard key={p.name} person={p} profileSlug={p.slug} />
           ))}
         </SectionReveal>
       </section>
