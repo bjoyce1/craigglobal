@@ -42,7 +42,7 @@ export const executives: Person[] = [
     slug: "keith-l-craig",
     placeholderBio: false,
     subtitle:
-      "Retired U.S. Army Sergeant Major, film distribution executive, author, speaker, and builder of pathways for creators ready to move with discipline and scale with purpose.",
+      "Retired U.S. Army Sergeant Major, film distribution executive, award-winning International Best Selling Author, 2018 HAPA Trailblazer Award recipient, speaker, and builder of pathways for creators ready to move with discipline and scale with purpose.",
     bio: "Founder and Chief Executive Officer. A Sergeant Major whose ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds.",
     fullBio: [
       "Keith L. Craig brings battlefield-tested logistics, studio-level distribution strategy, and a servant-leader mindset into one rare profile. As Founder and Chief Executive Officer of CGE Corporate, his ethos of earned discipline, chain of command, and stewardship defines how CGE holds and builds.",
@@ -59,7 +59,7 @@ export const executives: Person[] = [
       { value: "32", label: "Years serving in the U.S. Army before retiring as Sergeant Major." },
       { value: "6", label: "Combat campaigns, plus humanitarian and disaster relief operations." },
       { value: "50+", label: "Countries reached and high-profile films connected to his distribution career." },
-      { value: "2", label: "Published leadership and distribution books." },
+      { value: "2018", label: "HAPA Trailblazer Award recipient and International Best Selling Author." },
     ],
     chapters: [
       {
@@ -87,8 +87,8 @@ export const executives: Person[] = [
         title: "Author & Speaker",
         note: "Books, stages, practical wisdom",
         heading: "Lessons made usable.",
-        body: "His books Serving To Lead and Checkpoint Decoder distill decades of leadership under pressure into practical systems. On stage, he helps leaders and storytellers turn preparation into impact.",
-        tags: ["Serving To Lead", "Checkpoint Decoder", "Keynotes"],
+        body: "His books Serving To Lead and Checkpoint Decoder — including an International Best Seller — distill decades of leadership under pressure into practical systems. On stage, he helps leaders and storytellers turn preparation into impact.",
+        tags: ["Serving To Lead", "Checkpoint Decoder", "Keynotes", "International Best Seller"],
       },
       {
         title: "Athlete",
