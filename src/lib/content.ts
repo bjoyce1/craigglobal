@@ -118,17 +118,72 @@ export const executives: Person[] = [
     quoteAttribution: "Keith L. Craig",
   },
   {
-    name: "Taalib", // [surname PLACEHOLDER]
+    name: "Taalib Saber, Esq.",
     role: "Chief Operating Officer",
-    initials: "T",
-    slug: "taalib",
-    bio: "Chief Operating Officer, accountable for operating discipline across the portfolio. [PLACEHOLDER bio]",
-    placeholderBio: true,
+    initials: "TS",
+    slug: "taalib-saber",
+    placeholderBio: false,
+    subtitle:
+      "Strategic Legal Advisor and FIFA-licensed sports agent. Principal attorney at The Saber Firm, counseling investors, business owners, and athletes who build wealth with a conscience — legal infrastructure for people building wealth while staying true to their principles and purpose.",
+    bio: "Chief Operating Officer and strategic legal advisor. Principal attorney at The Saber Firm and FIFA-licensed agent, aligning operating discipline with wealth-building counsel across the portfolio.",
     fullBio: [
-      "Chief Operating Officer, accountable for operating discipline across the portfolio. [PLACEHOLDER bio]",
-      "He aligns cadence, standards, and execution so that every business CGE holds operates to the standard. [PLACEHOLDER bio]",
+      "Taalib Saber provides strategic legal counsel to investors, business owners, and athletes who have built wealth with a conscience. As principal attorney at The Saber Firm, he advises clients on business acquisitions, entity structuring, partnership agreements, trademark protection, and wealth-building transactions — legal infrastructure for people building wealth while staying true to their principles and purpose.",
+      "As a FIFA-licensed sports agent, Saber represents professional athletes navigating contract negotiations, image rights, brand protection, and long-term financial strategy. His client portfolio includes executives transitioning from C-suite roles, real estate investors, and creatives building businesses at the intersection of media, influence, and impact.",
+      "Saber's approach is rooted in the belief that wealth and mission are not mutually exclusive. His clients are proof: high earners who leverage their resources to create opportunity, build community wealth, and leave legacies that extend beyond personal success. This philosophy shapes both his legal practice and his work as Executive Director of Kazi za Wahenga, a nonprofit focused on empowerment for people of African descent through African Birthright Tours, Swahili language education, and criminal expungement clinics.",
+      "As an activist and global thought leader, Saber has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered keynotes on leadership in Uganda (2017), and led entrepreneurship workshops in Ghana (2018). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro. He has been recognized as a 2025 Emerging Leader by Who's Who in Black Baltimore, a 2018 Men Impact Change Award recipient, and a 2020-2021 Washington Bar Association Rising Star.",
+      "Born and raised in Prince George's County, Maryland, Saber earned his B.S. in Political Science from Morgan State University (2010) and his J.D. from North Carolina Central University School of Law (2015). He is admitted to practice in Maryland and the District of Columbia.",
     ],
-    focus: ["Operations", "Portfolio oversight", "Execution"],
+    focus: [
+      "Business & transactional law",
+      "Sports & athlete representation",
+      "Trademark & brand protection",
+      "Wealth-building strategy",
+    ],
+    stats: [
+      { value: "FIFA", label: "Licensed sports agent representing professional athletes worldwide." },
+      { value: "2", label: "Jurisdictions of practice — Maryland and the District of Columbia." },
+      { value: "UN", label: "Addressed the United Nations Permanent Forum for People of African Descent (2022)." },
+      { value: "2025", label: "Emerging Leader, Who's Who in Black Baltimore — among multiple honors." },
+    ],
+    chapters: [
+      {
+        title: "The Saber Firm",
+        note: "Business, entities, transactions",
+        heading: "Legal infrastructure for purpose.",
+        body: "As principal attorney at The Saber Firm, Taalib advises clients on business acquisitions, entity structuring, partnership agreements, trademark protection, and wealth-building transactions — building the legal infrastructure for people growing wealth while staying true to their principles.",
+        tags: ["Business acquisitions", "Entity structuring", "Trademark protection"],
+      },
+      {
+        title: "Sports Agency",
+        note: "FIFA license, athletes, image rights",
+        heading: "Representing the long game.",
+        body: "As a FIFA-licensed sports agent, Taalib represents professional athletes navigating contract negotiations, image rights, brand protection, and long-term financial strategy — guiding clients from C-suite transitions to creatives building at the intersection of media, influence, and impact.",
+        tags: ["FIFA licensed", "Contract negotiation", "Image rights"],
+      },
+      {
+        title: "Activism",
+        note: "Kazi za Wahenga, global advocacy",
+        heading: "Wealth and mission, together.",
+        body: "As Executive Director of Kazi za Wahenga, Taalib advances empowerment for people of African descent through African Birthright Tours, Swahili language education, and criminal expungement clinics — proof that wealth and mission are not mutually exclusive.",
+        tags: ["Kazi za Wahenga", "Birthright Tours", "Expungement clinics"],
+      },
+      {
+        title: "Global Voice",
+        note: "UN, keynotes, media",
+        heading: "A platform with reach.",
+        body: "A global thought leader, Taalib has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered leadership keynotes in Uganda (2017), and led entrepreneurship workshops in Ghana (2018). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro.",
+        tags: ["United Nations", "Keynotes", "Featured in media"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "Wealth with a conscience.", body: "Build for high earners who leverage resources to create opportunity and community wealth." },
+      { number: "02", title: "Structure first.", body: "Sound entities, agreements, and protections are the foundation of every lasting transaction." },
+      { number: "03", title: "Protect the brand.", body: "Image rights and trademark protection safeguard the value clients spend years building." },
+      { number: "04", title: "Serve the mission.", body: "Legal practice and advocacy work toward legacies that extend beyond personal success." },
+    ],
+    quote:
+      "Wealth and mission are not mutually exclusive — the goal is to build both, and leave a legacy that extends beyond personal success.",
+    quoteAttribution: "Taalib Saber, Esq.",
   },
   {
     name: "Lynn", // [surname PLACEHOLDER]
