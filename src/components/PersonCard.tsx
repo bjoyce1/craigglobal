@@ -81,7 +81,7 @@ export function PersonCard({
 
   if (to) {
     return (
-      <Link to={to} className={className}>
+      <Link to="/leadership/$slug" params={{ slug: to }} className={className}>
         {inner}
       </Link>
     );
