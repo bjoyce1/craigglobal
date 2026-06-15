@@ -67,24 +67,33 @@ function Profile() {
             </Link>
           </SectionReveal>
           <SectionReveal className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,360px)_1fr] md:items-end">
-            {/* Portrait placeholder */}
-            <div
-              className="relative w-full overflow-hidden bg-navy ring-1 ring-gold"
-              style={{ aspectRatio: "1 / 1" }}
-              role="img"
-              aria-label={`${person.name} portrait placeholder`}
-            >
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "radial-gradient(120% 120% at 50% 30%, #0d2747 0%, #0a1d38 60%, #05080f 100%)",
-                }}
+            {/* Portrait */}
+            {person.image ? (
+              <img
+                src={person.image}
+                alt={`${person.name} portrait`}
+                className="relative w-full overflow-hidden bg-navy object-cover ring-1 ring-gold"
+                style={{ aspectRatio: "1 / 1" }}
               />
-              <span className="absolute inset-0 flex items-center justify-center font-serif text-7xl font-semibold text-gold">
-                {person.initials}
-              </span>
-            </div>
+            ) : (
+              <div
+                className="relative w-full overflow-hidden bg-navy ring-1 ring-gold"
+                style={{ aspectRatio: "1 / 1" }}
+                role="img"
+                aria-label={`${person.name} portrait placeholder`}
+              >
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(120% 120% at 50% 30%, #0d2747 0%, #0a1d38 60%, #05080f 100%)",
+                  }}
+                />
+                <span className="absolute inset-0 flex items-center justify-center font-serif text-7xl font-semibold text-gold">
+                  {person.initials}
+                </span>
+              </div>
+            )}
             <div>
               <Eyebrow>Executive Leadership</Eyebrow>
               <h1 className="display-hero mt-6">{person.name}</h1>

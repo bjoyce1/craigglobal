@@ -22,30 +22,46 @@ export function PersonCard({
   const to = profileSlug;
   const inner = (
     <>
-      {/* [PLACEHOLDER portrait] — initials in gold Playfair on navy */}
-      <div
-        className="relative w-full overflow-hidden bg-navy"
-        style={{ aspectRatio: "1 / 1" }}
-        role="img"
-        aria-label={`${person.name} portrait placeholder`}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(120% 120% at 50% 30%, #0d2747 0%, #0a1d38 60%, #05080f 100%)",
-          }}
-        />
-        <span className="absolute inset-0 flex items-center justify-center font-serif text-5xl font-semibold text-gold">
-          {person.initials}
-        </span>
-        {to && (
-          <span
-            className="pointer-events-none absolute inset-0 bg-midnight/0 transition-colors duration-500 group-hover:bg-midnight/15"
-            aria-hidden="true"
+      {/* Portrait */}
+      {person.image ? (
+        <div className="relative w-full overflow-hidden bg-navy" style={{ aspectRatio: "1 / 1" }}>
+          <img
+            src={person.image}
+            alt={`${person.name} portrait`}
+            className="h-full w-full object-cover"
           />
-        )}
-      </div>
+          {to && (
+            <span
+              className="pointer-events-none absolute inset-0 bg-midnight/0 transition-colors duration-500 group-hover:bg-midnight/15"
+              aria-hidden="true"
+            />
+          )}
+        </div>
+      ) : (
+        <div
+          className="relative w-full overflow-hidden bg-navy"
+          style={{ aspectRatio: "1 / 1" }}
+          role="img"
+          aria-label={`${person.name} portrait placeholder`}
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(120% 120% at 50% 30%, #0d2747 0%, #0a1d38 60%, #05080f 100%)",
+            }}
+          />
+          <span className="absolute inset-0 flex items-center justify-center font-serif text-5xl font-semibold text-gold">
+            {person.initials}
+          </span>
+          {to && (
+            <span
+              className="pointer-events-none absolute inset-0 bg-midnight/0 transition-colors duration-500 group-hover:bg-midnight/15"
+              aria-hidden="true"
+            />
+          )}
+        </div>
+      )}
       <h3 className="mt-5 font-serif text-xl font-semibold leading-snug">
         <span className="relative inline-block">
           {person.name}
