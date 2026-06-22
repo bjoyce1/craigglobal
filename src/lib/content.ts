@@ -391,10 +391,13 @@ export const holdings: Holding[] = [
     logoHover: porterCraigDark.url,
   },
   {
-    name: "[Holding Three]",
-    sector: "[Sector]",
-    description: "[One-line description PLACEHOLDER]",
+    name: "ZMA Odflix Production",
+    sector: "Film Production & Streaming",
+    description:
+      "A Canada-based film production house and streaming platform where stories come alive — developing, producing, and distributing original feature films and series, including titles such as \"Unlucky to Love You\" and \"The Wizard Hunter,\" with a growing catalogue streamed directly on Odflix.",
     established: "[Year]",
+    website: "https://odflix.com/",
+    logo: odflixLogo.url,
   },
   {
     name: "[Holding Four]",
