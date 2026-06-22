@@ -45,11 +45,35 @@ function Holdings() {
                 key={h.name}
                 className="grid grid-cols-1 items-center gap-12 border-t border-[var(--line-light)] py-16 lg:grid-cols-2"
               >
-                <PlaceholderImage
-                  className={cn("w-full", flip && "lg:order-2")}
-                  ratio="4 / 3"
-                  label="[PLACEHOLDER LOGO]"
-                />
+                {h.logo ? (
+                  <div
+                    className={cn(
+                      "group relative w-full overflow-hidden rounded-lg",
+                      flip && "lg:order-2",
+                    )}
+                    style={{ aspectRatio: "4 / 3" }}
+                  >
+                    <img
+                      src={h.logo}
+                      alt={`${h.name} logo`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-out group-hover:opacity-0"
+                    />
+                    <img
+                      src={h.logoHover ?? h.logo}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                    />
+                  </div>
+                ) : (
+                  <PlaceholderImage
+                    className={cn("w-full", flip && "lg:order-2")}
+                    ratio="4 / 3"
+                    label="[PLACEHOLDER LOGO]"
+                  />
+                )}
                 <div className={cn(flip && "lg:order-1")}>
                   <Eyebrow>{h.sector}</Eyebrow>
                   <h2 className="display-h2 mt-5 text-3xl md:text-4xl">{h.name}</h2>
