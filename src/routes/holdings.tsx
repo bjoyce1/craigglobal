@@ -63,17 +63,12 @@ function Holdings() {
                       </p>
                       <p className="mt-1 font-serif text-xl">{h.established}</p>
                     </div>
-                    <div>
-                      <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
-                        Ownership
-                      </p>
-                      <p className="mt-1 font-serif text-xl">{h.ownership}</p>
+                  </div>
+                  {h.website && (
+                    <div className="mt-7">
+                      <ArrowLink href={h.website}>Visit site</ArrowLink>
                     </div>
-                  </div>
-                  {/* [PLACEHOLDER external link] */}
-                  <div className="mt-7">
-                    <ArrowLink href="#">Visit site</ArrowLink>
-                  </div>
+                  )}
                 </div>
               </SectionReveal>
             );
