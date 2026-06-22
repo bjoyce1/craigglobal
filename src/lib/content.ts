@@ -5,6 +5,8 @@
 
 import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
 import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
+import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
+import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -385,6 +387,8 @@ export const holdings: Holding[] = [
       "A Beverly Hills-based worldwide film and television sales organization specializing in the financing, production, and distribution of commercial feature films — representing its own slate and third-party content across an annual slate of 50 to 100 films, with clients including Netflix, Amazon, Paramount, Hulu, Showtime, Starz, and Tubi.",
     established: "[Year]",
     website: "https://www.pcfilmandmedia.com/",
+    logo: porterCraigLight.url,
+    logoHover: porterCraigDark.url,
   },
   {
     name: "[Holding Three]",
