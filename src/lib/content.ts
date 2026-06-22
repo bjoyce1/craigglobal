@@ -352,43 +352,41 @@ export const board: Person[] = [
   { name: "[Placeholder Name]", role: "Independent Director", initials: "—", bio: "", placeholderBio: true },
 ];
 
-// Holdings / Portfolio — [ALL PLACEHOLDER]
+// Holdings / Portfolio
 export type Holding = {
   name: string;
   sector: string;
   description: string;
   established: string;
-  ownership: string;
+  website?: string;
 };
 
 export const holdings: Holding[] = [
   {
-    name: "[Holding One]",
-    sector: "[Sector]",
-    description: "[One-line description PLACEHOLDER]",
+    name: "Black Brain Pictures International",
+    sector: "Film & Television",
+    description:
+      "A multi-award-winning South African film and television studio crafting drama, comedy, and world-class storytelling for Netflix, Showmax, Amazon Prime Video, and the SABC — a recognized hub for innovative, award-winning creative communications.",
     established: "[Year]",
-    ownership: "[Ownership %]",
+    website: "https://www.blackbrain.co.za/",
   },
   {
     name: "[Holding Two]",
     sector: "[Sector]",
     description: "[One-line description PLACEHOLDER]",
     established: "[Year]",
-    ownership: "[Ownership %]",
   },
   {
     name: "[Holding Three]",
     sector: "[Sector]",
     description: "[One-line description PLACEHOLDER]",
     established: "[Year]",
-    ownership: "[Ownership %]",
   },
   {
     name: "[Holding Four]",
     sector: "[Sector]",
     description: "[One-line description PLACEHOLDER]",
     established: "[Year]",
-    ownership: "[Ownership %]",
   },
 ];
 
