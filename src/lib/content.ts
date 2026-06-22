@@ -9,6 +9,7 @@ import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
 import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
+import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
 
 
 export type Stat = { value: string; label: string };
