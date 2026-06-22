@@ -3,6 +3,10 @@
  * Items tagged [PLACEHOLDER] are stand-ins — replace with the real brief.
  */
 
+import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
+import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
+
+
 export type Stat = { value: string; label: string };
 export type Chapter = {
   title: string;
