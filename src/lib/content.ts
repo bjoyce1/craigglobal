@@ -411,6 +411,15 @@ export const holdings: Holding[] = [
     website: "https://us.got-bag.com/",
     logo: gotBagLogo.url,
   },
+  {
+    name: "GOT BAG - AFRICA",
+    sector: "Sustainable Bags & Accessories",
+    description:
+      "The African arm of the Germany-founded sustainable goods brand, bringing Ocean Impact Plastic backpacks, travel bags, and accessories to communities across the continent — partnering with coastal recovery networks to turn marine waste into high-performance everyday gear.",
+    established: "2018",
+    website: "https://got-bag.com/en/",
+    logo: gotBagAfricaLogo.url,
+  },
 ];
 
 // The Standard — four principles (usable as written).
