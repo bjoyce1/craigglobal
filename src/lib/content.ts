@@ -7,6 +7,7 @@ import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
 import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
 import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
 import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
+import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -391,10 +392,13 @@ export const holdings: Holding[] = [
     logoHover: porterCraigDark.url,
   },
   {
-    name: "[Holding Three]",
-    sector: "[Sector]",
-    description: "[One-line description PLACEHOLDER]",
+    name: "ZMA Odflix Production",
+    sector: "Film Production & Streaming",
+    description:
+      "A Canada-based film production house and streaming platform where stories come alive — developing, producing, and distributing original feature films and series, including titles such as \"Unlucky to Love You\" and \"The Wizard Hunter,\" with a growing catalogue streamed directly on Odflix.",
     established: "[Year]",
+    website: "https://odflix.com/",
+    logo: odflixLogo.url,
   },
   {
     name: "[Holding Four]",
