@@ -373,7 +373,7 @@ export const holdings: Holding[] = [
     sector: "Film & Television",
     description:
       "A multi-award-winning South African film and television studio crafting drama, comedy, and world-class storytelling for Netflix, Showmax, Amazon Prime Video, and the SABC — a recognized hub for innovative, award-winning creative communications.",
-    established: "[Year]",
+    established: "2004",
     website: "https://www.blackbrain.co.za/",
     logo: blackBrainBlack.url,
     logoHover: blackBrainRed.url,
