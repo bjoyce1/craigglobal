@@ -3,6 +3,10 @@
  * Items tagged [PLACEHOLDER] are stand-ins — replace with the real brief.
  */
 
+import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
+import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
+
+
 export type Stat = { value: string; label: string };
 export type Chapter = {
   title: string;
@@ -359,6 +363,8 @@ export type Holding = {
   description: string;
   established: string;
   website?: string;
+  logo?: string;
+  logoHover?: string;
 };
 
 export const holdings: Holding[] = [
@@ -369,6 +375,8 @@ export const holdings: Holding[] = [
       "A multi-award-winning South African film and television studio crafting drama, comedy, and world-class storytelling for Netflix, Showmax, Amazon Prime Video, and the SABC — a recognized hub for innovative, award-winning creative communications.",
     established: "[Year]",
     website: "https://www.blackbrain.co.za/",
+    logo: blackBrainBlack.url,
+    logoHover: blackBrainRed.url,
   },
   {
     name: "[Holding Two]",
