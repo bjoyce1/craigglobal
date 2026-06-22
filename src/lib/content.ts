@@ -8,6 +8,7 @@ import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
 import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
 import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
+import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -401,10 +402,13 @@ export const holdings: Holding[] = [
     logo: odflixLogo.url,
   },
   {
-    name: "[Holding Four]",
-    sector: "[Sector]",
-    description: "[One-line description PLACEHOLDER]",
-    established: "[Year]",
+    name: "GOT BAG",
+    sector: "Sustainable Bags & Accessories",
+    description:
+      "A Germany-founded sustainable goods brand creating minimalist travel bags, backpacks, and accessories made from Ocean Impact Plastic — partnering with coastal communities in Indonesia to recover discarded plastic waste and transform it into high-performance gear for everyday adventure.",
+    established: "2018",
+    website: "https://us.got-bag.com/",
+    logo: gotBagLogo.url,
   },
 ];
 
