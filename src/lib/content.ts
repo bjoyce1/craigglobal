@@ -286,6 +286,7 @@ export const executives: Person[] = [
     role: "Chief of Staff",
     initials: "DA",
     slug: "david-ash",
+    image: davidAsh.url,
     placeholderBio: false,
     subtitle:
       "Visionary entrepreneur, media executive, and philanthropist whose influence spans entertainment, business, and community advocacy — a native of Demopolis, Alabama, now based in Atlanta, Georgia.",
