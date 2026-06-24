@@ -11,6 +11,7 @@ import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
 import davidAsh from "@/assets/david-ash.jpg.asset.json";
+import kenMerritt from "@/assets/ken-merritt.jpg.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -270,16 +271,62 @@ export const executives: Person[] = [
   },
   {
     name: "Ken Merritt",
-    role: "Chief Financial Officer",
+    role: "Chief Financial Officer / Chief Strategy Officer",
     initials: "KM",
     slug: "ken-merritt",
-    bio: "Chief Financial Officer, responsible for capital allocation and financial stewardship. [PLACEHOLDER bio]",
-    placeholderBio: true,
+    image: kenMerritt.url,
+    placeholderBio: false,
+    subtitle:
+      "Founder and Managing Partner of Merritt Advisory Group, and a strategic leader with world-class financial acumen — helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
+    bio: "Chief Financial Officer and Chief Strategy Officer. A strategic advisor who brings enterprise discipline, deep functional prowess, and financial stewardship to every position.",
     fullBio: [
-      "Chief Financial Officer, responsible for capital allocation and financial stewardship. [PLACEHOLDER bio]",
-      "He brings the financial discipline that keeps every position governed by process and accountability. [PLACEHOLDER bio]",
+      "Ken Merritt is the Founder and Managing Partner of Merritt Advisory Group. He is a strategic leader with a unique combination of broad enterprise strategy expertise, deep functional prowess, and world-class financial acumen. His specific expertise includes helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
+      "Ken has worked extensively in financial services, consumer and industrial products, and private equity. He has served as an advisory leader at Korn Ferry, Deloitte Consulting, and Accenture. He is a frequent speaker and strategic facilitator for conferences, universities, and leadership meetings. Ken served on the Beta Gamma Sigma Board of Governors from 2021 to 2025.",
+      "He earned a Bachelor of Science in Accounting from the Willie A. Deese College of Business & Economics at North Carolina A&T State University, and a Master of Business Administration in Finance, Strategy, and Marketing from the Kellogg School of Management at Northwestern University.",
     ],
-    focus: ["Capital allocation", "Financial stewardship", "Risk"],
+    focus: ["Enterprise strategy", "Financial stewardship", "Leadership alignment", "Private equity"],
+    stats: [
+      { value: "3", label: "Top-tier advisory firms — Korn Ferry, Deloitte Consulting, and Accenture." },
+      { value: "Kellogg", label: "MBA in Finance, Strategy & Marketing from Northwestern University." },
+      { value: "NC A&T", label: "B.S. in Accounting from the Willie A. Deese College of Business & Economics." },
+      { value: "2021–25", label: "Served on the Beta Gamma Sigma Board of Governors." },
+    ],
+    chapters: [
+      {
+        title: "Strategy",
+        note: "Merritt Advisory Group",
+        heading: "Alignment at the top.",
+        body: "As Founder and Managing Partner of Merritt Advisory Group, Ken helps executives align organizational goals, functional capabilities, and personal leadership gravitas — turning vision into disciplined execution.",
+        tags: ["Enterprise strategy", "Leadership alignment", "Organizational design"],
+      },
+      {
+        title: "Advisory",
+        note: "Korn Ferry, Deloitte, Accenture",
+        heading: "Advisory leadership at scale.",
+        body: "Ken has served as an advisory leader at Korn Ferry, Deloitte Consulting, and Accenture — bringing deep expertise across financial services, consumer and industrial products, and private equity to the world's most complex organizations.",
+        tags: ["Korn Ferry", "Deloitte", "Accenture", "Private equity"],
+      },
+      {
+        title: "Finance",
+        note: "Kellogg School of Management",
+        heading: "World-class financial acumen.",
+        body: "With an MBA in Finance, Strategy, and Marketing from the Kellogg School of Management at Northwestern University, Ken pairs rigorous financial discipline with strategic foresight to govern capital with care and conviction.",
+        tags: ["Kellogg MBA", "Capital stewardship", "Financial discipline"],
+      },
+      {
+        title: "Service",
+        note: "Beta Gamma Sigma",
+        heading: "Leadership beyond the boardroom.",
+        body: "A frequent speaker and strategic facilitator for conferences, universities, and leadership meetings, Ken served on the Beta Gamma Sigma Board of Governors from 2021 to 2025 — championing excellence in business education and honor society standards worldwide.",
+        tags: ["Beta Gamma Sigma", "Speaking", "Leadership development"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "Align strategy with structure.", body: "Ensure organizational goals, functional capabilities, and leadership presence are in concert before committing capital." },
+      { number: "02", title: "Govern with discipline.", body: "Apply world-class financial acumen and process so every position is held with accountability and long-view conviction." },
+      { number: "03", title: "Lead from the front.", body: "Bring personal gravitas and servant leadership to every advisory engagement, boardroom, and strategic conversation." },
+      { number: "04", title: "Measure in decades.", body: "Think beyond quarterly cycles — build structures and relationships that compound over time." },
+    ],
   },
   {
     name: "David S. Ash",
