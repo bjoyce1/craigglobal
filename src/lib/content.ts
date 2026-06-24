@@ -10,7 +10,7 @@ import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
-import davidAsh from "@/assets/david-ash.jpg.asset.json";
+import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 
 
