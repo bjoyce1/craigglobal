@@ -10,6 +10,7 @@ import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
+import davidAsh from "@/assets/david-ash.jpg.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -285,6 +286,7 @@ export const executives: Person[] = [
     role: "Chief of Staff",
     initials: "DA",
     slug: "david-ash",
+    image: davidAsh.url,
     placeholderBio: false,
     subtitle:
       "Visionary entrepreneur, media executive, and philanthropist whose influence spans entertainment, business, and community advocacy — a native of Demopolis, Alabama, now based in Atlanta, Georgia.",
