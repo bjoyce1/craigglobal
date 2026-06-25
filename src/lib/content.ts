@@ -20,6 +20,7 @@ import godfathersLogoColor from "@/assets/godfathers-logo-color.png.asset.json";
 import godfathersLogoBlack from "@/assets/godfathers-logo-black.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
+import suaveRabb from "@/assets/suave-rabb-pfp.png.asset.json";
 
 
 export type Stat = { value: string; label: string };
