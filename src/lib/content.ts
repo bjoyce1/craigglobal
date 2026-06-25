@@ -458,7 +458,7 @@ export const holdings: Holding[] = [
     sector: "Sustainable Bags & Accessories",
     description:
       "A Germany-founded sustainable goods brand creating minimalist travel bags, backpacks, and accessories made from Ocean Impact Plastic — partnering with coastal communities in Indonesia to recover discarded plastic waste and transform it into high-performance gear for everyday adventure.",
-    established: "2018",
+    established: "2026",
     website: "https://us.got-bag.com/",
     logo: gotBagLogo.url,
   },
