@@ -483,6 +483,16 @@ export const holdings: Holding[] = [
     logo: paralightLogoBlue.url,
     logoHover: paralightLogo.url,
   },
+  {
+    name: "Granville",
+    sector: "Hospitality & Restaurants",
+    description:
+      "A collection of modern-casual neighborhood restaurants specializing in wholesome, hand-crafted recipes and libations. With warm hospitality, globally-inspired food, and curated music, Granville is a culture, not a concept — supporting local, organic, and certified-humane practices while making everything from scratch daily across lunch, dinner, weekend breakfast, and full bar.",
+    established: "2007",
+    website: "https://www.granville.com/",
+    logo: granvilleLogoWhite.url,
+    logoHover: granvilleLogoBlack.url,
+  },
 ];
 
 // The Standard — four principles (usable as written).
