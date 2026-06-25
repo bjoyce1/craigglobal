@@ -10,6 +10,8 @@ import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
 import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
+import paralightLogo from "@/assets/paralight-logo.png.asset.json";
+import paralightLogoBlue from "@/assets/paralight-logo-blue.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 
@@ -468,6 +470,16 @@ export const holdings: Holding[] = [
     established: "2018",
     website: "https://got-bag.com/en/",
     logo: gotBagAfricaLogo.url,
+  },
+  {
+    name: "Paralight Studios",
+    sector: "AI Film Production & Creative Software",
+    description:
+      "An AI-powered creative studio turning imagination into finished, professional video — movies, television, commercials, music videos, and short-form content. From screenplay to scene breakdowns, AI characters, full storyboards, and export-ready production assets, Paralight is a complete script-to-screen system, already powering Hollywood productions including Stan Lee's \"Legion of 5.\"",
+    established: "2024",
+    website: "https://paralight.ai/",
+    logo: paralightLogoBlue.url,
+    logoHover: paralightLogo.url,
   },
 ];
 
