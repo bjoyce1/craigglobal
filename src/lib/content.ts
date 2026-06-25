@@ -20,6 +20,7 @@ import godfathersLogoColor from "@/assets/godfathers-logo-color.png.asset.json";
 import godfathersLogoBlack from "@/assets/godfathers-logo-black.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
+import suaveRabb from "@/assets/suave-rabb-pfp.png.asset.json";
 
 
 export type Stat = { value: string; label: string };
@@ -400,6 +401,72 @@ export const executives: Person[] = [
       { number: "02", title: "Champion people.", body: "Develop talent and mentor emerging leaders as the real measure of success." },
       { number: "03", title: "Serve the community.", body: "Turn influence into advocacy, education, and meaningful impact on lives." },
       { number: "04", title: "Pursue excellence.", body: "Exceed expectations through integrity, innovation, and personalized service." },
+    ],
+  },
+  {
+    name: "DeAngelo \u201CSuav\u2019e\u201D Rabb",
+    role: "President of A&R",
+    initials: "DR",
+    slug: "suave-rabb",
+    image: suaveRabb.url,
+    placeholderBio: false,
+    subtitle:
+      "Dallas-raised rapper, songwriter, and producer whose music is engineered for visual storytelling and high-impact media — cinematic narratives, atmospheric textures, and luxury-grade production built for film, television, trailers, and digital content.",
+    bio: "President of A&R and a cinematic songwriter-producer. Two decades of Southern-authentic, sync-ready music that elevates film, television, and brand storytelling.",
+    fullBio: [
+      "DeAngelo \u201CSuav\u2019e\u201D Rabb is a Dallas-raised rapper, songwriter, producer whose music is engineered for visual storytelling and high impact media. His signature sound blends cinematic narratives, atmospheric textures, and luxury grade production \u2014 creating emotionally resonant tracks that elevate film, television, trailers, and digital content.",
+      "With a career spanning more than two decades, Suav\u2019e has developed a storytelling style defined by vivid imagery, emotional pacing, and Southern authenticity. His music enhances on-screen moments with depth, tension, and clarity, making his catalog ideal for dramatic scenes, character driven arcs, motivational sequences, and culturally grounded narratives.",
+      "Musical works by Suav\u2019e have earned national recognition, including eight consecutive weeks at #1 on Minnesota\u2019s 99.7 KKCK and industry honors such as \u201CBest Performance\u201D in Dallas and \u201CBest Up and Coming Rap Group\u201D in Hollywood. His single \u201CLegend,\u201D co-produced with Grammy Award\u2013winning producer D-Moet, showcases his cinematic instincts through its dynamic arrangement and high-energy visual presentation featuring American actor/comedian Tony Rock and Dallas icon Fat Pimp.",
+      "His socially impactful single \u201CBlack Man\u201D demonstrates his ability to create emotionally charged, documentary-ready music. The track sparked national conversation and led to a televised interview on the Black News Channel (BNC), highlighting the strength of Suav\u2019e in crafting culturally relevant, narrative-driven work.",
+      "With an extensive catalog of independently released music, Suav\u2019e continues to expand his sound with compositions designed for sync \u2014 blending emotional weight, refined production, and a cinematic approach that aligns seamlessly with modern visual media.",
+    ],
+    focus: [
+      "A&R & talent development",
+      "Cinematic music & scoring",
+      "Sync & visual media",
+      "Songwriting & production",
+    ],
+    stats: [
+      { value: "20+", label: "Years crafting Southern-authentic, cinematic music for visual media." },
+      { value: "8", label: "Consecutive weeks at #1 on Minnesota\u2019s 99.7 KKCK." },
+      { value: "2", label: "Industry honors \u2014 \u201CBest Performance\u201D (Dallas) and \u201CBest Up and Coming Rap Group\u201D (Hollywood)." },
+      { value: "BNC", label: "National television feature for the socially impactful single \u201CBlack Man.\u201D" },
+    ],
+    chapters: [
+      {
+        title: "Sound",
+        note: "Cinematic, sync-ready production",
+        heading: "Music built for the screen.",
+        body: "Suav\u2019e\u2019s signature sound blends cinematic narratives, atmospheric textures, and luxury-grade production \u2014 emotionally resonant tracks engineered to elevate film, television, trailers, and digital content.",
+        tags: ["Cinematic", "Sync-ready", "Luxury production"],
+      },
+      {
+        title: "Storytelling",
+        note: "Southern authenticity, emotional pacing",
+        heading: "Vivid imagery, real depth.",
+        body: "Over two decades he has developed a storytelling style defined by vivid imagery, emotional pacing, and Southern authenticity \u2014 ideal for dramatic scenes, character-driven arcs, motivational sequences, and culturally grounded narratives.",
+        tags: ["Southern authenticity", "Emotional pacing", "Narrative-driven"],
+      },
+      {
+        title: "Recognition",
+        note: "Charts, awards, collaborations",
+        heading: "Honored across markets.",
+        body: "His work has earned national recognition \u2014 eight consecutive weeks at #1 on 99.7 KKCK and honors in Dallas and Hollywood. His single \u201CLegend,\u201D co-produced with Grammy winner D-Moet, features Tony Rock and Fat Pimp.",
+        tags: ["99.7 KKCK", "D-Moet", "\u201CLegend\u201D"],
+      },
+      {
+        title: "Impact",
+        note: "Culturally relevant work",
+        heading: "Music that starts conversations.",
+        body: "His socially impactful single \u201CBlack Man\u201D created emotionally charged, documentary-ready music that sparked national conversation and led to a televised interview on the Black News Channel (BNC).",
+        tags: ["\u201CBlack Man\u201D", "Black News Channel", "Cultural relevance"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "Score the story.", body: "Build music around the visual moment so emotion, tension, and clarity land on screen." },
+      { number: "02", title: "Stay authentic.", body: "Lead with Southern authenticity and vivid imagery that audiences feel as real." },
+      { number: "03", title: "Make it sync-ready.", body: "Refine production so every track aligns seamlessly with modern visual media." },
+      { number: "04", title: "Develop the next voice.", body: "Find and shape talent the way great A&R turns potential into lasting catalog." },
     ],
   },
 ];
