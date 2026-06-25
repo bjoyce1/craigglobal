@@ -16,6 +16,8 @@ import granvilleLogoWhite from "@/assets/granville-logo-wht.png.asset.json";
 import granvilleLogoBlack from "@/assets/granville-logo-black.png.asset.json";
 import adventLogoBlack from "@/assets/advent-logo-black.png.asset.json";
 import adventLogoWhite from "@/assets/advent-logo-white.png.asset.json";
+import godfathersLogoColor from "@/assets/godfathers-logo-color.png.asset.json";
+import godfathersLogoBlack from "@/assets/godfathers-logo-black.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 
@@ -504,6 +506,16 @@ export const holdings: Holding[] = [
     website: "https://advententertainment.com/",
     logo: adventLogoBlack.url,
     logoHover: adventLogoWhite.url,
+  },
+  {
+    name: "The Godfathers of Deep House SA",
+    sector: "Music, Media & Commerce",
+    description:
+      "A South African deep house music and media house running label, catalogue, and commerce through one controlled digital environment — GF Radio and GFTV broadcasts, a deep release catalogue, a talent roster including T'TimeZer011, Lele, KK Mash, and R.E.A, plus the GF Nostalgear apparel line and membership access for direct audience ownership.",
+    established: "2009",
+    website: "https://www.thegodfathers.co.za/",
+    logo: godfathersLogoColor.url,
+    logoHover: godfathersLogoBlack.url,
   },
 ];
 
