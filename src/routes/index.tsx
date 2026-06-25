@@ -8,6 +8,7 @@ import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
 import { executives, holdings } from "@/lib/content";
+import heroBg from "@/assets/cge-hero-bg-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -31,9 +32,12 @@ function Home() {
     <main>
       {/* 1. HERO */}
       <header className="surface-dark relative flex min-h-[100svh] items-end overflow-hidden">
-        {/* [PLACEHOLDER IMAGE] — navy-overlaid skyline with Ken Burns */}
         <div className="absolute inset-0 kenburns">
-          <PlaceholderImage className="h-full w-full" />
+          <img
+            src={heroBg.url}
+            alt="Classical columns at dusk"
+            className="h-full w-full object-cover"
+          />
         </div>
         <div className="scrim-bottom absolute inset-0" aria-hidden="true" />
 
