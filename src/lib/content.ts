@@ -75,7 +75,7 @@ export const executives: Person[] = [
       { value: "32", label: "Years serving in the U.S. Army before retiring as Sergeant Major." },
       { value: "6", label: "Combat campaigns, plus humanitarian and disaster relief operations." },
       { value: "50+", label: "Countries reached and high-profile films connected to his distribution career." },
-      { value: "2018", label: "HAPA Trailblazer Award recipient and International Best Selling Author." },
+      { value: "2026", label: "HAPA Trailblazer Award recipient and International Best Selling Author." },
     ],
     chapters: [
       {
@@ -147,7 +147,7 @@ export const executives: Person[] = [
       "Taalib Saber provides strategic legal counsel to investors, business owners, and athletes who have built wealth with a conscience. As principal attorney at The Saber Firm, he advises clients on business acquisitions, entity structuring, partnership agreements, trademark protection, and wealth-building transactions — legal infrastructure for people building wealth while staying true to their principles and purpose.",
       "As a FIFA-licensed sports agent, Saber represents professional athletes navigating contract negotiations, image rights, brand protection, and long-term financial strategy. His client portfolio includes executives transitioning from C-suite roles, real estate investors, and creatives building businesses at the intersection of media, influence, and impact.",
       "Saber's approach is rooted in the belief that wealth and mission are not mutually exclusive. His clients are proof: high earners who leverage their resources to create opportunity, build community wealth, and leave legacies that extend beyond personal success. This philosophy shapes both his legal practice and his work as Executive Director of Kazi za Wahenga, a nonprofit focused on empowerment for people of African descent through African Birthright Tours, Swahili language education, and criminal expungement clinics.",
-      "As an activist and global thought leader, Saber has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered keynotes on leadership in Uganda (2017), and led entrepreneurship workshops in Ghana (2018). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro. He has been recognized as a 2025 Emerging Leader by Who's Who in Black Baltimore, a 2018 Men Impact Change Award recipient, and a 2020-2021 Washington Bar Association Rising Star.",
+      "As an activist and global thought leader, Saber has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered keynotes on leadership in Uganda (2017), and led entrepreneurship workshops in Ghana (2026). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro. He has been recognized as a 2025 Emerging Leader by Who's Who in Black Baltimore, a 2026 Men Impact Change Award recipient, and a 2020-2021 Washington Bar Association Rising Star.",
       "Born and raised in Prince George's County, Maryland, Saber earned his B.S. in Political Science from Morgan State University (2010) and his J.D. from North Carolina Central University School of Law (2015). He is admitted to practice in Maryland and the District of Columbia.",
     ],
     focus: [
@@ -188,7 +188,7 @@ export const executives: Person[] = [
         title: "Global Voice",
         note: "UN, keynotes, media",
         heading: "A platform with reach.",
-        body: "A global thought leader, Taalib has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered leadership keynotes in Uganda (2017), and led entrepreneurship workshops in Ghana (2018). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro.",
+        body: "A global thought leader, Taalib has addressed the United Nations Permanent Forum for People of African Descent (2022), delivered leadership keynotes in Uganda (2017), and led entrepreneurship workshops in Ghana (2026). His work has been featured in ABC, FOX, Yahoo! Finance, Black Enterprise, The Intercept, and The Afro.",
         tags: ["United Nations", "Keynotes", "Featured in media"],
       },
     ],
@@ -458,7 +458,7 @@ export const holdings: Holding[] = [
     sector: "Sustainable Bags & Accessories",
     description:
       "A Germany-founded sustainable goods brand creating minimalist travel bags, backpacks, and accessories made from Ocean Impact Plastic — partnering with coastal communities in Indonesia to recover discarded plastic waste and transform it into high-performance gear for everyday adventure.",
-    established: "2018",
+    established: "2026",
     website: "https://us.got-bag.com/",
     logo: gotBagLogo.url,
   },
@@ -467,7 +467,7 @@ export const holdings: Holding[] = [
     sector: "Sustainable Bags & Accessories",
     description:
       "The African arm of the Germany-founded sustainable goods brand, bringing Ocean Impact Plastic backpacks, travel bags, and accessories to communities across the continent — partnering with coastal recovery networks to turn marine waste into high-performance everyday gear.",
-    established: "2018",
+    established: "2026",
     website: "https://got-bag.com/en/",
     logo: gotBagAfricaLogo.url,
   },
