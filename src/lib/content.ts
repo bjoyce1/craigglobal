@@ -441,7 +441,7 @@ export const holdings: Holding[] = [
     sector: "Film & Media Distribution",
     description:
       "A Beverly Hills-based worldwide film and television sales organization specializing in the financing, production, and distribution of commercial feature films — representing its own slate and third-party content across an annual slate of 50 to 100 films, with clients including Netflix, Amazon, Paramount, Hulu, Showtime, Starz, and Tubi.",
-    established: "[Year]",
+    established: "2015",
     website: "https://www.pcfilmandmedia.com/",
     logo: porterCraigLight.url,
     logoHover: porterCraigDark.url,
@@ -451,7 +451,7 @@ export const holdings: Holding[] = [
     sector: "Film Production & Streaming",
     description:
       "A Canada-based film production house and streaming platform where stories come alive — developing, producing, and distributing original feature films and series, including titles such as \"Unlucky to Love You\" and \"The Wizard Hunter,\" with a growing catalogue streamed directly on Odflix.",
-    established: "[Year]",
+    established: "2015",
     website: "https://odflix.com/",
     logo: odflixLogo.url,
   },
