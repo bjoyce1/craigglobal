@@ -279,14 +279,14 @@ export const executives: Person[] = [
   },
   {
     name: "Ken Merritt",
-    role: "Chief Financial Officer / Chief Strategy Officer",
+    role: "CHIEF FINANCIAL OFFICER",
     initials: "KM",
     slug: "ken-merritt",
     image: kenMerritt.url,
     placeholderBio: false,
     subtitle:
       "Founder and Managing Partner of Merritt Advisory Group, and a strategic leader with world-class financial acumen — helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
-    bio: "Chief Financial Officer and Chief Strategy Officer. A strategic advisor who brings enterprise discipline, deep functional prowess, and financial stewardship to every position.",
+    bio: "Chief Financial Officer. A strategic advisor who brings enterprise discipline, deep functional prowess, and financial stewardship to every position.",
     fullBio: [
       "Ken Merritt is the Founder and Managing Partner of Merritt Advisory Group. He is a strategic leader with a unique combination of broad enterprise strategy expertise, deep functional prowess, and world-class financial acumen. His specific expertise includes helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
       "Ken has worked extensively in financial services, consumer and industrial products, and private equity. He has served as an advisory leader at Korn Ferry, Deloitte Consulting, and Accenture. He is a frequent speaker and strategic facilitator for conferences, universities, and leadership meetings. Ken served on the Beta Gamma Sigma Board of Governors from 2021 to 2025.",
