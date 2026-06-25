@@ -12,6 +12,8 @@ import gotBagLogo from "@/assets/got-bag-logo.png.asset.json";
 import gotBagAfricaLogo from "@/assets/got-bag-africa-logo.jpg.asset.json";
 import paralightLogo from "@/assets/paralight-logo.png.asset.json";
 import paralightLogoBlue from "@/assets/paralight-logo-blue.png.asset.json";
+import granvilleLogoWhite from "@/assets/granville-logo-wht.png.asset.json";
+import granvilleLogoBlack from "@/assets/granville-logo-black.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 
@@ -480,6 +482,16 @@ export const holdings: Holding[] = [
     website: "https://paralight.ai/",
     logo: paralightLogoBlue.url,
     logoHover: paralightLogo.url,
+  },
+  {
+    name: "Granville",
+    sector: "Hospitality & Restaurants",
+    description:
+      "A collection of modern-casual neighborhood restaurants specializing in wholesome, hand-crafted recipes and libations. With warm hospitality, globally-inspired food, and curated music, Granville is a culture, not a concept — supporting local, organic, and certified-humane practices while making everything from scratch daily across lunch, dinner, weekend breakfast, and full bar.",
+    established: "2007",
+    website: "https://www.granville.com/",
+    logo: granvilleLogoWhite.url,
+    logoHover: granvilleLogoBlack.url,
   },
 ];
 
