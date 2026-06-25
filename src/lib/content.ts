@@ -58,7 +58,7 @@ export const executives: Person[] = [
     role: "Chief Executive Officer",
     initials: "KC",
     slug: "keith-l-craig",
-    image: "/__l5e/assets-v1/b7b03f08-63dd-467e-b907-829479eaa896/keith-l-craig.png",
+    image: "/__l5e/assets-v1/9580f997-8d67-4ed7-a181-07cfef991d5d/keith-l-craig-new.png",
     placeholderBio: false,
     subtitle:
       "Retired U.S. Army Sergeant Major, former Walt Disney Studios Motion Pictures executive, award-winning International Best Selling Author, and Co-Founder of Porter + Craig Film and Media Distribution — builder of pathways for creators ready to move with discipline and scale with purpose.",
