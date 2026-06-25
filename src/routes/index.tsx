@@ -8,6 +8,7 @@ import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
 import { executives, holdings } from "@/lib/content";
+import heroBg from "@/assets/cge-hero-bg-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
