@@ -279,7 +279,7 @@ export const executives: Person[] = [
   },
   {
     name: "Ken Merritt",
-    role: "Chief Financial Officer / Chief Strategy Officer",
+    role: "CHIEF FINANCIAL OFFICER",
     initials: "KM",
     slug: "ken-merritt",
     image: kenMerritt.url,
