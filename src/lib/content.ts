@@ -75,7 +75,7 @@ export const executives: Person[] = [
       { value: "32", label: "Years serving in the U.S. Army before retiring as Sergeant Major." },
       { value: "6", label: "Combat campaigns, plus humanitarian and disaster relief operations." },
       { value: "50+", label: "Countries reached and high-profile films connected to his distribution career." },
-      { value: "2018", label: "HAPA Trailblazer Award recipient and International Best Selling Author." },
+      { value: "2026", label: "HAPA Trailblazer Award recipient and International Best Selling Author." },
     ],
     chapters: [
       {
