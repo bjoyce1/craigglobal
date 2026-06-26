@@ -213,14 +213,14 @@ export const executives: Person[] = [
   },
   {
     name: "Lynn E. Roberts III, Esq.",
-    role: "Chief Strategy Officer / Chief Legal Officer",
+    role: "CHIEF LEGAL OFFICER",
     initials: "LR",
     slug: "lynn",
     placeholderBio: false,
     image: "/__l5e/assets-v1/c08e96d0-d73c-4efa-9ef2-2d66fe650bbc/lynn-roberts.png",
     subtitle:
       "Award-winning intellectual property attorney, governance strategist, and economic empowerment advocate. Founder & Principal Attorney of Roberts Legal Group, advising small businesses, creatives, and emerging enterprises on trademark protection, brand strategy, and sustainable development across the Mid-Atlantic and Tri-State regions.",
-    bio: "Chief Strategy Officer and Chief Legal Officer, steering long-view strategy and governance. An award-winning IP attorney and governance strategist who safeguards the structures and standards that let CGE commit with conviction and care.",
+    bio: "CHIEF LEGAL OFFICER, steering long-view strategy and governance. An award-winning IP attorney and governance strategist who safeguards the structures and standards that let CGE commit with conviction and care.",
     fullBio: [
       "Lynn E. Roberts III is an award-winning intellectual property attorney, governance strategist, and civic leader whose work centers on strengthening institutions that support entrepreneurship, economic mobility, and community-rooted enterprise. He is the Founder and Principal Attorney of Roberts Legal Group (RLG), where he advises small businesses, creatives, and emerging enterprises on trademark protection, brand strategy, and sustainable business development across the Mid-Atlantic and Tri-State regions.",
       "Lynn brings a governance-first lens to his work, with particular focus on how legal infrastructure, policy, and institutional decision-making can expand equitable access to economic opportunity. His practice and civic engagement sit at the intersection of law, entrepreneurship, and public policy, with an emphasis on long-term organizational stewardship rather than short-term transactional outcomes.",
@@ -282,14 +282,14 @@ export const executives: Person[] = [
   },
   {
     name: "Ken Merritt",
-    role: "CHIEF FINANCIAL OFFICER",
+    role: "CHIEF FINANCIAL OFFICER /\u00a0CHIEF STRATEGY OFFICER",
     initials: "KM",
     slug: "ken-merritt",
     image: kenMerritt.url,
     placeholderBio: false,
     subtitle:
       "Founder and Managing Partner of Merritt Advisory Group, and a strategic leader with world-class financial acumen — helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
-    bio: "Chief Financial Officer. A strategic advisor who brings enterprise discipline, deep functional prowess, and financial stewardship to every position.",
+    bio: "CHIEF FINANCIAL OFFICER /\u00a0CHIEF STRATEGY OFFICER. A strategic advisor who brings enterprise discipline, deep functional prowess, and financial stewardship to every position.",
     fullBio: [
       "Ken Merritt is the Founder and Managing Partner of Merritt Advisory Group. He is a strategic leader with a unique combination of broad enterprise strategy expertise, deep functional prowess, and world-class financial acumen. His specific expertise includes helping executives align organizational goals, functional capabilities, and personal leadership gravitas.",
       "Ken has worked extensively in financial services, consumer and industrial products, and private equity. He has served as an advisory leader at Korn Ferry, Deloitte Consulting, and Accenture. He is a frequent speaker and strategic facilitator for conferences, universities, and leadership meetings. Ken served on the Beta Gamma Sigma Board of Governors from 2021 to 2025.",
@@ -407,14 +407,14 @@ export const executives: Person[] = [
   },
   {
     name: "Engr. Ikechukwu Nnamani",
-    role: "Chief Innovation Officer",
+    role: "CHIEF TECHNOLOGY OFFICER",
     initials: "IN",
     slug: "ikechukwu-nnamani",
     image: ikechukwuNnamani.url,
     placeholderBio: false,
     subtitle:
       "Engineer, digital infrastructure pioneer, and boardroom leader with 23+ years shaping next-generation telecom and ICT across Africa — from carrier-neutral data centers to submarine cable landing stations.",
-    bio: "Chief Innovation Officer and architect of digital infrastructure. A mechanical engineer whose two decades of building Africa's most interconnected data centers define how CGE scales technology with purpose.",
+    bio: "CHIEF TECHNOLOGY OFFICER and architect of digital infrastructure. A mechanical engineer whose two decades of building Africa's most interconnected data centers define how CGE scales technology with purpose.",
     fullBio: [
       "Ikechukwu Nnamani is an Engineer with business interests in Information Communications and Technology infrastructure development, multimedia platforms, oil and gas, power generation and distribution, financial technology services, cyber security, Artificial Intelligence, Internet of Things, and the digital economy. He has sat on the boards of several companies and organizations including TeleAfrica Communications, Medallion Data Centres, Demadiur Systems, ChiefSoft Inc, Innova Infrastructure, Thub Communications, AI Empowerment Foundation, East Mines & Steels Company, AfricaPlan Foundation, KlinicX Inc, Xpand Financials, the Nigerian Internet Registration Agency, Association of Telecommunications Companies of Nigeria, and the Association of Interconnect Operating Companies, amongst others. He serves as Silvertrust Media Inc West African Region Business Development Executive.",
       "For over 23 years, Engineer Nnamani has been at the forefront of digital infrastructure development across Africa, playing a pioneering role in the development of next generation digital infrastructure in several African markets. He has promoted the establishment of telecom and ICT infrastructure in Ghana, Togo, Liberia, Sierra Leone, Cote D'Ivoire, Senegal, Kenya, Uganda, Botswana, and Angola amongst others.",
