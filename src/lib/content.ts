@@ -21,6 +21,8 @@ import godfathersLogoBlack from "@/assets/godfathers-logo-black.png.asset.json";
 import davidAsh from "@/assets/david-ash-pfp.png.asset.json";
 import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 import suaveRabb from "@/assets/suave-rabb-pfp.png.asset.json";
+import ikechukwuNnamani from "@/assets/ikechukwu-nnamani-pfp.png.asset.json";
+
 
 
 export type Stat = { value: string; label: string };
@@ -408,6 +410,7 @@ export const executives: Person[] = [
     role: "Chief Innovation Officer",
     initials: "IN",
     slug: "ikechukwu-nnamani",
+    image: ikechukwuNnamani.url,
     placeholderBio: false,
     subtitle:
       "Engineer, digital infrastructure pioneer, and boardroom leader with 23+ years shaping next-generation telecom and ICT across Africa — from carrier-neutral data centers to submarine cable landing stations.",
