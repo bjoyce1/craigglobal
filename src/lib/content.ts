@@ -407,14 +407,14 @@ export const executives: Person[] = [
   },
   {
     name: "Engr. Ikechukwu Nnamani",
-    role: "CHIEF TECHNOLOGY OFFICER",
+    role: "CHIEF TECHNOLOGY OFFICER /\u00a0CHIEF INFORMATION OFFICER",
     initials: "IN",
     slug: "ikechukwu-nnamani",
     image: ikechukwuNnamani.url,
     placeholderBio: false,
     subtitle:
       "Engineer, digital infrastructure pioneer, and boardroom leader with 23+ years shaping next-generation telecom and ICT across Africa — from carrier-neutral data centers to submarine cable landing stations.",
-    bio: "CHIEF TECHNOLOGY OFFICER and architect of digital infrastructure. A mechanical engineer whose two decades of building Africa's most interconnected data centers define how CGE scales technology with purpose.",
+    bio: "CHIEF TECHNOLOGY OFFICER /\u00a0CHIEF INFORMATION OFFICER and architect of digital infrastructure. A mechanical engineer whose two decades of building Africa's most interconnected data centers define how CGE scales technology with purpose.",
     fullBio: [
       "Ikechukwu Nnamani is an Engineer with business interests in Information Communications and Technology infrastructure development, multimedia platforms, oil and gas, power generation and distribution, financial technology services, cyber security, Artificial Intelligence, Internet of Things, and the digital economy. He has sat on the boards of several companies and organizations including TeleAfrica Communications, Medallion Data Centres, Demadiur Systems, ChiefSoft Inc, Innova Infrastructure, Thub Communications, AI Empowerment Foundation, East Mines & Steels Company, AfricaPlan Foundation, KlinicX Inc, Xpand Financials, the Nigerian Internet Registration Agency, Association of Telecommunications Companies of Nigeria, and the Association of Interconnect Operating Companies, amongst others. He serves as Silvertrust Media Inc West African Region Business Development Executive.",
       "For over 23 years, Engineer Nnamani has been at the forefront of digital infrastructure development across Africa, playing a pioneering role in the development of next generation digital infrastructure in several African markets. He has promoted the establishment of telecom and ICT infrastructure in Ghana, Togo, Liberia, Sierra Leone, Cote D'Ivoire, Senegal, Kenya, Uganda, Botswana, and Angola amongst others.",
@@ -478,7 +478,7 @@ export const executives: Person[] = [
     quoteAttribution: "Engr. Ikechukwu Nnamani",
   },
   {
-    name: "DeAngelo \u201CSuav\u2019e\u201D Rabb",
+    name: "DeAngelo Rabb",
     role: "President of A&R",
     initials: "DR",
     slug: "suave-rabb",
@@ -488,7 +488,7 @@ export const executives: Person[] = [
       "Dallas-raised rapper, songwriter, and producer whose music is engineered for visual storytelling and high-impact media — cinematic narratives, atmospheric textures, and luxury-grade production built for film, television, trailers, and digital content.",
     bio: "President of A&R and a cinematic songwriter-producer. Two decades of Southern-authentic, sync-ready music that elevates film, television, and brand storytelling.",
     fullBio: [
-      "DeAngelo \u201CSuav\u2019e\u201D Rabb is a Dallas-raised rapper, songwriter, producer whose music is engineered for visual storytelling and high impact media. His signature sound blends cinematic narratives, atmospheric textures, and luxury grade production \u2014 creating emotionally resonant tracks that elevate film, television, trailers, and digital content.",
+      "DeAngelo Rabb is a Dallas-raised rapper, songwriter, producer whose music is engineered for visual storytelling and high impact media. His signature sound blends cinematic narratives, atmospheric textures, and luxury grade production \u2014 creating emotionally resonant tracks that elevate film, television, trailers, and digital content.",
       "With a career spanning more than two decades, Suav\u2019e has developed a storytelling style defined by vivid imagery, emotional pacing, and Southern authenticity. His music enhances on-screen moments with depth, tension, and clarity, making his catalog ideal for dramatic scenes, character driven arcs, motivational sequences, and culturally grounded narratives.",
       "Musical works by Suav\u2019e have earned national recognition, including eight consecutive weeks at #1 on Minnesota\u2019s 99.7 KKCK and industry honors such as \u201CBest Performance\u201D in Dallas and \u201CBest Up and Coming Rap Group\u201D in Hollywood. His single \u201CLegend,\u201D co-produced with Grammy Award\u2013winning producer D-Moet, showcases his cinematic instincts through its dynamic arrangement and high-energy visual presentation featuring American actor/comedian Tony Rock and Dallas icon Fat Pimp.",
       "His socially impactful single \u201CBlack Man\u201D demonstrates his ability to create emotionally charged, documentary-ready music. The track sparked national conversation and led to a televised interview on the Black News Channel (BNC), highlighting the strength of Suav\u2019e in crafting culturally relevant, narrative-driven work.",
