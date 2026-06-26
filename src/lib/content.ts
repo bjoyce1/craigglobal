@@ -60,7 +60,7 @@ export type Person = {
 export const executives: Person[] = [
   {
     name: "Sergeant Major Keith L. Craig",
-    role: "Chief Executive Officer",
+    role: "CHAIRMAN & CHIEF EXECUTIVE OFFICER",
     initials: "KC",
     slug: "keith-l-craig",
     image: "/__l5e/assets-v1/9580f997-8d67-4ed7-a181-07cfef991d5d/keith-l-craig-new.png",
