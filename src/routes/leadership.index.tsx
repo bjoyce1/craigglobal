@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { PersonCard } from "@/components/PersonCard";
 import { OrgChart } from "@/components/OrgChart";
 import { CTABand } from "@/components/CTABand";
-import { executives, board } from "@/lib/content";
+import { executives } from "@/lib/content";
 
 export const Route = createFileRoute("/leadership/")({
   head: () => ({
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/leadership/")({
       {
         name: "description",
         content:
-          "The executive leadership and board of directors accountable for the standard at CGE Corporate.",
+          "The executive leadership accountable for the standard at CGE Corporate.",
       },
       { property: "og:title", content: "Leadership — CGE Corporate" },
       { property: "og:url", content: "/leadership" },
