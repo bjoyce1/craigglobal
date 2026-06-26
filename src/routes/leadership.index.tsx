@@ -53,27 +53,6 @@ function Leadership() {
         </SectionReveal>
       </section>
 
-      {/* Board of Directors — dark */}
-      <section className="surface-dark">
-        <SectionReveal className="section-pad mx-auto max-w-6xl px-6 pb-0">
-          <Eyebrow>Board of Directors</Eyebrow>
-        </SectionReveal>
-        <SectionReveal
-          stagger
-          className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-14 px-6 pt-14 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {/* [ENTIRE BOARD IS PLACEHOLDER] — Chairman first, with primacy */}
-          {board.map((p, i) => (
-            <PersonCard key={i} person={p} primary={i === 0} showBio={false} />
-          ))}
-        </SectionReveal>
-        {/* caption — tag for removal before launch */}
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-10">
-          <p className="text-dim text-sm italic">
-            Board roster pending final confirmation.
-          </p>
-        </div>
-      </section>
 
       {/* Corporate structure */}
       <section className="surface-light">
