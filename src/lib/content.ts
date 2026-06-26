@@ -60,14 +60,14 @@ export type Person = {
 export const executives: Person[] = [
   {
     name: "Sergeant Major Keith L. Craig",
-    role: "Chief Executive Officer",
+    role: "CHAIRMAN & CHIEF EXECUTIVE OFFICER",
     initials: "KC",
     slug: "keith-l-craig",
     image: "/__l5e/assets-v1/9580f997-8d67-4ed7-a181-07cfef991d5d/keith-l-craig-new.png",
     placeholderBio: false,
     subtitle:
       "Retired U.S. Army Sergeant Major, former Walt Disney Studios Motion Pictures executive, award-winning International Best Selling Author, and Co-Founder of Porter + Craig Film and Media Distribution — builder of pathways for creators ready to move with discipline and scale with purpose.",
-    bio: "Founder and Chief Executive Officer. A retired Sergeant Major whose 32 years of military service, studio-level distribution leadership, and servant ethos define how CGE holds and builds.",
+    bio: "Chairman and Chief Executive Officer. A retired Sergeant Major whose 32 years of military service, studio-level distribution leadership, and servant ethos define how CGE holds and builds.",
     fullBio: [
       "Sergeant Major Keith L. Craig embodies service-driven leadership across extraordinary domains. As a former Walt Disney Studios Motion Pictures executive, he orchestrated theatrical distribution strategies that contributed to Disney's historic $3.7 billion domestic box office record in 2019; distributing over 50 major releases that collectively generated more than $42 billion globally during his tenure, including Avengers: Endgame, The Lion King, Star Wars: The Rise of Skywalker, and the Oscar-winning Black Panther. Today, Craig serves as Co-Founder, Chairman, and Co-CEO of Porter + Craig Film and Media Distribution, a Beverly Hills-based powerhouse specializing in worldwide film and television sales with an annual slate of 50+ films.",
       "Craig's foundation rests in three decades of distinguished military service. Retiring as Sergeant Major after 32 years in the United States Army (1984-2016), he served six combat tours spanning more than 50 countries, including Operation Iraqi Freedom, where he led as First Sergeant of the 302nd Military Intelligence Battalion, and Operation Unified Response, coordinating humanitarian relief that sustained nearly three million Haitians following the devastating earthquake. His 52 military awards include three Bronze Stars (earned through distinguished combat performance), the Legion of Merit, and the prestigious Distinguished Order of Saint Martin. As the 12th Senior Enlisted Advisor to the Commander and Exchange CEO of the Army & Air Force Exchange Service for Europe and Southwest Asia, he oversaw a $10 billion retail operation serving 43,000 employees across 50 states, five territories, and more than 30 countries.",
