@@ -7,7 +7,7 @@ import { PersonCard } from "@/components/PersonCard";
 import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
-import { executives, holdings } from "@/lib/content";
+import { executives, holdings, chairmanLetter } from "@/lib/content";
 import heroBg from "@/assets/cge-hero-bg-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -74,22 +74,44 @@ function Home() {
 
       {/* 2. STATEMENT */}
       <section id="statement" className="surface-light">
-        <SectionReveal className="section-pad mx-auto max-w-3xl px-6 text-center">
+        <SectionReveal className="section-pad mx-auto max-w-4xl px-6 text-center">
           <Eyebrow centered>Who We Are</Eyebrow>
-          <h2 className="display-h2 mx-auto mt-7 max-w-[22ch]">
-            An assets holding company built on stewardship, not speculation.
+          <h2 className="display-h2 mx-auto mt-8 max-w-[18ch]">
+            Nine Holdings.{" "}
+            <em className="font-serif italic text-gold">Four Verticals.</em> One
+            Standard.
           </h2>
-          {/* [refine with brief] */}
-          <p className="body-measure mx-auto mt-8 text-[var(--ink-dim)]">
-            CGE Corporate acquires, holds, and strengthens businesses worth
-            building for the long term. We bring capital, structure, and operating
-            discipline — then we stay.
-          </p>
           <div className="mt-9 flex justify-center">
             <ArrowLink to="/approach">Our approach</ArrowLink>
           </div>
         </SectionReveal>
       </section>
+
+      {/* 2b. LETTER FROM THE CHAIRMAN */}
+      <section className="surface-light-2 border-t border-[var(--line-light)]">
+        <SectionReveal className="section-pad mx-auto max-w-3xl px-6">
+          <Eyebrow>{chairmanLetter.eyebrow}</Eyebrow>
+          <div className="mt-8 space-y-6">
+            {chairmanLetter.paragraphs.map((para, i) => (
+              <p
+                key={i}
+                className="body-measure text-[1.05rem] leading-relaxed text-[var(--ink-dim)]"
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+          <div className="mt-10 border-t border-[var(--line-light)] pt-6">
+            <p className="font-serif text-xl font-semibold">
+              {chairmanLetter.signature}
+            </p>
+            <p className="eyebrow mt-2" style={{ letterSpacing: "0.18em" }}>
+              {chairmanLetter.signatureTitle}
+            </p>
+          </div>
+        </SectionReveal>
+      </section>
+
 
       {/* 3. HOLDINGS PREVIEW */}
       <section className="surface-dark">

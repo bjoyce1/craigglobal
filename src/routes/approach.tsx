@@ -3,7 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
-import { principles, process } from "@/lib/content";
+import { principles, process, coreValues } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/approach")({
@@ -36,6 +36,40 @@ function Approach() {
           </>
         }
       />
+
+      {/* Core values — what supersedes business */}
+      <section className="surface-light">
+        <SectionReveal className="section-pad mx-auto max-w-3xl px-6 text-center">
+          <Eyebrow centered>Core Values</Eyebrow>
+          <h2 className="display-h2 mx-auto mt-7 max-w-[20ch]">
+            Values that supersede business.
+          </h2>
+          <p className="body-measure mx-auto mt-8 text-[var(--ink-dim)]">
+            Before we are a holding company, we are people accountable to one
+            another and to the world we share. These are the convictions that come
+            before profit — and outlast it.
+          </p>
+        </SectionReveal>
+        <SectionReveal
+          stagger
+          className="mx-auto grid max-w-6xl grid-cols-1 border-l border-t border-[var(--line-light)] px-6 pb-24 md:grid-cols-2"
+        >
+          {coreValues.map((v) => (
+            <div
+              key={v.number}
+              className="border-b border-r border-[var(--line-light)] p-8 md:p-12"
+            >
+              <span className="font-serif text-2xl font-semibold text-gold">
+                {v.number}
+              </span>
+              <h3 className="mt-4 font-serif text-2xl font-semibold leading-snug">
+                {v.title}
+              </h3>
+              <p className="text-dim mt-4 leading-relaxed">{v.body}</p>
+            </div>
+          ))}
+        </SectionReveal>
+      </section>
 
       {/* Four principles — alternating full-width bands */}
       {principles.map((p, i) => {

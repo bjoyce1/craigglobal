@@ -9,7 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as NewsroomRouteImport } from './routes/newsroom'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as HoldingsRouteImport } from './routes/holdings'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -19,11 +18,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as LeadershipIndexRouteImport } from './routes/leadership.index'
 import { Route as LeadershipSlugRouteImport } from './routes/leadership.$slug'
 
-const NewsroomRoute = NewsroomRouteImport.update({
-  id: '/newsroom',
-  path: '/newsroom',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LeadershipRoute = LeadershipRouteImport.update({
   id: '/leadership',
   path: '/leadership',
@@ -72,7 +66,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
   '/leadership': typeof LeadershipRouteWithChildren
-  '/newsroom': typeof NewsroomRoute
   '/leadership/$slug': typeof LeadershipSlugRoute
   '/leadership/': typeof LeadershipIndexRoute
 }
@@ -82,7 +75,6 @@ export interface FileRoutesByTo {
   '/approach': typeof ApproachRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
-  '/newsroom': typeof NewsroomRoute
   '/leadership/$slug': typeof LeadershipSlugRoute
   '/leadership': typeof LeadershipIndexRoute
 }
@@ -94,7 +86,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
   '/leadership': typeof LeadershipRouteWithChildren
-  '/newsroom': typeof NewsroomRoute
   '/leadership/$slug': typeof LeadershipSlugRoute
   '/leadership/': typeof LeadershipIndexRoute
 }
@@ -107,7 +98,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/holdings'
     | '/leadership'
-    | '/newsroom'
     | '/leadership/$slug'
     | '/leadership/'
   fileRoutesByTo: FileRoutesByTo
@@ -117,7 +107,6 @@ export interface FileRouteTypes {
     | '/approach'
     | '/contact'
     | '/holdings'
-    | '/newsroom'
     | '/leadership/$slug'
     | '/leadership'
   id:
@@ -128,7 +117,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/holdings'
     | '/leadership'
-    | '/newsroom'
     | '/leadership/$slug'
     | '/leadership/'
   fileRoutesById: FileRoutesById
@@ -140,18 +128,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   HoldingsRoute: typeof HoldingsRoute
   LeadershipRoute: typeof LeadershipRouteWithChildren
-  NewsroomRoute: typeof NewsroomRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/newsroom': {
-      id: '/newsroom'
-      path: '/newsroom'
-      fullPath: '/newsroom'
-      preLoaderRoute: typeof NewsroomRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/leadership': {
       id: '/leadership'
       path: '/leadership'
@@ -232,7 +212,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   HoldingsRoute: HoldingsRoute,
   LeadershipRoute: LeadershipRouteWithChildren,
-  NewsroomRoute: NewsroomRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

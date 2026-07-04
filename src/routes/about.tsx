@@ -1,9 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
+import { Eyebrow } from "@/components/Eyebrow";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
+import { mission, vision } from "@/lib/content";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -32,8 +34,29 @@ function About() {
         intro="CGE Corporate exists to own and steward businesses worth building for the long term — and to hold them to a standard that does not move."
       />
 
-      {/* The company — two column */}
+      {/* Mission & Vision */}
       <section className="surface-light">
+        <SectionReveal
+          stagger
+          className="section-pad mx-auto grid max-w-6xl grid-cols-1 gap-x-16 gap-y-14 px-6 lg:grid-cols-2"
+        >
+          <div>
+            <Eyebrow>Our Mission</Eyebrow>
+            <p className="mt-7 font-serif text-2xl leading-snug md:text-3xl">
+              {mission}
+            </p>
+          </div>
+          <div className="lg:border-l lg:border-[var(--line-light)] lg:pl-16">
+            <Eyebrow>Our Vision</Eyebrow>
+            <p className="mt-7 font-serif text-2xl leading-snug text-gold md:text-3xl">
+              {vision}
+            </p>
+          </div>
+        </SectionReveal>
+      </section>
+
+      {/* The company — two column */}
+      <section className="surface-light-2 border-t border-[var(--line-light)]">
         <SectionReveal
           stagger
           className="section-pad mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2"

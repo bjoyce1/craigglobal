@@ -8,7 +8,6 @@ const columns = [
       { to: "/about", label: "About" },
       { to: "/leadership", label: "Leadership" },
       { to: "/approach", label: "Approach" },
-      { to: "/newsroom", label: "Newsroom" },
     ],
   },
   {
@@ -24,7 +23,6 @@ const columns = [
     links: [
       { to: "/contact", label: "Contact" },
       { to: "/contact", label: "Careers" },
-      { to: "/newsroom", label: "Press" },
     ],
   },
 ] as const;

@@ -719,6 +719,51 @@ export const process = [
   { number: "04", title: "Hold", body: "We stay — measuring in decades, not quarters. [PLACEHOLDER]" },
 ];
 
+// Mission & Vision
+export const mission =
+  "Craig Global Enterprises owns and governs companies across sports, entertainment, and investment, built to carry driven talent farther than they could go alone and to compound wealth for generations.";
+
+export const vision =
+  "The premier global holding enterprise, turning world-class talent and strategic capital into legacies that outlast us.";
+
+// Chairman's letter — home page, minimalist note from the Chairman & CEO.
+export const chairmanLetter = {
+  eyebrow: "A Letter from Our Chairman & CEO",
+  paragraphs: [
+    "We did not build Craig Global Enterprises to chase moments. We built it to steward them — to gather world-class talent and strategic capital under one standard, and to carry both farther than either could travel alone.",
+    "Everything we own is held with intention. Across sports, entertainment, and investment, our companies share a single belief: that discipline, service, and patience compound into something that outlasts us. We measure success not in quarters, but in the legacies we leave and the lives we lift along the way.",
+    "If you are driven, principled, and building for the long view — you are in the right place.",
+  ],
+  signature: "Sergeant Major Keith L. Craig",
+  signatureTitle: "Chairman & Chief Executive Officer",
+};
+
+// Core values — the principles that supersede business (Approach page).
+export const coreValues = [
+  {
+    number: "01",
+    title: "Our relationship with humanity",
+    body: "Before profit, before position, there is the person. We lead with dignity and service, treating every partner, employee, and community as an end in themselves — never a means. Leadership, at its core, is stewardship of people.",
+  },
+  {
+    number: "02",
+    title: "Eco-friendly by conviction",
+    body: "We hold businesses that respect the planet we borrowed from the next generation — from ocean-recovered materials to sustainable, certified-humane practices. We intend to leave the world better than we found it.",
+  },
+  {
+    number: "03",
+    title: "Oneness with people",
+    body: "We believe in a shared humanity that crosses every border and background. We build bridges, not walls — investing in underrepresented and underserved communities around the world and opening doors that were once closed.",
+  },
+  {
+    number: "04",
+    title: "Building great leaders",
+    body: "Our deepest work is developing people. Drawing on decades of servant leadership, we pour discipline, mentorship, and opportunity into the next generation — so that talent everywhere can realize and maximize its full potential.",
+  },
+];
+
+
+
 // Newsroom — [ALL PLACEHOLDER]
 export const press = [
   { date: "[Date]", headline: "[Announcement headline PLACEHOLDER]", excerpt: "[One-line excerpt PLACEHOLDER]" },
