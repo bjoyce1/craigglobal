@@ -3,7 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
-import { principles, process } from "@/lib/content";
+import { principles, process, coreValues } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/approach")({
