@@ -40,83 +40,88 @@ function Holdings() {
         intro="A focused portfolio of operating businesses, held for the long term and governed to a single standard."
       />
 
-      {/* Holdings — alternating two-column rows. [ALL PLACEHOLDER] */}
+      {/* Holdings — carousel */}
       <section className="surface-light">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          {holdings.map((h, i) => {
-            const flip = i % 2 === 1;
-            return (
-              <SectionReveal
-                key={h.name}
-                className="grid grid-cols-1 items-center gap-12 border-t border-[var(--line-light)] py-16 lg:grid-cols-2"
-              >
-                {h.logo ? (
-                  <div
-                    className={cn(
-                      "group relative w-full overflow-hidden rounded-lg",
-                      flip && "lg:order-2",
-                    )}
-                    style={{ aspectRatio: "4 / 3" }}
-                  >
-                    <img
-                      src={h.logo}
-                      alt={`${h.name} logo`}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-out group-hover:opacity-0"
-                    />
-                    <img
-                      src={h.logoHover ?? h.logo}
-                      alt=""
-                      aria-hidden="true"
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-                    />
-                  </div>
-                ) : (
-                  <PlaceholderImage
-                    className={cn("w-full", flip && "lg:order-2")}
-                    ratio="4 / 3"
-                    label="[PLACEHOLDER LOGO]"
-                  />
-                )}
-                <div className={cn(flip && "lg:order-1")}>
-                  <Eyebrow>{h.sector}</Eyebrow>
-                  <h2 className="display-h2 mt-5 text-3xl md:text-4xl">{h.name}</h2>
-                  <p className="body-measure mt-5 text-[var(--ink-dim)]">
-                    {h.description}
-                  </p>
-                  <div className="mt-7 flex gap-10">
-                    <div>
-                      <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
-                        Established
-                      </p>
-                      <p className="mt-1 font-serif text-xl">{h.established}</p>
-                    </div>
-                  </div>
-                  {h.website && (
-                    <div className="mt-7">
-                      <ArrowLink href={h.website}>Visit site</ArrowLink>
-                    </div>
-                  )}
-                </div>
-              </SectionReveal>
-            );
-          })}
-        </div>
-      </section>
+        <SectionReveal className="mx-auto max-w-6xl px-6 py-16">
+          <Carousel opts={{ loop: true, align: "start" }} className="w-full">
+            <div className="mb-8 flex items-center justify-between gap-6">
+              <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
+                Browse the portfolio
+              </p>
+              <div className="flex items-center gap-3">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </div>
 
-      {/* Sector strip — [PLACEHOLDER] */}
-      <section className="surface-light-2 border-y border-[var(--line-light)]">
-        <SectionReveal className="mx-auto max-w-6xl px-6 py-14">
-          <p className="eyebrow">Sectors Represented</p>
-          <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4 font-serif text-xl text-[var(--ink-dim)]">
-            <span>[Sector One]</span>
-            <span>[Sector Two]</span>
-            <span>[Sector Three]</span>
-            <span>[Sector Four]</span>
-          </div>
+            <CarouselContent>
+              {holdings.map((h) => (
+                <CarouselItem key={h.name}>
+                  <div className="grid grid-cols-1 items-center gap-12 border-t border-[var(--line-light)] pt-12 lg:grid-cols-2">
+                    {h.logo ? (
+                      <div
+                        className="group relative w-full overflow-hidden rounded-lg"
+                        style={{ aspectRatio: "4 / 3" }}
+                      >
+                        <img
+                          src={h.logo}
+                          alt={`${h.name} logo`}
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-out group-hover:opacity-0"
+                        />
+                        <img
+                          src={h.logoHover ?? h.logo}
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                        />
+                      </div>
+                    ) : (
+                      <PlaceholderImage
+                        className="w-full"
+                        ratio="4 / 3"
+                        label="[PLACEHOLDER LOGO]"
+                      />
+                    )}
+                    <div>
+                      <Eyebrow>{h.sector}</Eyebrow>
+                      <h2 className="display-h2 mt-5 text-3xl md:text-4xl">
+                        {h.name}
+                      </h2>
+                      <p className="body-measure mt-5 text-[var(--ink-dim)]">
+                        {h.description}
+                      </p>
+                      <div className="mt-7">
+                        <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
+                          Established
+                        </p>
+                        <p className="mt-1 font-serif text-xl">{h.established}</p>
+                      </div>
+                      {h.website && (
+                        <div className="mt-7">
+                          <a
+                            href={h.website}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="group inline-flex items-center gap-2 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-gold transition-colors hover:text-gold-hi"
+                          >
+                            Visit website
+                            <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
+                              &rarr;
+                            </span>
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </SectionReveal>
       </section>
+
 
       <CTABand
         title="Considering a partnership or sale?"
