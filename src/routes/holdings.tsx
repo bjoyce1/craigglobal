@@ -2,11 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
-import { ArrowLink } from "@/components/ArrowLink";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { CTABand } from "@/components/CTABand";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 import { holdings } from "@/lib/content";
-import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/holdings")({
   head: () => ({
