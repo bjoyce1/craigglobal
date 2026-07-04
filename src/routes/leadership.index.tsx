@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { PersonCard } from "@/components/PersonCard";
 import { OrgChart } from "@/components/OrgChart";
 import { CTABand } from "@/components/CTABand";
-import { executives } from "@/lib/content";
+import { executives, board } from "@/lib/content";
 
 export const Route = createFileRoute("/leadership/")({
   head: () => ({
