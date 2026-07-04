@@ -547,17 +547,43 @@ export const executives: Person[] = [
 ];
 
 export function executiveBySlug(slug: string): Person | undefined {
-  return executives.find((p) => p.slug === slug);
+  return [...executives, ...board].find((p) => p.slug === slug);
 }
 
-// Board of Directors — [ENTIRE BOARD IS PLACEHOLDER]
+// Board of Directors
 export const board: Person[] = [
-  { name: "[Placeholder Name]", role: "Chairman of the Board", initials: "—", bio: "", placeholderBio: true },
-  { name: "[Placeholder Name]", role: "Vice Chairman", initials: "—", bio: "", placeholderBio: true },
-  { name: "[Placeholder Name]", role: "Director", initials: "—", bio: "", placeholderBio: true },
-  { name: "[Placeholder Name]", role: "Director", initials: "—", bio: "", placeholderBio: true },
-  { name: "[Placeholder Name]", role: "Director", initials: "—", bio: "", placeholderBio: true },
-  { name: "[Placeholder Name]", role: "Independent Director", initials: "—", bio: "", placeholderBio: true },
+  {
+    name: "Richard Lawson",
+    role: "Director",
+    initials: "RL",
+    slug: "richard-lawson",
+    image: richardLawson.url,
+    bio: "Acclaimed actor, director, and empowerment leader with a career spanning more than six decades — from Emmy-nominated performances to founding creative institutions that transform lives.",
+    subtitle:
+      "A true \u201cdream weaver\u201d who has touched thousands of lives — from celebrated Hollywood artists to aspiring young minds — Richard brings six decades of resilience, discipline, and visionary leadership to the boardroom.",
+    fullBio: [
+      "Richard Lawson is an acclaimed actor, director, and empowerment leader with a legendary career spanning over six decades. A true \u201cdream weaver,\u201d he has touched and transformed the lives of thousands, from celebrated Hollywood artists to aspiring young minds.",
+      "With an expansive body of work, Richard's career began on the stage, where he earned Drama Critics Awards for his powerful performances in \u201cMa Rainey's Black Bottom\u201d and \u201cStreamers.\u201d His notable theater credits also include the American premiere of \u201cHapgood\u201d and roles in two different productions of \u201cOthello.\u201d On screen, he has collaborated with cinematic giants like Steven Spielberg in \u201cPoltergeist\u201d and appeared in iconic films such as \u201cHow Stella Got Her Groove Back,\u201d \u201cWag the Dog,\u201d and \u201cFor Colored Girls.\u201d",
+      "He has also been a staple on television, from his starring role on \u201cAll My Children\u201d (for which he was nominated for an Outstanding Actor Emmy) to memorable turns in \u201cThe Days and Nights of Molly Dodd,\u201d \u201cMacGyver,\u201d and \u201cParenthood.\u201d He can currently be seen in the hit Tyler Perry/Netflix #1 series \u201cBeauty in Black,\u201d as well as \u201cDivorce in the Black,\u201d \u201cThe Ms. Pat Show,\u201d and \u201cThe Black Hamptons.\u201d",
+      "More than a legendary actor and director, Richard is a powerful advocate for young people. As co-founder and co-artistic director of the WACO (Where Art Can Occur) Theater Center, he built the Angels and Warriors mentorship program, which provided an artistic home for 100 young people ages 12 and 13, guiding them into becoming successful directors, writers, poets, filmmakers, and musical artists. He continues this work through the RL Studios Foundation.",
+      "For 30 years, Richard served as the protege to legendary acting teacher Milton Katselas, shaping the careers of hundreds of well-known actors. Carrying on this legacy, he founded Richard Lawson Studios in 2005 \u2014 more than a place to learn acting, it is a space for artists to find their voice, empower themselves, and tap into their full potential. He has also directed acclaimed stage productions of \u201cDeath of a Salesman,\u201d \u201cDriving Miss Daisy,\u201d \u201cOthello,\u201d and \u201cNo Place to Be Somebody,\u201d and recently directed the film \u201cBlack Terror,\u201d written by Richard Wesley.",
+      "Along with his partners Denee Busby and Mark \u201cSpark\u201d Welch, Richard created Hyperlens Studio, a next-generation media, production, and distribution company built to meet the future of storytelling on every screen, in every format, and across every culture. Hyperlens helps artists master not only their craft but also ownership, monetization, distribution, and cultural impact \u2014 developing premium vertical films, scripted series, documentaries, educational platforms, live experiences, and global storytelling initiatives.",
+      "Richard Lawson's journey has never been defined by one title. He is an actor, teacher, director, mentor, producer, entrepreneur, veteran, survivor, and visionary. Having served as a combat medic in Vietnam, survived a plane crash, and navigated the changing tides of Hollywood for more than six decades, he brings a rare depth of lived experience to everything he does \u2014 rooted in the belief that there are no losses, only lessons, and that dreams do not have expiration dates.",
+    ],
+    focus: [
+      "Media & storytelling",
+      "Talent development",
+      "Creative ownership",
+      "Youth empowerment",
+    ],
+    quote:
+      "There are no losses, only lessons \u2014 and dreams do not have expiration dates.",
+    quoteAttribution: "Richard Lawson",
+  },
+  { name: "[Placeholder Name]", role: "Chairman of the Board", initials: "\u2014", bio: "", placeholderBio: true },
+  { name: "[Placeholder Name]", role: "Vice Chairman", initials: "\u2014", bio: "", placeholderBio: true },
+  { name: "[Placeholder Name]", role: "Director", initials: "\u2014", bio: "", placeholderBio: true },
+  { name: "[Placeholder Name]", role: "Independent Director", initials: "\u2014", bio: "", placeholderBio: true },
 ];
 
 // Holdings / Portfolio
