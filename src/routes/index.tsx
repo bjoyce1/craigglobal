@@ -113,41 +113,6 @@ function Home() {
       </section>
 
 
-      {/* 3. HOLDINGS PREVIEW */}
-      <section className="surface-dark">
-        <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
-          <Eyebrow>The Portfolio</Eyebrow>
-          <h2 className="display-h2 mt-6">What we hold.</h2>
-        </SectionReveal>
-        <SectionReveal
-          stagger
-          className="mx-auto grid max-w-6xl grid-cols-1 gap-px border-t border-[var(--line-dark)] px-6 pb-24 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {holdings.map((h) => (
-            // [PLACEHOLDER holding tile]
-            <div
-              key={h.name}
-              className="flex aspect-square flex-col justify-between border border-[var(--line-dark)] p-7"
-            >
-              <span className="font-serif text-3xl font-semibold text-bone/30">
-                {h.name.replace(/[\[\]]/g, "").slice(0, 2) || "—"}
-              </span>
-              <div>
-                <p className="font-serif text-lg font-semibold text-bone">
-                  {h.name}
-                </p>
-                <p className="eyebrow mt-2" style={{ letterSpacing: "0.18em" }}>
-                  {h.sector}
-                </p>
-              </div>
-            </div>
-          ))}
-        </SectionReveal>
-        <div className="mx-auto max-w-6xl px-6 pb-24">
-          <ArrowLink to="/holdings">View all holdings</ArrowLink>
-        </div>
-      </section>
-
       {/* 4. THE STANDARD */}
       <TheStandard />
 
