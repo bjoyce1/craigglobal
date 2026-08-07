@@ -112,7 +112,7 @@ function Home() {
       </section>
 
 
-      {/* 4. THE STANDARD */}
+      {/* 4. CLOSING CTA */}
       <TheStandard />
 
       {/* 5. CLOSING CTA */}
