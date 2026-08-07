@@ -3,8 +3,6 @@
  * Items tagged [PLACEHOLDER] are stand-ins — replace with the real brief.
  */
 
-import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
-import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
 import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
 import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
@@ -598,16 +596,6 @@ export type Holding = {
 };
 
 export const holdings: Holding[] = [
-  {
-    name: "Black Brain Pictures International",
-    sector: "Film & Television",
-    description:
-      "A multi-award-winning South African film and television studio crafting drama, comedy, and world-class storytelling for Netflix, Showmax, Amazon Prime Video, and the SABC — a recognized hub for innovative, award-winning creative communications.",
-    established: "2004",
-    website: "https://www.blackbrain.co.za/",
-    logo: blackBrainBlack.url,
-    logoHover: blackBrainRed.url,
-  },
   {
     name: "Porter + Craig Film and Media",
     sector: "Film & Media Distribution",
