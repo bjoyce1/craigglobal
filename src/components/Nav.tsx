@@ -122,7 +122,7 @@ export function Nav() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-3" aria-label="CGE home">
-            <Crest size={28} />
+            <Crest size={34} variant={onDark ? "gold" : "navy"} />
             <span
               className={cn(
                 "font-serif text-lg font-semibold tracking-wide transition-colors",
