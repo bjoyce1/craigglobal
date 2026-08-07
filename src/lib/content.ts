@@ -3,8 +3,6 @@
  * Items tagged [PLACEHOLDER] are stand-ins — replace with the real brief.
  */
 
-import blackBrainBlack from "@/assets/blackbrain-logo-black.png.asset.json";
-import blackBrainRed from "@/assets/blackbrain-logo-red.png.asset.json";
 import porterCraigLight from "@/assets/porter-craig-logo-light.jpg.asset.json";
 import porterCraigDark from "@/assets/porter-craig-logo-dark.jpg.asset.json";
 import odflixLogo from "@/assets/odflix-logo.png.asset.json";
