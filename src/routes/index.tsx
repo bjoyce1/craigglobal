@@ -116,29 +116,7 @@ function Home() {
       {/* 4. THE STANDARD */}
       <TheStandard />
 
-      {/* 5. LEADERSHIP PREVIEW */}
-      <section className="surface-dark">
-        <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
-          <Eyebrow>Leadership</Eyebrow>
-          <h2 className="display-h2 mt-6">Led from the front.</h2>
-          <p className="body-measure text-dim mt-6">
-            Disciplined leadership, accountable for every position we hold.
-          </p>
-        </SectionReveal>
-        <SectionReveal
-          stagger
-          className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 md:grid-cols-3 lg:grid-cols-5"
-        >
-          {executives.map((p) => (
-            <PersonCard key={p.name} person={p} showBio={false} />
-          ))}
-        </SectionReveal>
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-12">
-          <ArrowLink to="/leadership">Meet the leadership</ArrowLink>
-        </div>
-      </section>
-
-      {/* 6. CLOSING CTA */}
+      {/* 5. CLOSING CTA */}
       <CTABand
         title="Build with us, for the long term."
         line="For partnership, investment, and acquisition inquiries."
