@@ -3,11 +3,10 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { PersonCard } from "@/components/PersonCard";
 import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
-import { executives, chairmanLetter } from "@/lib/content";
+import { chairmanLetter } from "@/lib/content";
 import heroBg from "@/assets/cge-hero-bg-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -113,32 +112,10 @@ function Home() {
       </section>
 
 
-      {/* 4. THE STANDARD */}
+      {/* 4. CLOSING CTA */}
       <TheStandard />
 
-      {/* 5. LEADERSHIP PREVIEW */}
-      <section className="surface-dark">
-        <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
-          <Eyebrow>Leadership</Eyebrow>
-          <h2 className="display-h2 mt-6">Led from the front.</h2>
-          <p className="body-measure text-dim mt-6">
-            Disciplined leadership, accountable for every position we hold.
-          </p>
-        </SectionReveal>
-        <SectionReveal
-          stagger
-          className="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 md:grid-cols-3 lg:grid-cols-5"
-        >
-          {executives.map((p) => (
-            <PersonCard key={p.name} person={p} showBio={false} />
-          ))}
-        </SectionReveal>
-        <div className="mx-auto max-w-6xl px-6 pb-24 pt-12">
-          <ArrowLink to="/leadership">Meet the leadership</ArrowLink>
-        </div>
-      </section>
-
-      {/* 6. CLOSING CTA */}
+      {/* 5. CLOSING CTA */}
       <CTABand
         title="Build with us, for the long term."
         line="For partnership, investment, and acquisition inquiries."
