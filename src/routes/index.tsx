@@ -3,7 +3,6 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { PersonCard } from "@/components/PersonCard";
 import { TheStandard } from "@/components/TheStandard";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
