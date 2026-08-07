@@ -37,13 +37,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Crest size={120} />
+            <Crest size={92} variant="gold" />
             <p className="mt-6 font-serif text-2xl font-semibold text-bone">
-              CGE Corporate
+              Craig Global Enterprises
             </p>
-            {/* [confirm] tagline */}
-            <p className="text-dim mt-2 text-sm">An assets holding company.</p>
+            <p className="text-dim mt-2 text-sm tracking-[0.18em] uppercase">
+              Stewardship over speculation.
+            </p>
           </div>
+
 
           {columns.map((col) => (
             <nav key={col.heading} aria-label={col.heading}>
