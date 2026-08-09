@@ -603,6 +603,18 @@
   font-weight: 600;
 }
 
+
+/* Mid-desktop: shrink type so the full tree fits without horizontal scroll */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .cge-org .node .name { font-size: 0.86rem; }
+  .cge-org .node.subsidiary .name { font-size: 0.92rem; }
+  .cge-org .node.leaf .name { font-size: 0.78rem; }
+  .cge-org .node .sub,
+  .cge-org .roster span { font-size: 0.66rem; }
+  .cge-org .node .tag { font-size: 0.56rem; letter-spacing: 0.16em; }
+  .cge-org .feeder { font-size: 0.64rem; padding: 6px 10px; }
+}
+
 @media (max-width: 1279px) {
   .cge-org .tree,
   .cge-org .tree ul {
