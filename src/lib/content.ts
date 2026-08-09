@@ -406,7 +406,7 @@ export const executives: Person[] = [
   },
   {
     name: "Engr. Ikechukwu Nnamani",
-    role: "CHIEF TECHNOLOGY OFFICER /\u00a0CHIEF INFORMATION OFFICER",
+    role: "CEO OF CGI (NIGERIA) /\u00a0CHIEF TECHNOLOGY OFFICER, CGE",
     initials: "IN",
     slug: "ikechukwu-nnamani",
     image: ikechukwuNnamani.url,
