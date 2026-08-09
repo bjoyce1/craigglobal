@@ -146,11 +146,17 @@ export function OrgChart() {
               </li>
 
               <li>
-                <div className="node subsidiary pending">
+                <div className="node subsidiary">
                   <div className="tag">CGI</div>
-                  <div className="name">Craig Global International</div>
+                  <div className="name">Craig Global International Ltd</div>
+                  <div className="sub">Nigeria — international branch</div>
+                  <div className="roster">
+                    <span>
+                      <b>Ikechukwu Nnamani</b> · CEO
+                    </span>
+                  </div>
                 </div>
-                <div className="badge confirm">Relationship to confirm</div>
+                <div className="badge">Subsidiary</div>
               </li>
             </ul>
           </li>
