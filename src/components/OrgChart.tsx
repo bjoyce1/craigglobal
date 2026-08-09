@@ -188,10 +188,6 @@ export function OrgChart() {
             <span className="flag">CSO meaning:</span> Strategy, Security, or another title.
           </p>
           <p>
-            <span className="flag">CGI placement:</span> shown as a subsidiary for now. Confirm
-            whether Craig Global International is a subsidiary, affiliate, or international parent.
-          </p>
-          <p>
             <span className="flag">Full names:</span> only Ken Merritt is confirmed. Remaining
             executives are shown by first name or title.
           </p>
