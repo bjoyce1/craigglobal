@@ -40,6 +40,10 @@ export function OrgChart() {
                   <div className="who">Ken Merritt</div>
                 </div>
                 <div className="exec">
+                  <div className="role">CTO</div>
+                  <div className="who">Ikechukwu Nnamani</div>
+                </div>
+                <div className="exec">
                   <div className="role">COS</div>
                   <div className="who">Dave</div>
                 </div>
@@ -142,11 +146,17 @@ export function OrgChart() {
               </li>
 
               <li>
-                <div className="node subsidiary pending">
+                <div className="node subsidiary">
                   <div className="tag">CGI</div>
-                  <div className="name">Craig Global International</div>
+                  <div className="name">Craig Global International Ltd</div>
+                  <div className="sub">Nigeria — international branch</div>
+                  <div className="roster">
+                    <span>
+                      <b>Ikechukwu Nnamani</b> · CEO
+                    </span>
+                  </div>
                 </div>
-                <div className="badge confirm">Relationship to confirm</div>
+                <div className="badge">Subsidiary</div>
               </li>
             </ul>
           </li>
@@ -169,6 +179,9 @@ export function OrgChart() {
             <b>CFO</b> Chief Financial Officer
           </p>
           <p>
+            <b>CTO</b> Chief Technology Officer
+          </p>
+          <p>
             <b>COS</b> Chief of Staff
           </p>
         </div>
@@ -176,10 +189,6 @@ export function OrgChart() {
         <div className="grid">
           <p>
             <span className="flag">CSO meaning:</span> Strategy, Security, or another title.
-          </p>
-          <p>
-            <span className="flag">CGI placement:</span> shown as a subsidiary for now. Confirm
-            whether Craig Global International is a subsidiary, affiliate, or international parent.
           </p>
           <p>
             <span className="flag">Full names:</span> only Ken Merritt is confirmed. Remaining
