@@ -179,6 +179,9 @@ export function OrgChart() {
             <b>CFO</b> Chief Financial Officer
           </p>
           <p>
+            <b>CTO</b> Chief Technology Officer
+          </p>
+          <p>
             <b>COS</b> Chief of Staff
           </p>
         </div>
