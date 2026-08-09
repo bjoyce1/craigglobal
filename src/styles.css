@@ -264,15 +264,16 @@
   color: var(--bone);
   border: 1px solid var(--line-dark);
   border-radius: 18px;
-  padding: 48px 24px 56px;
+  padding: clamp(24px, 4vw, 48px) clamp(14px, 2.5vw, 24px) clamp(28px, 4.5vw, 56px);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cge-org .tree {
   display: flex;
   justify-content: center;
   min-width: min-content;
-  padding: 0 12px;
+  padding: 0 clamp(4px, 0.8vw, 12px);
 }
 .cge-org .tree ul {
   display: flex;
@@ -287,9 +288,10 @@
 .cge-org .tree li {
   list-style: none;
   position: relative;
-  padding: 34px 12px 0;
+  padding: 34px clamp(4px, 0.55vw, 12px) 0;
   text-align: center;
 }
+
 .cge-org .tree li::before,
 .cge-org .tree li::after {
   content: "";
