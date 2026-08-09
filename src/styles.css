@@ -264,15 +264,16 @@
   color: var(--bone);
   border: 1px solid var(--line-dark);
   border-radius: 18px;
-  padding: 48px 24px 56px;
+  padding: clamp(24px, 4vw, 48px) clamp(14px, 2.5vw, 24px) clamp(28px, 4.5vw, 56px);
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cge-org .tree {
   display: flex;
   justify-content: center;
   min-width: min-content;
-  padding: 0 12px;
+  padding: 0 clamp(4px, 0.8vw, 12px);
 }
 .cge-org .tree ul {
   display: flex;
@@ -287,9 +288,10 @@
 .cge-org .tree li {
   list-style: none;
   position: relative;
-  padding: 34px 12px 0;
+  padding: 34px clamp(3px, 0.4vw, 12px) 0;
   text-align: center;
 }
+
 .cge-org .tree li::before,
 .cge-org .tree li::after {
   content: "";
@@ -337,9 +339,9 @@
   justify-content: center;
   position: relative;
   gap: 3px;
-  min-width: 148px;
-  max-width: 240px;
-  padding: 16px 20px;
+  min-width: clamp(112px, 9.5vw, 148px);
+  max-width: clamp(160px, 15vw, 240px);
+  padding: clamp(11px, 1.1vw, 16px) clamp(12px, 1.4vw, 20px);
   background: linear-gradient(180deg, var(--navy-2), var(--navy));
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 14px;
@@ -374,9 +376,9 @@
 }
 
 .cge-org .node.parent {
-  min-width: 360px;
+  min-width: min(360px, 100%);
   max-width: 560px;
-  padding: 24px 40px;
+  padding: clamp(18px, 2vw, 24px) clamp(20px, 3vw, 40px);
   background: linear-gradient(180deg, #20242e, #13161d);
   border: 1px solid var(--org-line);
   box-shadow: 0 0 0 1px rgba(203, 162, 79, 0.15), 0 30px 70px -30px rgba(0, 0, 0, 1),
@@ -384,7 +386,7 @@
 }
 .cge-org .node.parent .brand {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--gold-hi);
@@ -419,8 +421,8 @@
   border-color: var(--org-crimson);
 }
 .cge-org .node.leaf {
-  min-width: 124px;
-  padding: 13px 16px;
+  min-width: clamp(80px, 5.8vw, 124px);
+  padding: clamp(9px, 1vw, 13px) clamp(10px, 1.2vw, 16px);
 }
 .cge-org .node.leaf .name {
   font-size: 0.88rem;
@@ -448,6 +450,9 @@
 
 .cge-org .feeder {
   display: inline-flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
@@ -598,7 +603,19 @@
   font-weight: 600;
 }
 
-@media (max-width: 880px) {
+
+/* Mid-desktop: shrink type so the full tree fits without horizontal scroll */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .cge-org .node .name { font-size: 0.86rem; }
+  .cge-org .node.subsidiary .name { font-size: 0.92rem; }
+  .cge-org .node.leaf .name { font-size: 0.78rem; }
+  .cge-org .node .sub,
+  .cge-org .roster span { font-size: 0.66rem; }
+  .cge-org .node .tag { font-size: 0.56rem; letter-spacing: 0.16em; }
+  .cge-org .feeder { font-size: 0.64rem; padding: 6px 10px; }
+}
+
+@media (max-width: 1279px) {
   .cge-org .tree,
   .cge-org .tree ul {
     display: block;
