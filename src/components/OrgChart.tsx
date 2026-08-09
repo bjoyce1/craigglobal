@@ -40,6 +40,10 @@ export function OrgChart() {
                   <div className="who">Ken Merritt</div>
                 </div>
                 <div className="exec">
+                  <div className="role">CTO</div>
+                  <div className="who">Ikechukwu Nnamani</div>
+                </div>
+                <div className="exec">
                   <div className="role">COS</div>
                   <div className="who">Dave</div>
                 </div>
