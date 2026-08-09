@@ -7,8 +7,10 @@ const links = [
   { to: "/about", label: "About" },
   { to: "/leadership", label: "Leadership" },
   { to: "/holdings", label: "Holdings" },
+  { to: "/cgi", label: "CGI" },
   { to: "/approach", label: "Approach" },
 ] as const;
+
 
 /**
  * Nav — sticky, minimal. Transparent over the hero; gains a solid surface

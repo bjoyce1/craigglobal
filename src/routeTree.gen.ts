@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as HoldingsRouteImport } from './routes/holdings'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CgiRouteImport } from './routes/cgi'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -31,6 +32,11 @@ const HoldingsRoute = HoldingsRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CgiRoute = CgiRouteImport.update({
+  id: '/cgi',
+  path: '/cgi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApproachRoute = ApproachRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cgi': typeof CgiRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
   '/leadership': typeof LeadershipRouteWithChildren
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cgi': typeof CgiRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
   '/leadership/$slug': typeof LeadershipSlugRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/cgi': typeof CgiRoute
   '/contact': typeof ContactRoute
   '/holdings': typeof HoldingsRoute
   '/leadership': typeof LeadershipRouteWithChildren
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cgi'
     | '/contact'
     | '/holdings'
     | '/leadership'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cgi'
     | '/contact'
     | '/holdings'
     | '/leadership/$slug'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/approach'
+    | '/cgi'
     | '/contact'
     | '/holdings'
     | '/leadership'
@@ -125,6 +137,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
+  CgiRoute: typeof CgiRoute
   ContactRoute: typeof ContactRoute
   HoldingsRoute: typeof HoldingsRoute
   LeadershipRoute: typeof LeadershipRouteWithChildren
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cgi': {
+      id: '/cgi'
+      path: '/cgi'
+      fullPath: '/cgi'
+      preLoaderRoute: typeof CgiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/approach': {
@@ -209,6 +229,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
+  CgiRoute: CgiRoute,
   ContactRoute: ContactRoute,
   HoldingsRoute: HoldingsRoute,
   LeadershipRoute: LeadershipRouteWithChildren,

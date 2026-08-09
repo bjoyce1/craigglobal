@@ -14,10 +14,12 @@ const columns = [
     heading: "Portfolio",
     links: [
       { to: "/holdings", label: "Holdings" },
+      { to: "/cgi", label: "CGI International" },
       { to: "/approach", label: "Stewardship" },
       { to: "/contact", label: "Partnerships" },
     ],
   },
+
   {
     heading: "Connect",
     links: [
