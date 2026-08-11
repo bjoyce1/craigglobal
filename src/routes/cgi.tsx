@@ -81,12 +81,12 @@ const directors: { name: string; role: string; note: string }[] = [
   {
     name: "Keith L. Craig",
     role: "Director · Shareholder · Person with significant control",
-    note: "Chairman & Chief Executive Officer of Craig Global Enterprises. Holds 70,000,000 ordinary shares (70%) and 70% of voting rights. Appointed 17 July 2026.",
+    note: "Chairman & Chief Executive Officer of Craig Global Enterprises. Holds 70,000,000 ordinary shares (70%) and 70% of voting rights.",
   },
   {
     name: "Engr. Ikechukwu Nnamani",
     role: "Director · Shareholder · Person with significant control",
-    note: "Chief Technology Officer / Chief Information Officer. Holds 30,000,000 ordinary shares (30%) and 30% of voting rights. Appointed 17 July 2026.",
+    note: "Chief Executive Officer Holds ordinary shares and voting rights. Appointed July 17, 2026.",
   },
 ];
 
