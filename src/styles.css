@@ -660,3 +660,51 @@
     text-align: left;
   }
 }
+
+/* --- Starfield (CGI hero) --- */
+.starfield {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 20%, rgba(201, 168, 106, 0.06), transparent 70%),
+    var(--navy, #0b1220);
+}
+.starfield .star-layer {
+  position: absolute;
+  inset: -50% 0 0 0;
+  height: 200%;
+  background-repeat: repeat;
+  will-change: transform;
+}
+.starfield .star-layer-1 {
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 220px 160px, rgba(201, 168, 106, 0.6), transparent),
+    radial-gradient(1px 1px at 320px 60px, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 90px 240px, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 400px 320px;
+  animation: star-drift 240s linear infinite, star-twinkle 7s ease-in-out infinite;
+}
+.starfield .star-layer-2 {
+  background-image:
+    radial-gradient(1px 1px at 60px 120px, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1.5px 1.5px at 260px 40px, rgba(201, 168, 106, 0.45), transparent),
+    radial-gradient(1px 1px at 380px 210px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1px 1px at 170px 300px, rgba(255, 255, 255, 0.35), transparent);
+  background-size: 520px 460px;
+  animation: star-drift 420s linear infinite reverse, star-twinkle 11s ease-in-out infinite 2s;
+  opacity: 0.8;
+}
+@keyframes star-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-400px, 160px, 0); }
+}
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .starfield .star-layer { animation: none; }
+}
