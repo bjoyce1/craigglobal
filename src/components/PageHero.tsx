@@ -36,17 +36,12 @@ export function PageHero({
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
         <div className={cn("absolute inset-0", !video && !globe && "kenburns")}>
           {globe ? (
-            image ? (
-              <img
-                src={imageUrl(image)}
-                alt=""
-                className="h-full w-full object-cover opacity-40"
-                width={1920}
-                height={1080}
-                fetchPriority="high"
-              />
-            ) : null
+            <div className="starfield" aria-hidden="true">
+              <div className="star-layer star-layer-1" />
+              <div className="star-layer star-layer-2" />
+            </div>
           ) : video ? (
+
             <video
               src={imageUrl(video)}
               poster={imageUrl(image)}
