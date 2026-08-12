@@ -41,7 +41,6 @@ export function PageHero({
               <div className="star-layer star-layer-2" />
             </div>
           ) : video ? (
-
             <video
               src={imageUrl(video)}
               poster={imageUrl(image)}
