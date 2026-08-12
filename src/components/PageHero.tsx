@@ -69,7 +69,7 @@ export function PageHero({
         {globe && (
           <>
             <div
-              className="pointer-events-none absolute inset-0 bg-[var(--navy)]/55"
+              className="pointer-events-none absolute inset-0 bg-[var(--navy)]/25"
               aria-hidden="true"
             />
             <div className="absolute -right-[12%] top-1/2 w-[46vw] max-w-[760px] min-w-[420px] -translate-y-1/2 opacity-80 [mask-image:radial-gradient(closest-side,black_72%,transparent_100%)] md:-right-[6%]">
