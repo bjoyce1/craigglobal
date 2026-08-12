@@ -19,18 +19,32 @@ export function PageHero({
   intro,
   variant = "light",
   image,
+  video,
 }: {
   eyebrow: string;
   title: ReactNode;
   intro?: ReactNode;
   variant?: "light" | "dark";
   image?: { url: string } | string;
+  video?: { url: string } | string;
 }) {
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className="absolute inset-0 kenburns">
-          {image ? (
+        <div className={cn("absolute inset-0", !video && "kenburns")}>
+          {video ? (
+            <video
+              src={imageUrl(video)}
+              poster={imageUrl(image)}
+              className="h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+            />
+          ) : image ? (
             <img
               src={imageUrl(image)}
               alt=""
@@ -43,6 +57,7 @@ export function PageHero({
             <PlaceholderImage className="h-full w-full" />
           )}
         </div>
+
         <div className="scrim-bottom absolute inset-0" aria-hidden="true" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-44">
           <Eyebrow>{eyebrow}</Eyebrow>
