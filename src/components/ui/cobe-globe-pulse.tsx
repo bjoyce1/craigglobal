@@ -158,7 +158,6 @@ export function GlobePulse({
           key={m.id}
           style={{
             position: "absolute",
-            // @ts-expect-error CSS Anchor Positioning
             positionAnchor: `--cobe-${m.id}`,
             bottom: "anchor(center)",
             left: "anchor(center)",
@@ -172,7 +171,7 @@ export function GlobePulse({
             opacity: `var(--cobe-visible-${m.id}, 0)`,
             filter: `blur(calc((1 - var(--cobe-visible-${m.id}, 0)) * 8px))`,
             transition: "opacity 0.4s, filter 0.4s",
-          }}
+          } as React.CSSProperties}
         >
           <span
             style={{
