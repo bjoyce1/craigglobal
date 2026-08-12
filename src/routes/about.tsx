@@ -61,11 +61,14 @@ function About() {
           stagger
           className="section-pad mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2"
         >
-          {/* [PLACEHOLDER IMAGE] */}
-          <PlaceholderImage
-            className="w-full"
-            ratio="4 / 5"
-            label="[PLACEHOLDER IMAGE]"
+          <img
+            src={holdingModelImage}
+            alt="A quiet executive boardroom at night, representing the long-term stewardship of the holding-company model."
+            loading="lazy"
+            width={1024}
+            height={1280}
+            className="w-full object-cover"
+            style={{ aspectRatio: "4 / 5" }}
           />
           <div>
             <h2 className="display-h2">The holding-company model.</h2>
