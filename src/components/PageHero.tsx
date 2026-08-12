@@ -3,6 +3,7 @@ import { SectionReveal } from "./SectionReveal";
 import { Eyebrow } from "./Eyebrow";
 import { PlaceholderImage } from "./PlaceholderImage";
 import { cn } from "@/lib/utils";
+import { GlobePulse } from "./ui/cobe-globe-pulse";
 
 function imageUrl(image: { url: string } | string | undefined): string | undefined {
   if (!image) return undefined;
@@ -20,6 +21,7 @@ export function PageHero({
   variant = "light",
   image,
   video,
+  globe = false,
 }: {
   eyebrow: string;
   title: ReactNode;
@@ -27,12 +29,24 @@ export function PageHero({
   variant?: "light" | "dark";
   image?: { url: string } | string;
   video?: { url: string } | string;
+  globe?: boolean;
 }) {
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className={cn("absolute inset-0", !video && "kenburns")}>
-          {video ? (
+        <div className={cn("absolute inset-0", !video && !globe && "kenburns")}>
+          {globe ? (
+            image ? (
+              <img
+                src={imageUrl(image)}
+                alt=""
+                className="h-full w-full object-cover opacity-40"
+                width={1920}
+                height={1080}
+                fetchPriority="high"
+              />
+            ) : null
+          ) : video ? (
             <video
               src={imageUrl(video)}
               poster={imageUrl(image)}
@@ -58,6 +72,17 @@ export function PageHero({
           )}
         </div>
 
+        {globe && (
+          <>
+            <div
+              className="pointer-events-none absolute inset-0 bg-[var(--navy)]/70"
+              aria-hidden="true"
+            />
+            <div className="absolute -right-[12%] top-1/2 w-[46vw] max-w-[760px] min-w-[420px] -translate-y-1/2 opacity-80 [mask-image:radial-gradient(closest-side,black_72%,transparent_100%)] md:-right-[6%]">
+              <GlobePulse />
+            </div>
+          </>
+        )}
         {video && (
           <div
             className="absolute inset-0 bg-[var(--navy,#0b1220)]/45 mix-blend-multiply"
