@@ -36,7 +36,7 @@ export function PageHero({
             <video
               src={imageUrl(video)}
               poster={imageUrl(image)}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover opacity-55 [filter:saturate(0.7)_contrast(0.95)]"
               autoPlay
               muted
               loop
@@ -58,6 +58,12 @@ export function PageHero({
           )}
         </div>
 
+        {video && (
+          <div
+            className="absolute inset-0 bg-[var(--navy,#0b1220)]/45 mix-blend-multiply"
+            aria-hidden="true"
+          />
+        )}
         <div className="scrim-bottom absolute inset-0" aria-hidden="true" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-44">
           <Eyebrow>{eyebrow}</Eyebrow>
