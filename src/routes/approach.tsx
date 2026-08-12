@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
 import { principles, process, coreValues } from "@/lib/content";
 import { cn } from "@/lib/utils";
+import approachHeroBg from "@/assets/approach-hero-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/approach")({
   head: () => ({
@@ -29,6 +30,7 @@ function Approach() {
       <PageHero
         variant="dark"
         eyebrow="Our Approach"
+        image={approachHeroBg}
         title={
           <>
             Stewardship over{" "}
