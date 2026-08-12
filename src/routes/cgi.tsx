@@ -3,6 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
+import cgiHeroBg from "@/assets/cgi-hero-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/cgi")({
   head: () => ({
@@ -94,6 +95,8 @@ function CGIPage() {
   return (
     <main>
       <PageHero
+        variant="dark"
+        image={cgiHeroBg}
         eyebrow="Craig Global International"
         title="CGI — the international branch of CGE."
         intro="Craig Global International Ltd carries the CGE standard beyond the United States: a Nigerian-registered company built for technology, digital commerce, and cross-border trade across Africa and the wider world."
