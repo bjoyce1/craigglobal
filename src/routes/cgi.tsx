@@ -3,6 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
+import cgiHeroBg from "@/assets/cgi-hero-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/cgi")({
   head: () => ({
