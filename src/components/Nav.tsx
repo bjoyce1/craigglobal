@@ -206,7 +206,7 @@ export function Nav() {
             </Link>
           ))}
         </div>
-        <div className="px-8 pb-14">
+        <div className="shrink-0 px-7 pb-10 sm:px-8 sm:pb-14">
           <Link
             to="/contact"
             className="inline-flex w-full items-center justify-center rounded-full bg-gold px-8 py-4 font-sans text-[0.82rem] font-semibold uppercase tracking-[0.12em] text-ink"
