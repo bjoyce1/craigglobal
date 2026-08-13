@@ -183,7 +183,7 @@
 @utility display-h2 {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  font-size: clamp(1.75rem, 5vw, 3.4rem);
   line-height: 1.12;
 }
 
