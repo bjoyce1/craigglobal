@@ -4,6 +4,31 @@ import { Eyebrow } from "./Eyebrow";
 import { PlaceholderImage } from "./PlaceholderImage";
 import { cn } from "@/lib/utils";
 import { GlobePulse } from "./ui/cobe-globe-pulse";
+import { WorldMap } from "./ui/map";
+
+/** Holdings footprint — arcs between CGE market hubs. */
+const worldDots = [
+  {
+    start: { lat: 40.7128, lng: -74.006, label: "New York" },
+    end: { lat: 51.5074, lng: -0.1278, label: "London" },
+  },
+  {
+    start: { lat: 51.5074, lng: -0.1278, label: "London" },
+    end: { lat: 6.5244, lng: 3.3792, label: "Lagos" },
+  },
+  {
+    start: { lat: 6.5244, lng: 3.3792, label: "Lagos" },
+    end: { lat: -26.2041, lng: 28.0473, label: "Johannesburg" },
+  },
+  {
+    start: { lat: 43.6532, lng: -79.3832, label: "Toronto" },
+    end: { lat: 40.7128, lng: -74.006, label: "New York" },
+  },
+  {
+    start: { lat: 50.0, lng: 8.2711, label: "Mainz" },
+    end: { lat: 40.7128, lng: -74.006, label: "New York" },
+  },
+];
 
 function imageUrl(image: { url: string } | string | undefined): string | undefined {
   if (!image) return undefined;
