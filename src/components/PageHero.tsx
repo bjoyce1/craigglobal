@@ -63,8 +63,10 @@ export function PageHero({
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
         <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
           {map ? (
-            <div className="absolute inset-0 flex items-center justify-center opacity-70">
-              <WorldMap dots={worldDots} />
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-70">
+              <div className="w-[180%] max-w-none sm:w-full">
+                <WorldMap dots={worldDots} />
+              </div>
             </div>
           ) : globe ? (
 
