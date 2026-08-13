@@ -22,6 +22,7 @@ export function PageHero({
   image,
   video,
   globe = false,
+  map = false,
 }: {
   eyebrow: string;
   title: ReactNode;
@@ -30,12 +31,18 @@ export function PageHero({
   image?: { url: string } | string;
   video?: { url: string } | string;
   globe?: boolean;
+  map?: boolean;
 }) {
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className={cn("absolute inset-0", !video && !globe && "kenburns")}>
-          {globe ? (
+        <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
+          {map ? (
+            <div className="absolute inset-0 flex items-center justify-center opacity-70">
+              <WorldMap dots={worldDots} />
+            </div>
+          ) : globe ? (
+
             <div className="starfield" aria-hidden="true">
               <div className="star-layer star-layer-1" />
               <div className="star-layer star-layer-2" />
