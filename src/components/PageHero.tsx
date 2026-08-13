@@ -63,8 +63,10 @@ export function PageHero({
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
         <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
           {map ? (
-            <div className="absolute inset-0 flex items-center justify-center opacity-70">
-              <WorldMap dots={worldDots} />
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-70">
+              <div className="w-[180%] max-w-none sm:w-full">
+                <WorldMap dots={worldDots} />
+              </div>
             </div>
           ) : globe ? (
 
@@ -104,7 +106,7 @@ export function PageHero({
               className="pointer-events-none absolute inset-0 bg-[var(--navy)]/25"
               aria-hidden="true"
             />
-            <div className="absolute -right-[12%] top-1/2 w-[46vw] max-w-[760px] min-w-[420px] -translate-y-1/2 opacity-80 [mask-image:radial-gradient(closest-side,black_72%,transparent_100%)] md:-right-[6%]">
+            <div className="absolute left-1/2 top-[26%] w-[78vw] max-w-[420px] -translate-x-1/2 -translate-y-1/2 opacity-50 [mask-image:radial-gradient(closest-side,black_72%,transparent_100%)] sm:left-auto sm:right-[-12%] sm:top-1/2 sm:w-[46vw] sm:min-w-[420px] sm:max-w-[760px] sm:translate-x-0 sm:opacity-80 md:right-[-6%]">
               <GlobePulse />
             </div>
           </>
@@ -116,7 +118,7 @@ export function PageHero({
           />
         )}
         <div className="scrim-bottom absolute inset-0" aria-hidden="true" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-44">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-6 sm:pb-24 sm:pt-44">
           <Eyebrow>{eyebrow}</Eyebrow>
           <h1 className="display-hero mt-6 max-w-4xl text-bone">{title}</h1>
           {intro && (
@@ -129,7 +131,7 @@ export function PageHero({
 
   return (
     <header className={cn("surface-light")}>
-      <SectionReveal className="mx-auto max-w-6xl px-6 pb-16 pt-44">
+      <SectionReveal className="mx-auto max-w-6xl px-5 pb-12 pt-32 sm:px-6 sm:pb-16 sm:pt-44">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="display-hero mt-6 max-w-4xl">{title}</h1>
         {intro && (

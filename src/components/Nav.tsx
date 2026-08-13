@@ -192,12 +192,12 @@ export function Nav() {
         )}
         aria-hidden={!open}
       >
-        <div className="flex flex-1 flex-col justify-center gap-7 px-8 pt-20">
+        <div className="flex flex-1 flex-col justify-center gap-5 overflow-y-auto px-7 pb-6 pt-24 sm:gap-7 sm:px-8">
           {links.map((l, i) => (
             <Link
               key={l.to}
               to={l.to}
-              className="flex items-baseline gap-4 font-serif text-4xl font-medium text-bone"
+              className="flex items-baseline gap-4 font-serif text-3xl font-medium text-bone sm:text-4xl"
             >
               <span className="font-serif text-base italic text-gold">
                 {String(i + 1).padStart(2, "0")}
@@ -206,7 +206,7 @@ export function Nav() {
             </Link>
           ))}
         </div>
-        <div className="px-8 pb-14">
+        <div className="shrink-0 px-7 pb-10 sm:px-8 sm:pb-14">
           <Link
             to="/contact"
             className="inline-flex w-full items-center justify-center rounded-full bg-gold px-8 py-4 font-sans text-[0.82rem] font-semibold uppercase tracking-[0.12em] text-ink"
