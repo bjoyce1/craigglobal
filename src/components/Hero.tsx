@@ -39,7 +39,7 @@ export function Hero({
       {/* bottom-up navy scrim */}
       <div className="scrim-bottom absolute inset-0" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 pt-40 md:pb-32">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-16 pt-32 sm:px-6 sm:pb-24 sm:pt-40 md:pb-32">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="display-hero mt-6 max-w-4xl text-bone">{title}</h1>
         {sub && (
