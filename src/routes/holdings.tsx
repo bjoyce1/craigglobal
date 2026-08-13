@@ -27,10 +27,13 @@ function Holdings() {
   return (
     <main>
       <PageHero
+        variant="dark"
+        map
         eyebrow="Portfolio"
         title="What we hold."
-        intro="A focused portfolio of operating businesses, held for the long term and governed to a single standard."
+        intro="A focused portfolio of operating businesses across four continents, held for the long term and governed to a single standard."
       />
+
 
       {/* Holdings — full portfolio grid */}
       <section className="surface-light">

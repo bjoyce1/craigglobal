@@ -4,6 +4,31 @@ import { Eyebrow } from "./Eyebrow";
 import { PlaceholderImage } from "./PlaceholderImage";
 import { cn } from "@/lib/utils";
 import { GlobePulse } from "./ui/cobe-globe-pulse";
+import { WorldMap } from "./ui/map";
+
+/** Holdings footprint — arcs between CGE market hubs. */
+const worldDots = [
+  {
+    start: { lat: 40.7128, lng: -74.006, label: "New York" },
+    end: { lat: 51.5074, lng: -0.1278, label: "London" },
+  },
+  {
+    start: { lat: 51.5074, lng: -0.1278, label: "London" },
+    end: { lat: 6.5244, lng: 3.3792, label: "Lagos" },
+  },
+  {
+    start: { lat: 6.5244, lng: 3.3792, label: "Lagos" },
+    end: { lat: -26.2041, lng: 28.0473, label: "Johannesburg" },
+  },
+  {
+    start: { lat: 43.6532, lng: -79.3832, label: "Toronto" },
+    end: { lat: 40.7128, lng: -74.006, label: "New York" },
+  },
+  {
+    start: { lat: 50.0, lng: 8.2711, label: "Mainz" },
+    end: { lat: 40.7128, lng: -74.006, label: "New York" },
+  },
+];
 
 function imageUrl(image: { url: string } | string | undefined): string | undefined {
   if (!image) return undefined;
@@ -22,6 +47,7 @@ export function PageHero({
   image,
   video,
   globe = false,
+  map = false,
 }: {
   eyebrow: string;
   title: ReactNode;
@@ -30,12 +56,18 @@ export function PageHero({
   image?: { url: string } | string;
   video?: { url: string } | string;
   globe?: boolean;
+  map?: boolean;
 }) {
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className={cn("absolute inset-0", !video && !globe && "kenburns")}>
-          {globe ? (
+        <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
+          {map ? (
+            <div className="absolute inset-0 flex items-center justify-center opacity-70">
+              <WorldMap dots={worldDots} />
+            </div>
+          ) : globe ? (
+
             <div className="starfield" aria-hidden="true">
               <div className="star-layer star-layer-1" />
               <div className="star-layer star-layer-2" />
