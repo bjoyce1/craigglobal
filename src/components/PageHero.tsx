@@ -131,7 +131,7 @@ export function PageHero({
 
   return (
     <header className={cn("surface-light")}>
-      <SectionReveal className="mx-auto max-w-6xl px-6 pb-16 pt-44">
+      <SectionReveal className="mx-auto max-w-6xl px-5 pb-12 pt-32 sm:px-6 sm:pb-16 sm:pt-44">
         <Eyebrow>{eyebrow}</Eyebrow>
         <h1 className="display-hero mt-6 max-w-4xl">{title}</h1>
         {intro && (
