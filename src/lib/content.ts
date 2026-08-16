@@ -649,7 +649,6 @@ export const board: Person[] = [
       "There are no losses, only lessons \u2014 and dreams do not have expiration dates.",
     quoteAttribution: "Richard Lawson",
   },
-  { name: "[Placeholder Name]", role: "Vice Chairman", initials: "\u2014", bio: "", placeholderBio: true },
   { name: "[Placeholder Name]", role: "Director", initials: "\u2014", bio: "", placeholderBio: true },
   { name: "[Placeholder Name]", role: "Independent Director", initials: "\u2014", bio: "", placeholderBio: true },
 ];
