@@ -619,6 +619,7 @@ export function executiveBySlug(slug: string): Person | undefined {
 
 // Board of Directors
 export const board: Person[] = [
+  { name: "[Placeholder Name]", role: "Chairman of the Board", initials: "\u2014", bio: "", placeholderBio: true },
   {
     name: "Richard Lawson",
     role: "Director",
