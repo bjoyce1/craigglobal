@@ -542,7 +542,74 @@ export const executives: Person[] = [
       { number: "04", title: "Develop the next voice.", body: "Find and shape talent the way great A&R turns potential into lasting catalog." },
     ],
   },
+  {
+    name: "Samantha Jacobs",
+    role: "President of African and Asian Operations, CGI",
+    initials: "SJ",
+    slug: "samantha-jacobs",
+    image: samanthaJacobs.url,
+    placeholderBio: false,
+    subtitle:
+      "As CGI\u2019s President of African and Asian Operations, Samantha builds the bridges that turn creative potential into global opportunity.",
+    bio: "Award-winning philanthropist, creative arts strategist, and documentary filmmaker whose global influence spans entertainment, art, and humanitarian work across the U.S., Africa, Asia, and Europe.",
+    fullBio: [
+      "Samantha Jacobs is an award-winning Philanthropist, Creative Arts Strategist and Documentary Filmmaker whose global influence spans entertainment, art and humanitarian work. She\u2019s an American now based in Kenya and has built a reputation as a dynamic connector whose career embodies solutions-based thinking, cross-cultural fluency and an unwavering commitment to turning vision into results.",
+      "As Founder of the consultancy, Success Farm, Ms. Jacobs leads strategic growth and partnership development internationally representing award-winning talent in film, music and visual arts. Her work bridges creativity with business by connecting artists, institutions and opportunities across the United States, Africa, Asia and Europe.",
+      "Driven by a deep commitment to service, Ms. Jacobs is Co-Founder and Chairwoman of Me to You Charity, where she has led the fight against period poverty since 2020, delivering reusable menstrual hygiene solutions to more than 9,000 women and girls across Kenya, Uganda, Nigeria, and Zanzibar. In 2023, she launched a free Sewing Academy for Hand-Sewn Sanitary Pads, certifying over 1,000 graduates to date. As Service Projects Director for the Rotary Club of Mombasa-Nyali, she extends that impact into education, sustainability, digital literacy initiatives and championing health, including medical camps in Kenya.",
+      "Educated at Georgia State University, with roots in broadcast media dating back to the mid-1990s, she has worked behind the scenes in marketing and production in major markets including V-103 Atlanta, 103.5 The Beat and WSVN Channel 7 in Miami. Ms. Jacobs has spent more than two decades mastering the mechanics of storytelling, humanitarianism and strategic communications. That foundation earned her recognition as the 2025 African Trailblazer of the Year at the 14th Voice Achievers Awards in Lagos, Nigeria.",
+      "Ms. Jacobs continues to expand her influence as a keynote speaker on topics like Leadership, Philanthropy and Literature. More than an executive, she is a path maker and an architect for change creating lasting, positive impact for several generations to come.",
+    ],
+    focus: [
+      "African & Asian operations",
+      "Creative arts strategy",
+      "Philanthropy & humanitarian impact",
+      "Documentary film & storytelling",
+    ],
+    stats: [
+      { value: "9,000+", label: "Women and girls reached with reusable menstrual hygiene solutions across Kenya, Uganda, Nigeria, and Zanzibar." },
+      { value: "1,000+", label: "Graduates certified through the free Sewing Academy for Hand-Sewn Sanitary Pads since 2023." },
+      { value: "20+", label: "Years mastering storytelling, humanitarianism, and strategic communications." },
+      { value: "2025", label: "African Trailblazer of the Year, 14th Voice Achievers Awards, Lagos, Nigeria." },
+    ],
+    chapters: [
+      {
+        title: "Strategy",
+        note: "Success Farm, global partnerships",
+        heading: "Bridging creativity and business.",
+        body: "As Founder of the consultancy Success Farm, she leads strategic growth and partnership development internationally, representing award-winning talent in film, music and visual arts \u2014 connecting artists, institutions and opportunities across the United States, Africa, Asia and Europe.",
+        tags: ["Success Farm", "Talent representation", "Cross-border partnerships"],
+      },
+      {
+        title: "Philanthropy",
+        note: "Me to You Charity, Rotary",
+        heading: "Service at scale.",
+        body: "Co-Founder and Chairwoman of Me to You Charity, leading the fight against period poverty since 2020. As Service Projects Director for the Rotary Club of Mombasa-Nyali, she extends that impact into education, sustainability, digital literacy and health, including medical camps in Kenya.",
+        tags: ["Me to You Charity", "Period poverty", "Rotary Mombasa-Nyali"],
+      },
+      {
+        title: "Media",
+        note: "Broadcast, production, documentary",
+        heading: "Two decades behind the scenes.",
+        body: "Educated at Georgia State University, with roots in broadcast media dating to the mid-1990s, she has worked in marketing and production in major markets including V-103 Atlanta, 103.5 The Beat and WSVN Channel 7 in Miami.",
+        tags: ["V-103 Atlanta", "103.5 The Beat", "WSVN Channel 7"],
+      },
+      {
+        title: "Recognition",
+        note: "Awards and the keynote stage",
+        heading: "A path maker.",
+        body: "Named 2025 African Trailblazer of the Year at the 14th Voice Achievers Awards in Lagos, Nigeria. She continues to expand her influence as a keynote speaker on Leadership, Philanthropy and Literature.",
+        tags: ["Voice Achievers Awards", "Keynote speaker", "Leadership"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "Connect across borders.", body: "Cross-cultural fluency turns creative potential into global opportunity." },
+      { number: "02", title: "Lead with service.", body: "Impact is measured in lives changed, not titles held." },
+      { number: "03", title: "Think in solutions.", body: "Solutions-based thinking converts vision into measurable results." },
+      { number: "04", title: "Build for generations.", body: "Architect change that outlasts the moment it was made in." },
+    ],
+  },
 ];
+
 
 export function executiveBySlug(slug: string): Person | undefined {
   return [...executives, ...board].find((p) => p.slug === slug);
