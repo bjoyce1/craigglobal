@@ -619,6 +619,7 @@ export function executiveBySlug(slug: string): Person | undefined {
 
 // Board of Directors
 export const board: Person[] = [
+  { name: "[Placeholder Name]", role: "Chairman of the Board", initials: "\u2014", bio: "", placeholderBio: true },
   {
     name: "Richard Lawson",
     role: "Director",
@@ -647,7 +648,6 @@ export const board: Person[] = [
       "There are no losses, only lessons \u2014 and dreams do not have expiration dates.",
     quoteAttribution: "Richard Lawson",
   },
-  { name: "[Placeholder Name]", role: "Chairman of the Board", initials: "\u2014", bio: "", placeholderBio: true },
   { name: "[Placeholder Name]", role: "Vice Chairman", initials: "\u2014", bio: "", placeholderBio: true },
   { name: "[Placeholder Name]", role: "Director", initials: "\u2014", bio: "", placeholderBio: true },
   { name: "[Placeholder Name]", role: "Independent Director", initials: "\u2014", bio: "", placeholderBio: true },
