@@ -21,6 +21,8 @@ import kenMerritt from "@/assets/ken-merritt-pfp.png.asset.json";
 import suaveRabb from "@/assets/suave-rabb-new.png.asset.json";
 import ikechukwuNnamani from "@/assets/ikechukwu-nnamani-pfp.png.asset.json";
 import richardLawson from "@/assets/richard-lawson-pfp.png.asset.json";
+import samanthaJacobs from "@/assets/samantha-jacobs-pfp.jpg.asset.json";
+
 
 
 
