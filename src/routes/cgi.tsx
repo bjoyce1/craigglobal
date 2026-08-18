@@ -211,6 +211,28 @@ function CGIPage() {
         </SectionReveal>
       </section>
 
+      {/* Corporate registry */}
+      <section className="surface-midnight border-y border-[var(--line-dark)]">
+        <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
+          <Eyebrow>Corporate registry</Eyebrow>
+          <h2 className="display-h2 mt-6 text-bone">On the record.</h2>
+          <dl className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-[var(--line-dark)] sm:grid-cols-2">
+            {registry.map((r) => (
+              <div
+                key={r.label}
+                className="border border-[var(--line-dark)] p-7"
+              >
+                <dt className="eyebrow text-gold">{r.label}</dt>
+                <dd className="mt-3 font-serif text-lg text-bone">{r.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="text-dim mt-8 text-sm">
+            Source: Corporate Affairs Commission certified extract, 24 July 2026.
+          </p>
+        </SectionReveal>
+      </section>
+
       <CTABand
         title="Partner with CGI."
         line="Technology, commerce, and trade mandates across Africa and beyond."
