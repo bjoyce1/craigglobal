@@ -3,6 +3,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
+import { CgiLeadership } from "@/components/CgiLeadership";
 
 export const Route = createFileRoute("/cgi")({
   head: () => ({
@@ -199,6 +200,8 @@ function CGIPage() {
           </div>
         </SectionReveal>
       </section>
+
+      <CgiLeadership />
 
       {/* Offices */}
       <section className="surface-light border-t border-[var(--line-light)]">
