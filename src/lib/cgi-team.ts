@@ -217,7 +217,7 @@ export const cgiTeam: CgiTeamMember[] = [
     organization: "CGI",
     name: "Karen",
     title: "International Legal Affairs",
-    location: "France",
+    location: "PARIS, FRANCE",
     country: "France",
     initials: "K",
     shortBio:
