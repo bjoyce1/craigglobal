@@ -200,6 +200,8 @@ function CGIPage() {
         </SectionReveal>
       </section>
 
+      <CgiLeadership />
+
       {/* Offices */}
       <section className="surface-light border-t border-[var(--line-light)]">
         <SectionReveal
