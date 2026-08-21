@@ -222,7 +222,30 @@ function CGIPage() {
         <SectionReveal className="section-pad mx-auto max-w-6xl px-6">
           <Eyebrow>Corporate registry</Eyebrow>
           <h2 className="display-h2 mt-6 text-bone">On the record.</h2>
-          <dl className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-[var(--line-dark)] sm:grid-cols-2">
+          {/* Mobile accordion */}
+          <Accordion
+            type="single"
+            collapsible
+            className="mt-12 border-t border-[var(--line-dark)] sm:hidden"
+          >
+            {registry.map((r) => (
+              <AccordionItem
+                key={r.label}
+                value={r.label}
+                className="border-b border-[var(--line-dark)]"
+              >
+                <AccordionTrigger className="py-5 text-left hover:no-underline">
+                  <span className="eyebrow text-gold">{r.label}</span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6">
+                  <p className="font-serif text-lg text-bone">{r.value}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          {/* Desktop grid */}
+          <dl className="mt-12 hidden grid-cols-2 gap-px overflow-hidden border border-[var(--line-dark)] sm:grid">
             {registry.map((r) => (
               <div
                 key={r.label}
