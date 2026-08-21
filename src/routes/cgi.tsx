@@ -4,6 +4,12 @@ import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
 import { CTABand } from "@/components/CTABand";
 import { CgiLeadership } from "@/components/CgiLeadership";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export const Route = createFileRoute("/cgi")({
   head: () => ({
