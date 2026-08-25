@@ -5,6 +5,7 @@
  */
 
 import ikechukwuNnamani from "@/assets/ikechukwu-nnamani-pfp.png.asset.json";
+import patriciaBebia from "@/assets/patricia-bebia-pfp.png.asset.json";
 
 export type CgiTeamMember = {
   id: string;
@@ -122,6 +123,7 @@ export const cgiTeam: CgiTeamMember[] = [
     title: "Chief Marketing Officer",
     location: "Toronto, Canada",
     country: "Canada",
+    photo: patriciaBebia.url,
     initials: "PB",
     shortBio:
       "Patricia Bebia is an award-winning media executive, filmmaker, producer, publisher, and communications leader whose career spans television, film, broadcasting, publishing, marketing, and public speaking. Her international work combines storytelling, brand development, creative leadership, and media strategy.",
