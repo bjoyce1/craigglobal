@@ -5,6 +5,7 @@
  */
 
 import ikechukwuNnamani from "@/assets/ikechukwu-nnamani-pfp.png.asset.json";
+import patriciaBebia from "@/assets/patricia-bebia-pfp.png.asset.json";
 
 export type CgiTeamMember = {
   id: string;
