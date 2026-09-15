@@ -213,6 +213,67 @@ export const executives: Person[] = [
     quoteAttribution: "Taalib Saber, Esq.",
   },
   {
+    name: "Cristiani Oliveira",
+    role: "Chief Partnerships Officer — Latin America",
+    initials: "CO",
+    slug: "cristiani-oliveira",
+    image: "/__l5e/assets-v1/7ba9f6a5-7ec7-440a-a14f-c014004067c4/cristiani-oliveira.png",
+    placeholderBio: false,
+    subtitle:
+      "Brazilian attorney, public figure, and partnership builder focused on expanding film, media, and distribution opportunities across Brazil and Latin America.",
+    bio: "Chief Partnerships Officer — Latin America. A Brazilian attorney and public figure whose legal expertise, cultural fluency, and strategic network position CGE to grow across Brazil and Latin American markets.",
+    fullBio: [
+      "Cristiani Oliveira is a Brazilian attorney, public figure, and former Miss Universe São Paulo Capital representative with a strong background in communication, public relations, business development, and strategic networking.",
+      "She is also the mother of Brazilian actress Hannah Assayag, who starred in the film Cavaleiro de Rodas, screened at the 2026 Cannes Film Festival. Through Hannah's career and her own professional journey, Cristiani has developed a close connection with the entertainment industry and an understanding of the dedication, relationships, and strategic vision required to build successful international projects.",
+      "With her legal expertise, professional credibility, public presence, and extensive network in Brazil, Cristiani is well positioned to represent and develop partnerships for film production and distribution companies seeking to expand their presence in Brazil and Latin America.",
+      "She brings professionalism, cultural understanding, strong communication skills, and a genuine passion for connecting people and creating new international opportunities.",
+    ],
+    focus: [
+      "Latin American partnerships",
+      "Film & media representation",
+      "Business development",
+      "Strategic networking",
+    ],
+    stats: [
+      { value: "Brazil", label: "Home market and base of operations for partnership development across Latin America." },
+      { value: "Cannes", label: "2026 Cannes Film Festival connection through family work in film." },
+      { value: "Attorney", label: "Licensed Brazilian attorney bringing legal credibility to deal structures." },
+      { value: "PR", label: "Communication and public-relations background shaping international representation." },
+    ],
+    chapters: [
+      {
+        title: "Legal Foundation",
+        note: "Attorney, credibility, deal structure",
+        heading: "Legal expertise meets relationship capital.",
+        body: "As a Brazilian attorney, Cristiani brings professional credibility and legal fluency to partnership conversations — helping CGE navigate representation, distribution, and market-entry discussions with structure and trust.",
+        tags: ["Brazilian attorney", "Deal structure", "Market entry"],
+      },
+      {
+        title: "Entertainment Network",
+        note: "Cannes, film, public figure",
+        heading: "A bridge into film and media.",
+        body: "Through her daughter Hannah Assayag's work and her own public profile, Cristiani has built close ties to the entertainment industry — including the 2026 Cannes Film Festival — giving her insight into the relationships that drive international projects.",
+        tags: ["Cannes 2026", "Film partnerships", "Public figure"],
+      },
+      {
+        title: "Latin America Growth",
+        note: "Brazil, partnerships, expansion",
+        heading: "Opening markets with cultural fluency.",
+        body: "Cristiani's network across Brazil and Latin America, combined with her communication skills and cultural understanding, positions CGE to build authentic, lasting partnerships in one of the world's most dynamic media regions.",
+        tags: ["Latin America", "Strategic networking", "Cultural fluency"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "Build trust first.", body: "Authentic relationships are the foundation of every successful international partnership." },
+      { number: "02", title: "Speak the local language.", body: "Cultural fluency and legal credibility open doors that pitches alone cannot." },
+      { number: "03", title: "Connect with purpose.", body: "Use public presence and network capital to create opportunities that serve both sides." },
+      { number: "04", title: "Represent with excellence.", body: "Professionalism and clear communication protect the brand in every market." },
+    ],
+    quote:
+      "Great partnerships begin with genuine connection — understanding the culture, honoring the relationship, and building something meaningful together.",
+    quoteAttribution: "Cristiani Oliveira",
+  },
+  {
     name: "Lynn E. Roberts III, Esq.",
     role: "CHIEF LEGAL OFFICER",
     initials: "LR",
