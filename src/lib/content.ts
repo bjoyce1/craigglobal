@@ -214,7 +214,7 @@ export const executives: Person[] = [
   },
   {
     name: "Cristiani Oliveira",
-    role: "Chief Partnerships Officer — Latin America",
+    role: " / CHIEF STRATEGY OFFICER",
     initials: "CO",
     slug: "cristiani-oliveira",
     image: "/__l5e/assets-v1/04ed8cbd-55ba-47df-a423-0f0729f84c0f/christiani-oliveira-pfp.png",
