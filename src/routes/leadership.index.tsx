@@ -25,7 +25,8 @@ export const Route = createFileRoute("/leadership/")({
 });
 
 function Leadership() {
-  const [ceo, ...rest] = executives;
+  const visible = executives.filter((p) => !p.hidden);
+  const [ceo, ...rest] = visible;
 
   return (
     <main>

@@ -44,6 +44,7 @@ export type Person = {
   bio: string;
   placeholderBio?: boolean;
   slug?: string;
+  hidden?: boolean;
   // Extended profile fields — surfaced on the individual profile page.
   image?: string;
   subtitle?: string;
@@ -606,6 +607,7 @@ export const executives: Person[] = [
     role: "President of A&R",
     initials: "DR",
     slug: "suave-rabb",
+    hidden: true,
     image: suaveRabb.url,
     placeholderBio: false,
     subtitle:
