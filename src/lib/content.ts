@@ -150,7 +150,7 @@ export const executives: Person[] = [
     initials: "TS",
     slug: "taalib-saber",
     placeholderBio: false,
-    image: "/__l5e/assets-v1/9b87e633-ef26-4c12-af9d-12e8c7fc7f7d/taalib-saber.png",
+    image: "/__l5e/assets-v1/c9f8dcd8-7643-48f6-99fc-28e7129aa049/taalib-saber.png",
     subtitle:
       "Strategic Legal Advisor and FIFA-licensed sports agent. Principal attorney at The Saber Firm, counseling investors, business owners, and athletes who build wealth with a conscience — legal infrastructure for people building wealth while staying true to their principles and purpose.",
     bio: "Chief Operating Officer and strategic legal advisor. Principal attorney at The Saber Firm and FIFA-licensed agent, aligning operating discipline with wealth-building counsel across the portfolio.",
