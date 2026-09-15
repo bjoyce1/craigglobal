@@ -607,6 +607,7 @@ export const executives: Person[] = [
     role: "President of A&R",
     initials: "DR",
     slug: "suave-rabb",
+    hidden: true,
     image: suaveRabb.url,
     placeholderBio: false,
     subtitle:
