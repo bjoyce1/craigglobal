@@ -343,6 +343,68 @@ export const executives: Person[] = [
     quoteAttribution: "Lynn E. Roberts III, Esq.",
   },
   {
+    name: "Marie Janice",
+    role: "CHIEF RISK OFFICER",
+    initials: "MJ",
+    slug: "marie-janice",
+    image: "/__l5e/assets-v1/40845438-8ffc-4423-8fb5-b812ea5dba49/marie-janice-pfp.png",
+    placeholderBio: false,
+    subtitle:
+      "Legal and transactional risk professional based in Amsterdam, specializing in cross-border M&A, regulatory risk, and corporate governance across European and international markets.",
+    bio: "CHIEF RISK OFFICER. A legal and transactional risk professional who evaluates complex legal, financial, regulatory, and social risks in cross-border M&A and corporate governance.",
+    fullBio: [
+      "Marie Janice is a legal and transactional risk professional specializing in cross-border M&A, regulatory risk, and corporate governance.",
+      "Based in Amsterdam, she evaluates complex legal, financial, regulatory, and social risks associated with domestic and international mergers and acquisitions. Her work involves detailed due diligence, assessment of corporate governance and regulatory frameworks, and analysis of risk allocation in transactions. Prior to this role, she gained extensive legal experience through several M&A-focused positions at French law firms.",
+      "This experience has developed her ability to evaluate opportunities, understand different business environments, and facilitate discussions between parties with diverse commercial and regulatory interests.",
+      "She holds a degree in Economic Law from Sciences Po Paris Law School, with a focus on international law, cross-border M&A, corporate governance, and anti-corruption frameworks, and a degree in Political Science and Philosophy from York University in Toronto, Canada.",
+      "With professional experience across France and the Netherlands and an academic background spanning Europe and North America, she brings a distinctly international perspective to legal, regulatory, and investment matters.",
+    ],
+    focus: [
+      "Cross-border M&A",
+      "Regulatory risk",
+      "Corporate governance",
+      "Transactional due diligence",
+    ],
+    stats: [
+      { value: "Amsterdam", label: "Base of operations for European and cross-border risk advisory." },
+      { value: "Sciences Po", label: "Economic Law degree focused on international law, M&A, and anti-corruption." },
+      { value: "York U", label: "Political Science and Philosophy degree from York University, Toronto." },
+      { value: "M&A", label: "Extensive experience in M&A-focused roles at French law firms." },
+    ],
+    chapters: [
+      {
+        title: "Risk Advisory",
+        note: "M&A, due diligence, risk allocation",
+        heading: "Risk seen across the transaction.",
+        body: "Marie evaluates complex legal, financial, regulatory, and social risks in domestic and international M&A — from detailed due diligence to risk allocation — so CGE can commit capital with clarity and confidence.",
+        tags: ["Cross-border M&A", "Due diligence", "Risk allocation"],
+      },
+      {
+        title: "Governance",
+        note: "Frameworks, compliance, anti-corruption",
+        heading: "Governance that travels.",
+        body: "Her assessment of corporate governance and regulatory frameworks helps CGE navigate diverse business environments, ensuring structures hold up under multiple jurisdictions and stakeholder expectations.",
+        tags: ["Corporate governance", "Regulatory frameworks", "Anti-corruption"],
+      },
+      {
+        title: "International Lens",
+        note: "France, Netherlands, Europe, North America",
+        heading: "A global academic and professional perspective.",
+        body: "With professional experience across France and the Netherlands and degrees from Sciences Po Paris and York University in Toronto, Marie brings a distinctly international view to legal, regulatory, and investment decisions.",
+        tags: ["Sciences Po Paris", "York University", "Europe & North America"],
+      },
+    ],
+    playbook: [
+      { number: "01", title: "See the full risk picture.", body: "Evaluate legal, financial, regulatory, and social risk before any transaction closes." },
+      { number: "02", title: "Govern across borders.", body: "Build governance frameworks that hold firm in multiple jurisdictions and cultures." },
+      { number: "03", title: "Bridge interests.", body: "Facilitate discussions between parties with diverse commercial and regulatory priorities." },
+      { number: "04", title: "Stay internationally grounded.", body: "Use academic and professional experience across Europe and North America to inform every position." },
+    ],
+    quote:
+      "Risk is not just something to avoid — it is something to understand, allocate, and govern with discipline across borders and cultures.",
+    quoteAttribution: "Marie Janice",
+  },
+  {
     name: "Ken Merritt",
     role: "CHIEF FINANCIAL OFFICER /\u00a0CHIEF STRATEGY OFFICER",
     initials: "KM",
