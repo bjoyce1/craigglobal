@@ -217,7 +217,7 @@ export const executives: Person[] = [
     role: "Chief Partnerships Officer — Latin America",
     initials: "CO",
     slug: "cristiani-oliveira",
-    image: "/__l5e/assets-v1/7ba9f6a5-7ec7-440a-a14f-c014004067c4/cristiani-oliveira.png",
+    image: "/__l5e/assets-v1/04ed8cbd-55ba-47df-a423-0f0729f84c0f/christiani-oliveira-pfp.png",
     placeholderBio: false,
     subtitle:
       "Brazilian attorney, public figure, and partnership builder focused on expanding film, media, and distribution opportunities across Brazil and Latin America.",
