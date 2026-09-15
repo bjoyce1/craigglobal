@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { PersonCard } from "@/components/PersonCard";
 import { OrgChart } from "@/components/OrgChart";
 import { CTABand } from "@/components/CTABand";
-import { executives, board } from "@/lib/content";
+import { executives } from "@/lib/content";
 
 export const Route = createFileRoute("/leadership/")({
   head: () => ({
@@ -54,7 +54,8 @@ function Leadership() {
         </SectionReveal>
       </section>
 
-      {/* Board of Directors — dark */}
+      {/* Board of Directors — hidden for now; restore when briefed */}
+      {/*
       <section className="surface-dark">
         <SectionReveal className="section-pad mx-auto max-w-6xl px-6 pb-0">
           <Eyebrow>Board of Directors</Eyebrow>
@@ -73,6 +74,7 @@ function Leadership() {
           ))}
         </SectionReveal>
       </section>
+      */}
 
 
       {/* Corporate structure */}
