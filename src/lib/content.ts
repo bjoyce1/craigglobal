@@ -44,6 +44,7 @@ export type Person = {
   bio: string;
   placeholderBio?: boolean;
   slug?: string;
+  hidden?: boolean;
   // Extended profile fields — surfaced on the individual profile page.
   image?: string;
   subtitle?: string;
