@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
-import { Eyebrow } from "@/components/Eyebrow";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { CTABand } from "@/components/CTABand";
+import { HoldingCard } from "@/components/HoldingCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { holdings } from "@/lib/content";
 
 export const Route = createFileRoute("/holdings")({
