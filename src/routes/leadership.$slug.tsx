@@ -4,6 +4,7 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
 import { CTABand } from "@/components/CTABand";
+import { BioActions } from "@/components/BioActions";
 import { executiveBySlug } from "@/lib/content";
 import type { Person, Stat, FilmCredit, PlaybookEntry } from "@/lib/content";
 
@@ -63,7 +64,7 @@ function Profile() {
               to="/leadership"
               className="eyebrow inline-flex items-center gap-2 text-gold transition-colors hover:text-gold-hi"
             >
-              <span aria-hidden="true">&larr;</span> Leadership
+              <span aria-hidden="true">&larr;</span> Meet the Team
             </Link>
           </SectionReveal>
           <SectionReveal className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-[minmax(0,360px)_1fr] md:items-end">
@@ -137,6 +138,8 @@ function Profile() {
                 )}
               </blockquote>
             )}
+
+            <BioActions person={person} />
           </div>
 
           {/* Areas of focus */}

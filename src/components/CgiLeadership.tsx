@@ -6,12 +6,13 @@ import { ExecutiveBioModal, VideoModal } from "@/components/ExecutiveBioModal";
 import { LeadershipMap } from "@/components/ui/leadership-map";
 import { PillButton } from "@/components/PillButton";
 import {
-  cgiExecutives,
-  cgiLegal,
-  cgiOperations,
-  cgiTeam,
-  type CgiTeamMember,
-} from "@/lib/cgi-team";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { cgiTeam, type CgiTeamMember } from "@/lib/cgi-team";
 
 function preview(member: CgiTeamMember) {
   return member.shortBio;
@@ -30,7 +31,7 @@ function ExecutiveCard({
     <article
       onMouseEnter={() => onHover(member.id)}
       onMouseLeave={() => onHover(null)}
-      className="group flex flex-col border border-[var(--line-dark)] p-6 transition-colors duration-500 hover:border-gold/60"
+      className="group flex h-full flex-col border border-[var(--line-dark)] p-6 transition-colors duration-500 hover:border-gold/60"
     >
       <CgiPortrait name={member.name} initials={member.initials} photo={member.photo} />
       <h3 className="mt-6 font-serif text-2xl font-semibold leading-snug text-bone">
@@ -67,63 +68,6 @@ function ExecutiveCard({
   );
 }
 
-function TeamCard({
-  member,
-  onOpen,
-  onHover,
-}: {
-  member: CgiTeamMember;
-  onOpen: () => void;
-  onHover: (id: string | null) => void;
-}) {
-  return (
-    <article
-      onMouseEnter={() => onHover(member.id)}
-      onMouseLeave={() => onHover(null)}
-      className="group flex flex-col border border-[var(--line-dark)] p-5 transition-colors duration-500 hover:border-gold/60"
-    >
-      <div className="flex items-start gap-4">
-        <div className="w-20 shrink-0">
-          <CgiPortrait
-            name={member.name}
-            initials={member.initials}
-            photo={member.photo}
-          />
-        </div>
-        <div>
-          <h3 className="font-serif text-lg font-semibold leading-snug text-bone">
-            {member.name}
-          </h3>
-          <p className="eyebrow mt-2 text-gold">{member.title}</p>
-          <p className="text-dim mt-1 font-sans text-[0.65rem] uppercase tracking-[0.18em]">
-            {member.location}
-          </p>
-        </div>
-      </div>
-      <p className="text-dim mt-4 text-[0.9rem] leading-relaxed">
-        {member.roleDescription ?? member.shortBio}
-      </p>
-      {member.bioStatus === "Awaiting Client Bio" && (
-        <p className="mt-4 font-sans text-[0.6rem] uppercase tracking-[0.18em] text-gold/70">
-          Role description · Full biography forthcoming
-        </p>
-      )}
-      <div className="mt-auto pt-5">
-        <button
-          type="button"
-          onClick={onOpen}
-          className="group/btn inline-flex cursor-pointer items-center gap-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-gold transition-colors hover:text-gold-hi"
-        >
-          View profile
-          <span className="transition-transform duration-300 ease-out group-hover/btn:translate-x-1.5">
-            &rarr;
-          </span>
-        </button>
-      </div>
-    </article>
-  );
-}
-
 export function CgiLeadership() {
   const [active, setActive] = useState<CgiTeamMember | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
@@ -144,49 +88,30 @@ export function CgiLeadership() {
           The leadership carrying CGI abroad.
         </h2>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {cgiExecutives.map((m) => (
-            <ExecutiveCard
-              key={m.id}
-              member={m}
-              onOpen={() => setActive(m)}
-              onHover={setHovered}
-            />
-          ))}
-        </div>
+        <p className="text-dim mt-5 text-sm">
+          Browse the team — open any profile for the full biography.
+        </p>
 
-        {/* International operations */}
-        <div className="mt-24">
-          <Eyebrow>International Operations</Eyebrow>
-          <h3 className="display-h2 mt-6 max-w-2xl text-bone">
-            Global Expertise. Regional Presence.
-          </h3>
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {cgiOperations.map((m) => (
-              <TeamCard
+        <Carousel opts={{ align: "start" }} className="mt-12 w-full">
+          <CarouselContent className="-ml-6">
+            {cgiTeam.map((m) => (
+              <CarouselItem
                 key={m.id}
-                member={m}
-                onOpen={() => setActive(m)}
-                onHover={setHovered}
-              />
+                className="pl-6 md:basis-1/2 lg:basis-1/3"
+              >
+                <ExecutiveCard
+                  member={m}
+                  onOpen={() => setActive(m)}
+                  onHover={setHovered}
+                />
+              </CarouselItem>
             ))}
+          </CarouselContent>
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <CarouselPrevious className="static translate-y-0 cursor-pointer border-[var(--line-dark)] bg-transparent text-bone hover:bg-gold hover:text-navy" />
+            <CarouselNext className="static translate-y-0 cursor-pointer border-[var(--line-dark)] bg-transparent text-bone hover:bg-gold hover:text-navy" />
           </div>
-        </div>
-
-        {/* Legal affairs */}
-        <div className="mt-20">
-          <Eyebrow>International Legal Affairs</Eyebrow>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {cgiLegal.map((m) => (
-              <TeamCard
-                key={m.id}
-                member={m}
-                onOpen={() => setActive(m)}
-                onHover={setHovered}
-              />
-            ))}
-          </div>
-        </div>
+        </Carousel>
 
         {/* Global leadership map */}
         <div className="mt-24 border-t border-[var(--line-dark)] pt-14">

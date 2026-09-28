@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
-import { Eyebrow } from "@/components/Eyebrow";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { CTABand } from "@/components/CTABand";
+import { HoldingCard } from "@/components/HoldingCard";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { holdings } from "@/lib/content";
 
 export const Route = createFileRoute("/holdings")({
@@ -30,87 +36,40 @@ function Holdings() {
         variant="dark"
         map
         eyebrow="Portfolio"
-        title="What we hold."
-        intro="A focused portfolio of operating businesses across four continents, held for the long term and governed to a single standard."
+        title="Holdings Making an Impact."
+        intro="Held here, grown everywhere."
       />
 
-
-      {/* Holdings — full portfolio grid */}
+      {/* Holdings — flashcard carousel */}
       <section className="surface-light">
-        <SectionReveal className="mx-auto max-w-6xl px-6 py-16">
-          <p className="eyebrow mb-10" style={{ letterSpacing: "0.18em" }}>
-            The portfolio
-          </p>
-
-          <div className="grid grid-cols-1 gap-x-12 gap-y-16 md:grid-cols-2">
-            {holdings.map((h) => (
-              <article
-                key={h.name}
-                className="flex flex-col gap-6 border-t border-[var(--line-light)] pt-10"
-              >
-                <div
-                  className="group relative w-full overflow-hidden rounded-lg"
-                  style={{ aspectRatio: "4 / 3" }}
-                >
-                  {h.logo ? (
-                    <>
-                      <img
-                        src={h.logo}
-                        alt={`${h.name} logo`}
-                        loading="lazy"
-                        className="absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-out group-hover:opacity-0"
-                      />
-                      {h.logoHover && (
-                        <img
-                          src={h.logoHover}
-                          alt=""
-                          aria-hidden="true"
-                          loading="lazy"
-                          className="absolute inset-0 h-full w-full object-contain opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-                        />
-                      )}
-                    </>
-                  ) : (
-                    <PlaceholderImage
-                      className="w-full"
-                      ratio="4 / 3"
-                      label="[PLACEHOLDER LOGO]"
-                    />
-                  )}
-                </div>
-                <div className="flex flex-col">
-                  <Eyebrow>{h.sector}</Eyebrow>
-                  <h2 className="display-h2 mt-5 text-3xl md:text-4xl">
-                    {h.name}
-                  </h2>
-                  <p className="body-measure mt-5 text-[var(--ink-dim)]">
-                    {h.description}
-                  </p>
-                  <div className="mt-7">
-                    <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
-                      Established
-                    </p>
-                    <p className="mt-1 font-serif text-xl">{h.established}</p>
-                  </div>
-                  {h.website && (
-                    <div className="mt-7">
-                      <a
-                        href={h.website}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="group inline-flex items-center gap-2 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-gold transition-colors hover:text-gold-hi"
-                      >
-                        Visit website
-                        <span className="transition-transform duration-300 ease-out group-hover:translate-x-1.5">
-                          &rarr;
-                        </span>
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
+        <SectionReveal className="mx-auto max-w-6xl px-6 py-20">
+          <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow" style={{ letterSpacing: "0.18em" }}>
+                The portfolio
+              </p>
+              <p className="mt-3 text-sm text-[var(--ink-dim)]">
+                Hover or tap a company to reveal what it does.
+              </p>
+            </div>
           </div>
+
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-6">
+              {holdings.map((h) => (
+                <CarouselItem
+                  key={h.name}
+                  className="pl-6 sm:basis-1/2 lg:basis-1/3"
+                >
+                  <HoldingCard holding={h} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="mt-10 flex items-center justify-center gap-4">
+              <CarouselPrevious className="static translate-y-0 cursor-pointer border-[var(--line-light)] text-ink hover:bg-navy hover:text-bone" />
+              <CarouselNext className="static translate-y-0 cursor-pointer border-[var(--line-light)] text-ink hover:bg-navy hover:text-bone" />
+            </div>
+          </Carousel>
         </SectionReveal>
       </section>
 

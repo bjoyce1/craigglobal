@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TheStandard } from "@/components/TheStandard";
+import { BoardroomTable } from "@/components/BoardroomTable";
 import { CTABand } from "@/components/CTABand";
 import { smoothScrollTo } from "@/lib/gsap";
 import { chairmanLetter } from "@/lib/content";
@@ -112,7 +112,10 @@ function Home() {
       </section>
 
 
-      {/* 4. CLOSING CTA */}
+      {/* 3. THE TABLE */}
+      <BoardroomTable />
+
+      {/* 4. THE STANDARD */}
       <TheStandard />
 
       {/* 5. CLOSING CTA */}

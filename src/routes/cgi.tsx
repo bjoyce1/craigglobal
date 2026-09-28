@@ -104,9 +104,12 @@ function CGIPage() {
         variant="dark"
         globe
         eyebrow="Craig Global International"
-        title="CGI — the international branch of CGE."
-        intro="Craig Global International Ltd carries the CGE standard beyond the United States: a Nigerian-registered company built for technology, digital commerce, and cross-border trade across Africa and the wider world."
+        title="CGE / CGI"
+        intro="Providing continuity across continents."
       />
+
+      <CgiLeadership />
+
 
       {/* Positioning */}
       <section className="surface-light border-t border-[var(--line-light)]">
@@ -186,7 +189,6 @@ function CGIPage() {
         </SectionReveal>
       </section>
 
-      <CgiLeadership />
 
       {/* Offices */}
       <section className="surface-light border-t border-[var(--line-light)]">
