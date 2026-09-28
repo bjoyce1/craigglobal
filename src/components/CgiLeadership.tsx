@@ -68,63 +68,6 @@ function ExecutiveCard({
   );
 }
 
-function TeamCard({
-  member,
-  onOpen,
-  onHover,
-}: {
-  member: CgiTeamMember;
-  onOpen: () => void;
-  onHover: (id: string | null) => void;
-}) {
-  return (
-    <article
-      onMouseEnter={() => onHover(member.id)}
-      onMouseLeave={() => onHover(null)}
-      className="group flex flex-col border border-[var(--line-dark)] p-5 transition-colors duration-500 hover:border-gold/60"
-    >
-      <div className="flex items-start gap-4">
-        <div className="w-20 shrink-0">
-          <CgiPortrait
-            name={member.name}
-            initials={member.initials}
-            photo={member.photo}
-          />
-        </div>
-        <div>
-          <h3 className="font-serif text-lg font-semibold leading-snug text-bone">
-            {member.name}
-          </h3>
-          <p className="eyebrow mt-2 text-gold">{member.title}</p>
-          <p className="text-dim mt-1 font-sans text-[0.65rem] uppercase tracking-[0.18em]">
-            {member.location}
-          </p>
-        </div>
-      </div>
-      <p className="text-dim mt-4 text-[0.9rem] leading-relaxed">
-        {member.roleDescription ?? member.shortBio}
-      </p>
-      {member.bioStatus === "Awaiting Client Bio" && (
-        <p className="mt-4 font-sans text-[0.6rem] uppercase tracking-[0.18em] text-gold/70">
-          Role description · Full biography forthcoming
-        </p>
-      )}
-      <div className="mt-auto pt-5">
-        <button
-          type="button"
-          onClick={onOpen}
-          className="group/btn inline-flex cursor-pointer items-center gap-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-gold transition-colors hover:text-gold-hi"
-        >
-          View profile
-          <span className="transition-transform duration-300 ease-out group-hover/btn:translate-x-1.5">
-            &rarr;
-          </span>
-        </button>
-      </div>
-    </article>
-  );
-}
-
 export function CgiLeadership() {
   const [active, setActive] = useState<CgiTeamMember | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
