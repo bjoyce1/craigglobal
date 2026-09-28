@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
@@ -6,17 +7,24 @@ import { PersonCard } from "@/components/PersonCard";
 import { OrgChart } from "@/components/OrgChart";
 import { CTABand } from "@/components/CTABand";
 import { executives } from "@/lib/content";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/leadership/")({
   head: () => ({
     meta: [
-      { title: "Leadership — CGE Corporate" },
+      { title: "Meet the Team — Craig Global Enterprises" },
       {
         name: "description",
         content:
-          "The executive leadership accountable for the standard at CGE Corporate.",
+          "Get to know those who steward your success — the executive officers and wider team of Craig Global Enterprises.",
       },
-      { property: "og:title", content: "Leadership — CGE Corporate" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Meet the Team — Craig Global Enterprises" },
+      {
+        property: "og:description",
+        content: "Get to know those who steward your success.",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/leadership" },
     ],
     links: [{ rel: "canonical", href: "/leadership" }],
@@ -24,30 +32,74 @@ export const Route = createFileRoute("/leadership/")({
   component: Leadership,
 });
 
+const EXECUTIVE_OFFICER_SLUGS = [
+  "keith-l-craig",
+  "taalib-saber",
+  "lynn",
+  "ken-merritt",
+] as const;
+
+const TABS = [
+  { id: "overview", label: "Overview" },
+  { id: "officers", label: "Executive Officers" },
+] as const;
+
 function Leadership() {
+  const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("overview");
   const visible = executives.filter((p) => !p.hidden);
-  const [ceo, ...rest] = visible;
+
+  const officers = EXECUTIVE_OFFICER_SLUGS.map((slug) =>
+    visible.find((p) => p.slug === slug),
+  ).filter((p): p is (typeof visible)[number] => Boolean(p));
+
+  const people = tab === "officers" ? officers : visible;
+  const [lead, ...rest] = people;
 
   return (
     <main>
       <PageHero
-        eyebrow="Leadership"
-        title="The people accountable for the standard."
+        eyebrow="Meet the Team"
+        title="Meet the Team."
+        intro="Get to know those who steward your success."
       />
 
-      {/* Executive Leadership */}
+      {/* Team */}
       <section className="surface-light">
         <SectionReveal className="section-pad mx-auto max-w-6xl px-6 pb-0">
-          <Eyebrow>Executive Leadership</Eyebrow>
+          <div
+            role="tablist"
+            aria-label="Team categories"
+            className="flex flex-wrap items-center gap-2 border-b border-[var(--line-light)]"
+          >
+            {TABS.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={tab === t.id}
+                onClick={() => setTab(t.id)}
+                className={cn(
+                  "-mb-px cursor-pointer border-b-2 px-1 pb-4 pt-2 font-sans text-[0.8rem] font-semibold uppercase tracking-[0.18em] transition-colors duration-200 sm:px-3",
+                  tab === t.id
+                    ? "border-gold text-gold"
+                    : "border-transparent text-[var(--ink-dim)] hover:text-ink",
+                )}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
         </SectionReveal>
         <SectionReveal
+          key={tab}
           stagger
           className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-14 px-6 pb-24 pt-14 md:grid-cols-2 lg:grid-cols-3"
         >
-          {/* CEO carries the Sergeant Major rank + visual primacy */}
-          <div className="md:col-span-2 lg:col-span-1 lg:row-span-1">
-            <PersonCard person={ceo} primary profileSlug={ceo.slug} />
-          </div>
+          {lead && (
+            <div className="md:col-span-2 lg:col-span-1 lg:row-span-1">
+              <PersonCard person={lead} primary profileSlug={lead.slug} />
+            </div>
+          )}
           {rest.map((p) => (
             <PersonCard key={p.name} person={p} profileSlug={p.slug} />
           ))}
