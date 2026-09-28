@@ -144,49 +144,30 @@ export function CgiLeadership() {
           The leadership carrying CGI abroad.
         </h2>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {cgiExecutives.map((m) => (
-            <ExecutiveCard
-              key={m.id}
-              member={m}
-              onOpen={() => setActive(m)}
-              onHover={setHovered}
-            />
-          ))}
-        </div>
+        <p className="text-dim mt-5 text-sm">
+          Browse the team — open any profile for the full biography.
+        </p>
 
-        {/* International operations */}
-        <div className="mt-24">
-          <Eyebrow>International Operations</Eyebrow>
-          <h3 className="display-h2 mt-6 max-w-2xl text-bone">
-            Global Expertise. Regional Presence.
-          </h3>
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {cgiOperations.map((m) => (
-              <TeamCard
+        <Carousel opts={{ align: "start" }} className="mt-12 w-full">
+          <CarouselContent className="-ml-6">
+            {cgiTeam.map((m) => (
+              <CarouselItem
                 key={m.id}
-                member={m}
-                onOpen={() => setActive(m)}
-                onHover={setHovered}
-              />
+                className="pl-6 md:basis-1/2 lg:basis-1/3"
+              >
+                <ExecutiveCard
+                  member={m}
+                  onOpen={() => setActive(m)}
+                  onHover={setHovered}
+                />
+              </CarouselItem>
             ))}
+          </CarouselContent>
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <CarouselPrevious className="static translate-y-0 cursor-pointer border-[var(--line-dark)] bg-transparent text-bone hover:bg-gold hover:text-navy" />
+            <CarouselNext className="static translate-y-0 cursor-pointer border-[var(--line-dark)] bg-transparent text-bone hover:bg-gold hover:text-navy" />
           </div>
-        </div>
-
-        {/* Legal affairs */}
-        <div className="mt-20">
-          <Eyebrow>International Legal Affairs</Eyebrow>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {cgiLegal.map((m) => (
-              <TeamCard
-                key={m.id}
-                member={m}
-                onOpen={() => setActive(m)}
-                onHover={setHovered}
-              />
-            ))}
-          </div>
-        </div>
+        </Carousel>
 
         {/* Global leadership map */}
         <div className="mt-24 border-t border-[var(--line-dark)] pt-14">
