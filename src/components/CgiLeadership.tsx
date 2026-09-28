@@ -6,12 +6,13 @@ import { ExecutiveBioModal, VideoModal } from "@/components/ExecutiveBioModal";
 import { LeadershipMap } from "@/components/ui/leadership-map";
 import { PillButton } from "@/components/PillButton";
 import {
-  cgiExecutives,
-  cgiLegal,
-  cgiOperations,
-  cgiTeam,
-  type CgiTeamMember,
-} from "@/lib/cgi-team";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { cgiTeam, type CgiTeamMember } from "@/lib/cgi-team";
 
 function preview(member: CgiTeamMember) {
   return member.shortBio;
@@ -30,7 +31,7 @@ function ExecutiveCard({
     <article
       onMouseEnter={() => onHover(member.id)}
       onMouseLeave={() => onHover(null)}
-      className="group flex flex-col border border-[var(--line-dark)] p-6 transition-colors duration-500 hover:border-gold/60"
+      className="group flex h-full flex-col border border-[var(--line-dark)] p-6 transition-colors duration-500 hover:border-gold/60"
     >
       <CgiPortrait name={member.name} initials={member.initials} photo={member.photo} />
       <h3 className="mt-6 font-serif text-2xl font-semibold leading-snug text-bone">
