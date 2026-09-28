@@ -6,7 +6,7 @@ const columns = [
     heading: "Company",
     links: [
       { to: "/about", label: "About" },
-      { to: "/leadership", label: "Leadership" },
+      { to: "/leadership", label: "Meet the Team" },
       { to: "/approach", label: "Approach" },
     ],
   },
