@@ -56,6 +56,8 @@ export type Person = {
   chapters?: Chapter[];
   films?: FilmCredit[];
   playbook?: PlaybookEntry[];
+  /** Professional links shown in the profile's "Stay Connected" block. */
+  links?: { label: string; url: string }[];
 };
 
 // Executive Leadership — names/roles real; surnames/bios [PLACEHOLDER] where noted.
