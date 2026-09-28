@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { Eyebrow } from "@/components/Eyebrow";
 import { ArrowLink } from "@/components/ArrowLink";
-import { PlaceholderImage } from "@/components/PlaceholderImage";
 import { TheStandard } from "@/components/TheStandard";
 import { BoardroomTable } from "@/components/BoardroomTable";
 import { CTABand } from "@/components/CTABand";
