@@ -137,6 +137,8 @@ function Profile() {
                 )}
               </blockquote>
             )}
+
+            <BioActions person={person} />
           </div>
 
           {/* Areas of focus */}
