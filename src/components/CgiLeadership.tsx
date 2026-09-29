@@ -38,7 +38,6 @@ function ExecutiveCard({
       <p className="text-dim mt-2 font-sans text-xs uppercase tracking-[0.18em]">
         {member.location}
       </p>
-      <p className="text-dim mt-5 text-[0.95rem] leading-relaxed">{preview(member)}</p>
       <div className="mt-5 flex flex-wrap gap-2">
         {member.expertise.slice(0, 6).map((t) => (
           <span
