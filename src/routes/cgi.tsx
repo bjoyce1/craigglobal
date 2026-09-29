@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import cgiHeroBg from "@/assets/cgi-hero-bg.jpg.asset.json";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
@@ -104,7 +103,6 @@ function CGIPage() {
       <PageHero
         variant="dark"
         globe
-        image={cgiHeroBg}
         eyebrow="Craig Global International"
         title="CGE / CGI"
         intro="Providing continuity across continents."

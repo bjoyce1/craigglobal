@@ -69,22 +69,11 @@ export function PageHero({
               </div>
             </div>
           ) : globe ? (
-            <>
-              {image && (
-                <img
-                  src={imageUrl(image)}
-                  alt=""
-                  className="h-full w-full object-cover opacity-50 [filter:saturate(0.8)_contrast(1.02)]"
-                  width={1920}
-                  height={1080}
-                  fetchPriority="high"
-                />
-              )}
-              <div className="starfield" aria-hidden="true">
-                <div className="star-layer star-layer-1" />
-                <div className="star-layer star-layer-2" />
-              </div>
-            </>
+
+            <div className="starfield" aria-hidden="true">
+              <div className="star-layer star-layer-1" />
+              <div className="star-layer star-layer-2" />
+            </div>
           ) : video ? (
             <video
               src={imageUrl(video)}

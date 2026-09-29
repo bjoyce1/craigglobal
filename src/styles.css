@@ -725,7 +725,8 @@
   inset: 0;
   overflow: hidden;
   background:
-    radial-gradient(120% 90% at 50% 20%, rgba(201, 168, 106, 0.06), transparent 70%);
+    radial-gradient(120% 90% at 50% 20%, rgba(201, 168, 106, 0.06), transparent 70%),
+    var(--navy, #0b1220);
 }
 .starfield .star-layer {
   position: absolute;
