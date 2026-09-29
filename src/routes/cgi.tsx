@@ -104,6 +104,7 @@ function CGIPage() {
       <PageHero
         variant="dark"
         globe
+        image={cgiHeroBg.url}
         eyebrow="Craig Global International"
         title="CGE / CGI"
         intro="Providing continuity across continents."
