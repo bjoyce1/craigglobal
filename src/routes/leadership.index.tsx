@@ -51,7 +51,7 @@ function Leadership() {
   ).filter((p): p is (typeof visible)[number] => Boolean(p));
 
   const people = tab === "officers" ? officers : visible;
-  const [lead, ...rest] = people;
+
 
   return (
     <main>
@@ -93,13 +93,13 @@ function Leadership() {
           stagger
           className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-14 px-6 pb-24 pt-14 md:grid-cols-2 lg:grid-cols-3"
         >
-          {lead && (
-            <div className="md:col-span-2 lg:col-span-1 lg:row-span-1">
-              <PersonCard person={lead} primary profileSlug={lead.slug} />
-            </div>
-          )}
-          {rest.map((p) => (
-            <PersonCard key={p.name} person={p} profileSlug={p.slug} />
+          {people.map((p) => (
+            <PersonCard
+              key={p.name}
+              person={p}
+              showBio={false}
+              profileSlug={p.slug}
+            />
           ))}
         </SectionReveal>
       </section>
