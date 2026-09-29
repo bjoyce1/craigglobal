@@ -14,9 +14,6 @@ import {
 } from "@/components/ui/carousel";
 import { cgiTeam, type CgiTeamMember } from "@/lib/cgi-team";
 
-function preview(member: CgiTeamMember) {
-  return member.shortBio;
-}
 
 function ExecutiveCard({
   member,
