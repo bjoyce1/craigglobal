@@ -61,7 +61,12 @@ export function PageHero({
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
+        <div
+          className={cn(
+            "absolute inset-0",
+            !video && (!globe || !image) && !map && "kenburns",
+          )}
+        >
           {map ? (
             <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-70">
               <div className="w-[180%] max-w-none sm:w-full">
@@ -69,11 +74,21 @@ export function PageHero({
               </div>
             </div>
           ) : globe ? (
-
-            <div className="starfield" aria-hidden="true">
-              <div className="star-layer star-layer-1" />
-              <div className="star-layer star-layer-2" />
-            </div>
+            image ? (
+              <img
+                src={imageUrl(image)}
+                alt=""
+                className="h-full w-full object-cover"
+                width={1920}
+                height={1080}
+                fetchPriority="high"
+              />
+            ) : (
+              <div className="starfield" aria-hidden="true">
+                <div className="star-layer star-layer-1" />
+                <div className="star-layer star-layer-2" />
+              </div>
+            )
           ) : video ? (
             <video
               src={imageUrl(video)}
