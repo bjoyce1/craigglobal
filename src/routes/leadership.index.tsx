@@ -51,7 +51,7 @@ function Leadership() {
   ).filter((p): p is (typeof visible)[number] => Boolean(p));
 
   const people = tab === "officers" ? officers : visible;
-  const [lead, ...rest] = people;
+
 
   return (
     <main>
