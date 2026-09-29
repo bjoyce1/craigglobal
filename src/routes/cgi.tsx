@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import cgiHeroBg from "@/assets/cgi-hero-bg.png.asset.json";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
 import { Eyebrow } from "@/components/Eyebrow";
