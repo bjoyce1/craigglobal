@@ -2,9 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { SectionReveal } from "@/components/SectionReveal";
 import { PageHero } from "@/components/PageHero";
-import { Eyebrow } from "@/components/Eyebrow";
 import { PersonCard } from "@/components/PersonCard";
-import { OrgChart } from "@/components/OrgChart";
 import { CTABand } from "@/components/CTABand";
 import { executives } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -127,18 +125,6 @@ function Leadership() {
         </SectionReveal>
       </section>
       */}
-
-
-      {/* Corporate structure */}
-      <section className="surface-light">
-        <SectionReveal className="section-pad px-6">
-          <Eyebrow>Corporate Structure</Eyebrow>
-          <h2 className="display-h2 mt-6 max-w-xl">How CGE is organized.</h2>
-          <div className="mt-16">
-            <OrgChart />
-          </div>
-        </SectionReveal>
-      </section>
 
       <CTABand
         title="Build with us, for the long term."
