@@ -61,7 +61,12 @@ export function PageHero({
   if (variant === "dark") {
     return (
       <header className="surface-dark relative flex min-h-[68svh] items-end overflow-hidden">
-        <div className={cn("absolute inset-0", !video && !globe && !map && "kenburns")}>
+        <div
+          className={cn(
+            "absolute inset-0",
+            !video && (!globe || !image) && !map && "kenburns",
+          )}
+        >
           {map ? (
             <div className="absolute inset-0 flex items-center justify-center overflow-hidden opacity-70">
               <div className="w-[180%] max-w-none sm:w-full">
