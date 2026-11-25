@@ -673,13 +673,13 @@ export const executives: Person[] = [
   },
   {
     name: "Samantha Jacobs",
-    role: "President of African and Asian Operations, CGI",
+    role: "Chief Operating Officer of CGI",
     initials: "SJ",
     slug: "samantha-jacobs",
     image: samanthaJacobs.url,
     placeholderBio: false,
     subtitle:
-      "As CGI\u2019s President of African and Asian Operations, Samantha builds the bridges that turn creative potential into global opportunity.",
+      "As CGI\u2019s Chief Operating Officer, Samantha builds the bridges that turn creative potential into global opportunity.",
     bio: "Award-winning philanthropist, creative arts strategist, and documentary filmmaker whose global influence spans entertainment, art, and humanitarian work across the U.S., Africa, Asia, and Europe.",
     fullBio: [
       "Samantha Jacobs is an award-winning Philanthropist, Creative Arts Strategist and Documentary Filmmaker whose global influence spans entertainment, art and humanitarian work. She\u2019s an American now based in Kenya and has built a reputation as a dynamic connector whose career embodies solutions-based thinking, cross-cultural fluency and an unwavering commitment to turning vision into results.",
